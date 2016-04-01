@@ -4,7 +4,7 @@ import UntappdApp from './components/UntappdApp';
 
 var config = require('../../config.json');
 
-//var _apiURL = config["api_base_url"] + '?client_id=' + config["client_id"] + '&client_secret=' config["client_secret"];
+//var _apiURL = config['api_url'];
 
 ReactDOM.render(
     <UntappdApp source={config['dummy-load']}/>,

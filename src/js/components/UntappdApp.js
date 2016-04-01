@@ -55,7 +55,7 @@ class UntappdApp extends React.Component {
 
             var _apiObj = "checkins";
 
-            //console.log(result);
+            console.log(result);
 
             for (var i = 0; i < result.response[_apiObj].items.length; i++) {
 

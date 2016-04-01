@@ -8,7 +8,7 @@ class ListItem extends React.Component {
         super(props);
 
         this.state = { selected: false };
-        
+
     }
 
     componentDidMount() {
@@ -50,7 +50,7 @@ class ListItem extends React.Component {
         return (
 
             <li name='list-item' onClick={this.handleClick.bind(this)}>
-              <input type="checkbox" id="cbox1" value="first_checkbox" defaultChecked={selected} />
+              <input type="checkbox" id="cbox1" value="" defaultChecked={selected} />
 
               <p>{_thisItemContent.checkin_comment}</p>
               <div>
