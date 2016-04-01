@@ -23,8 +23,8 @@ function create(action) {
         payload: action,
         selected: false
     };
-
-    console.log(_items);
+    console.log(_items[id]);
+    //console.log(_items);
 
 }
 
@@ -44,6 +44,14 @@ function deselect(action) {
 
   
 
+}
+
+/**
+ * Delete a TODO item.
+ * @param  {string} id
+ */
+function destroy(id) {
+  delete _items[id];
 }
 
 var AppStore = assign({}, EventEmitter.prototype, {
@@ -77,12 +85,12 @@ var AppStore = assign({}, EventEmitter.prototype, {
 });
 
 AppDispatcher.register(function(action) {
-    console.log(action.action);
+    //console.log(action.action);
 
     switch (action.action.actionType) {
         case AppConstants.ADD_ITEM:
             //if (1 == 1) {
-            console.log("AppConstants.ADD_ITEM");
+            //console.log("AppConstants.ADD_ITEM");
             create(action);
             AppStore.emitChange();
             //}

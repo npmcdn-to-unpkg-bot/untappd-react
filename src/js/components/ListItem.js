@@ -3,9 +3,9 @@ import AppActions from './../actions/AppActions';
 
 class ListItem extends React.Component {
 
-    constructor(props){
+    constructor(props) {
 
-      super(props);
+        super(props);
 
     }
 
@@ -15,22 +15,25 @@ class ListItem extends React.Component {
 
     }
 
-    handleClick(){
+    handleClick() {
 
-      AppActions.selectItem(this);
+        //AppActions.selectItem(this);
+
+        console.log(this);
 
     }
 
     render() {
 
-       console.log("here");
+        //console.log("here");
 
-        console.log(this.props.item.payload.action);
+        //console.log(this.props.item.payload.action);
         var _thisItemContent = this.props.item.payload.action.item;
 
         return (
 
             <li name='list-item' onClick={this.handleClick.bind(this)}>
+              <input type="checkbox" id="cbox1" value="first_checkbox" />
 
               <p>{_thisItemContent.checkin_comment}</p>
               <div>

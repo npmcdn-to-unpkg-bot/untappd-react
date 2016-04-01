@@ -21,7 +21,7 @@ class List extends React.Component {
 
     render() {
 
-        console.log(this.props.items);
+        //console.log(this.props.items);
 
         // This section should be hidden by default
         // and shown when there are todos.

@@ -41,7 +41,7 @@ class UntappdApp extends React.Component {
     _onChange() {
 
         //this.setState(getAppState());
-        console.log('_onChange');
+        //console.log('_onChange');
 
     }
 
@@ -49,7 +49,7 @@ class UntappdApp extends React.Component {
 
         AppStore.addChangeListener(this._onChange);
 
-        console.log("componentDidMount");
+        //console.log("componentDidMount");
 
         this.serverRequest = $.get(this.props.source, function(result) {
 
@@ -58,7 +58,7 @@ class UntappdApp extends React.Component {
 
             var _apiObj = "checkins";
 
-            console.log(result);
+            //console.log(result);
 
             for (var i = 0; i < result.response[_apiObj].items.length; i++) {
 
@@ -109,7 +109,7 @@ class UntappdApp extends React.Component {
     }
 
     render() {
-        console.log("render");
+        //console.log("render");
         return (
             <div className="filter-list">
 	          <List items={this.state.allItems}/>
