@@ -1,0 +1,2833 @@
+{  
+   "meta":{  
+      "code":200,
+      "response_time":{  
+         "time":0.455,
+         "measure":"seconds"
+      },
+      "init_time":{  
+         "time":0.006,
+         "measure":"seconds"
+      }
+   },
+   "notifications":[  
+
+   ],
+   "response":{  
+      "pagination":{  
+         "next_url":"https:\/\/api.untappd.com\/v4\/beer\/checkins\/867402?max_id=293983360",
+         "max_id":293983360,
+         "since_url":"https:\/\/api.untappd.com\/v4\/beer\/checkins\/867402?min_id=294081217"
+      },
+      "checkins":{  
+         "count":25,
+         "items":[  
+            {  
+               "checkin_id":294081217,
+               "created_at":"Thu, 31 Mar 2016 20:45:57 +0000",
+               "checkin_comment":"",
+               "rating_score":3,
+               "user":{  
+                  "uid":3219573,
+                  "user_name":"h3chi0",
+                  "first_name":"Pascual",
+                  "last_name":"S.",
+                  "location":"",
+                  "url":"",
+                  "is_supporter":0,
+                  "bio":"",
+                  "relationship":null,
+                  "user_avatar":"https:\/\/gravatar.com\/avatar\/0e5da0abf7c751e9c970457bba88ed95?size=100&d=https%3A%2F%2Funtappd.akamaized.net%2Fsite%2Fassets%2Fimages%2Fdefault_avatar_v2.jpg%3Fv%3D1",
+                  "is_private":0,
+                  "contact":[  
+
+                  ]
+               },
+               "beer":{  
+                  "bid":867402,
+                  "beer_name":"Not Your Father's Root Beer (5.9%)",
+                  "beer_label":"https:\/\/untappd.akamaized.net\/site\/beer_logos\/beer-867402_a3046_sm.jpeg",
+                  "beer_abv":5.9,
+                  "beer_ibu":0,
+                  "beer_slug":"small-town-brewery-not-your-father-s-root-beer-5-9",
+                  "beer_description":"Not Your Fatherâ€™s Root Beer is a category-defining craft specialty ale brewed with unique spices. Brewer Tim Kovacâ€™s creativity and painstaking commitment to flavor complexity results in an unmistakable offering that masterfully blends hints of sarsaparilla, wintergreen, anise, and vanilla. A smooth and balanced Ale, NYFRB has broad appeal â€“ from discerning craft beer drinkers to non-beer drinkers.",
+                  "is_in_production":1,
+                  "beer_style_id":232,
+                  "beer_style":"Root Beer",
+                  "auth_rating":0,
+                  "wish_list":false,
+                  "beer_active":1
+               },
+               "brewery":{  
+                  "brewery_id":20144,
+                  "brewery_name":"Small Town Brewery",
+                  "brewery_slug":"small-town-brewery",
+                  "brewery_label":"https:\/\/untappd.akamaized.net\/site\/brewery_logos\/brewery-20144_c85a0.jpeg",
+                  "country_name":"United States",
+                  "contact":{  
+                     "twitter":"smalltownbrewer",
+                     "facebook":"https:\/\/www.facebook.com\/smalltownbrewery",
+                     "url":"http:\/\/smalltownbrewery.com\/"
+                  },
+                  "location":{  
+                     "brewery_city":"Wauconda",
+                     "brewery_state":"IL",
+                     "lat":42.278,
+                     "lng":-88.1515
+                  },
+                  "brewery_active":1
+               },
+               "venue":[  
+
+               ],
+               "comments":{  
+                  "total_count":0,
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "toasts":{  
+                  "total_count":0,
+                  "count":0,
+                  "auth_toast":null,
+                  "items":[  
+
+                  ]
+               },
+               "media":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "source":{  
+                  "app_name":"Untappd for iPhone - (V2)",
+                  "app_website":"http:\/\/untpd.it\/iphoneapp"
+               },
+               "badges":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               }
+            },
+            {  
+               "checkin_id":294078745,
+               "created_at":"Thu, 31 Mar 2016 20:38:00 +0000",
+               "checkin_comment":"",
+               "rating_score":4.5,
+               "user":{  
+                  "uid":602687,
+                  "user_name":"D_ftmfw",
+                  "first_name":"Danielle",
+                  "last_name":"",
+                  "location":"",
+                  "url":"",
+                  "is_supporter":0,
+                  "bio":"",
+                  "relationship":null,
+                  "user_avatar":"https:\/\/untappd.akamaized.net\/profile\/ede8f9df2d0243210c63b793d505441c_thumb.jpg",
+                  "is_private":0,
+                  "contact":{  
+                     "facebook":"1462621608"
+                  }
+               },
+               "beer":{  
+                  "bid":867402,
+                  "beer_name":"Not Your Father's Root Beer (5.9%)",
+                  "beer_label":"https:\/\/untappd.akamaized.net\/site\/beer_logos\/beer-867402_a3046_sm.jpeg",
+                  "beer_abv":5.9,
+                  "beer_ibu":0,
+                  "beer_slug":"small-town-brewery-not-your-father-s-root-beer-5-9",
+                  "beer_description":"Not Your Fatherâ€™s Root Beer is a category-defining craft specialty ale brewed with unique spices. Brewer Tim Kovacâ€™s creativity and painstaking commitment to flavor complexity results in an unmistakable offering that masterfully blends hints of sarsaparilla, wintergreen, anise, and vanilla. A smooth and balanced Ale, NYFRB has broad appeal â€“ from discerning craft beer drinkers to non-beer drinkers.",
+                  "is_in_production":1,
+                  "beer_style_id":232,
+                  "beer_style":"Root Beer",
+                  "auth_rating":0,
+                  "wish_list":false,
+                  "beer_active":1
+               },
+               "brewery":{  
+                  "brewery_id":20144,
+                  "brewery_name":"Small Town Brewery",
+                  "brewery_slug":"small-town-brewery",
+                  "brewery_label":"https:\/\/untappd.akamaized.net\/site\/brewery_logos\/brewery-20144_c85a0.jpeg",
+                  "country_name":"United States",
+                  "contact":{  
+                     "twitter":"smalltownbrewer",
+                     "facebook":"https:\/\/www.facebook.com\/smalltownbrewery",
+                     "url":"http:\/\/smalltownbrewery.com\/"
+                  },
+                  "location":{  
+                     "brewery_city":"Wauconda",
+                     "brewery_state":"IL",
+                     "lat":42.278,
+                     "lng":-88.1515
+                  },
+                  "brewery_active":1
+               },
+               "venue":{  
+                  "venue_id":9240,
+                  "venue_name":"Six Flags Great Adventure",
+                  "venue_slug":"six-flags-great-adventure",
+                  "primary_category":"Arts & Entertainment",
+                  "parent_category_id":"4d4b7104d754a06370d81259",
+                  "categories":{  
+                     "count":1,
+                     "items":[  
+                        {  
+                           "category_name":"Theme Park",
+                           "category_id":"4bf58dd8d48988d182941735",
+                           "is_primary":true
+                        }
+                     ]
+                  },
+                  "location":{  
+                     "venue_address":"1 Six Flags Blvd",
+                     "venue_city":"Jackson",
+                     "venue_state":"NJ",
+                     "venue_country":"United States",
+                     "lat":40.1386,
+                     "lng":-74.4411
+                  },
+                  "contact":{  
+                     "twitter":"@sfgradventure",
+                     "venue_url":"http:\/\/www.sixflags.com\/greatAdventure\/"
+                  },
+                  "public_venue":true,
+                  "foursquare":{  
+                     "foursquare_id":"44f9affef964a52069381fe3",
+                     "foursquare_url":"http:\/\/4sq.com\/5anViq"
+                  },
+                  "venue_icon":{  
+                     "sm":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/themepark_bg_64.png",
+                     "md":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/themepark_bg_88.png",
+                     "lg":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/themepark_bg_88.png"
+                  },
+                  "is_verified":false
+               },
+               "comments":{  
+                  "total_count":0,
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "toasts":{  
+                  "total_count":0,
+                  "count":0,
+                  "auth_toast":null,
+                  "items":[  
+
+                  ]
+               },
+               "media":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "source":{  
+                  "app_name":"Untappd for iPhone - (V2)",
+                  "app_website":"http:\/\/untpd.it\/iphoneapp"
+               },
+               "badges":{  
+                  "count":1,
+                  "items":[  
+                     {  
+                        "badge_id":3784,
+                        "user_badge_id":108664060,
+                        "badge_name":"Bar Explorer (Level 2)",
+                        "badge_description":"Your quest to quench your thirst leaves no stone unturned! That's at least 10 distinct venues!",
+                        "created_at":"Thu, 31 Mar 2016 20:38:01 +0000",
+                        "badge_image":{  
+                           "sm":"https:\/\/untappd.akamaized.net\/badges\/bdg_goingPlaces_sm.jpg",
+                           "md":"https:\/\/untappd.akamaized.net\/badges\/bdg_goingPlaces_md.jpg",
+                           "lg":"https:\/\/untappd.akamaized.net\/badges\/bdg_goingPlaces_lg.jpg"
+                        }
+                     }
+                  ]
+               }
+            },
+            {  
+               "checkin_id":294075788,
+               "created_at":"Thu, 31 Mar 2016 20:28:24 +0000",
+               "checkin_comment":"",
+               "rating_score":4.25,
+               "user":{  
+                  "uid":3047072,
+                  "user_name":"Famousamos16461",
+                  "first_name":"Amos",
+                  "last_name":"G.",
+                  "location":"",
+                  "url":"",
+                  "is_supporter":0,
+                  "bio":"",
+                  "relationship":null,
+                  "user_avatar":"https:\/\/gravatar.com\/avatar\/1dbaf5b3746a5987a80b872538bb3993?size=100&d=https%3A%2F%2Funtappd.akamaized.net%2Fsite%2Fassets%2Fimages%2Fdefault_avatar_v2.jpg%3Fv%3D1",
+                  "is_private":0,
+                  "contact":{  
+                     "facebook":"10207500806972246"
+                  }
+               },
+               "beer":{  
+                  "bid":867402,
+                  "beer_name":"Not Your Father's Root Beer (5.9%)",
+                  "beer_label":"https:\/\/untappd.akamaized.net\/site\/beer_logos\/beer-867402_a3046_sm.jpeg",
+                  "beer_abv":5.9,
+                  "beer_ibu":0,
+                  "beer_slug":"small-town-brewery-not-your-father-s-root-beer-5-9",
+                  "beer_description":"Not Your Fatherâ€™s Root Beer is a category-defining craft specialty ale brewed with unique spices. Brewer Tim Kovacâ€™s creativity and painstaking commitment to flavor complexity results in an unmistakable offering that masterfully blends hints of sarsaparilla, wintergreen, anise, and vanilla. A smooth and balanced Ale, NYFRB has broad appeal â€“ from discerning craft beer drinkers to non-beer drinkers.",
+                  "is_in_production":1,
+                  "beer_style_id":232,
+                  "beer_style":"Root Beer",
+                  "auth_rating":0,
+                  "wish_list":false,
+                  "beer_active":1
+               },
+               "brewery":{  
+                  "brewery_id":20144,
+                  "brewery_name":"Small Town Brewery",
+                  "brewery_slug":"small-town-brewery",
+                  "brewery_label":"https:\/\/untappd.akamaized.net\/site\/brewery_logos\/brewery-20144_c85a0.jpeg",
+                  "country_name":"United States",
+                  "contact":{  
+                     "twitter":"smalltownbrewer",
+                     "facebook":"https:\/\/www.facebook.com\/smalltownbrewery",
+                     "url":"http:\/\/smalltownbrewery.com\/"
+                  },
+                  "location":{  
+                     "brewery_city":"Wauconda",
+                     "brewery_state":"IL",
+                     "lat":42.278,
+                     "lng":-88.1515
+                  },
+                  "brewery_active":1
+               },
+               "venue":[  
+
+               ],
+               "comments":{  
+                  "total_count":0,
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "toasts":{  
+                  "total_count":0,
+                  "count":0,
+                  "auth_toast":null,
+                  "items":[  
+
+                  ]
+               },
+               "media":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "source":{  
+                  "app_name":"Untappd for Android - (V2)",
+                  "app_website":"http:\/\/untpd.it\/androidapp"
+               },
+               "badges":{  
+                  "count":2,
+                  "items":[  
+                     {  
+                        "badge_id":16,
+                        "user_badge_id":108662620,
+                        "badge_name":"Power Month",
+                        "badge_description":"A beer a day will keep the doctor away... or something like that. Thatâ€™s 30 brews in a month!",
+                        "created_at":"Thu, 31 Mar 2016 20:28:24 +0000",
+                        "badge_image":{  
+                           "sm":"https:\/\/untappd.akamaized.net\/badges\/bdg_powerMonth_sm.jpg",
+                           "md":"https:\/\/untappd.akamaized.net\/badges\/bdg_powerMonth_md.jpg",
+                           "lg":"https:\/\/untappd.akamaized.net\/badges\/bdg_powerMonth_lg.jpg"
+                        }
+                     },
+                     {  
+                        "badge_id":542,
+                        "user_badge_id":108662621,
+                        "badge_name":"Land of the Free (Level 6)",
+                        "badge_description":"Youâ€™ve pledged allegiance, and now itâ€™s time to enjoy some beer! Now remember, not all American beer is fizzy and yellow. Thatâ€™s 30 different beers from a brewery in the United States. Try 5 more for Level 7.",
+                        "created_at":"Thu, 31 Mar 2016 20:28:24 +0000",
+                        "badge_image":{  
+                           "sm":"https:\/\/untappd.akamaized.net\/badges\/bdg_america_sm.jpg",
+                           "md":"https:\/\/untappd.akamaized.net\/badges\/bdg_america_md.jpg",
+                           "lg":"https:\/\/untappd.akamaized.net\/badges\/bdg_america_lg.jpg"
+                        }
+                     }
+                  ]
+               }
+            },
+            {  
+               "checkin_id":294060658,
+               "created_at":"Thu, 31 Mar 2016 19:35:27 +0000",
+               "checkin_comment":"",
+               "rating_score":5,
+               "user":{  
+                  "uid":828831,
+                  "user_name":"JazzboneKM",
+                  "first_name":"Kevin",
+                  "last_name":"M.",
+                  "location":"",
+                  "url":"",
+                  "is_supporter":0,
+                  "bio":"",
+                  "relationship":null,
+                  "user_avatar":"https:\/\/untappd.akamaized.net\/profile\/f8b25021b0b214162b31cdbeef731a2e_100x100.jpg",
+                  "is_private":0,
+                  "contact":{  
+                     "facebook":"836170286"
+                  }
+               },
+               "beer":{  
+                  "bid":867402,
+                  "beer_name":"Not Your Father's Root Beer (5.9%)",
+                  "beer_label":"https:\/\/untappd.akamaized.net\/site\/beer_logos\/beer-867402_a3046_sm.jpeg",
+                  "beer_abv":5.9,
+                  "beer_ibu":0,
+                  "beer_slug":"small-town-brewery-not-your-father-s-root-beer-5-9",
+                  "beer_description":"Not Your Fatherâ€™s Root Beer is a category-defining craft specialty ale brewed with unique spices. Brewer Tim Kovacâ€™s creativity and painstaking commitment to flavor complexity results in an unmistakable offering that masterfully blends hints of sarsaparilla, wintergreen, anise, and vanilla. A smooth and balanced Ale, NYFRB has broad appeal â€“ from discerning craft beer drinkers to non-beer drinkers.",
+                  "is_in_production":1,
+                  "beer_style_id":232,
+                  "beer_style":"Root Beer",
+                  "auth_rating":0,
+                  "wish_list":false,
+                  "beer_active":1
+               },
+               "brewery":{  
+                  "brewery_id":20144,
+                  "brewery_name":"Small Town Brewery",
+                  "brewery_slug":"small-town-brewery",
+                  "brewery_label":"https:\/\/untappd.akamaized.net\/site\/brewery_logos\/brewery-20144_c85a0.jpeg",
+                  "country_name":"United States",
+                  "contact":{  
+                     "twitter":"smalltownbrewer",
+                     "facebook":"https:\/\/www.facebook.com\/smalltownbrewery",
+                     "url":"http:\/\/smalltownbrewery.com\/"
+                  },
+                  "location":{  
+                     "brewery_city":"Wauconda",
+                     "brewery_state":"IL",
+                     "lat":42.278,
+                     "lng":-88.1515
+                  },
+                  "brewery_active":1
+               },
+               "venue":{  
+                  "venue_id":3283455,
+                  "venue_name":"Sunset Apartments",
+                  "venue_slug":"sunset-apartments",
+                  "primary_category":"Residence",
+                  "parent_category_id":"4e67e38e036454776db1fb3a",
+                  "categories":{  
+                     "count":1,
+                     "items":[  
+                        {  
+                           "category_name":"Residential Building (Apartment \/ Condo)",
+                           "category_id":"4d954b06a243a5684965b473",
+                           "is_primary":true
+                        }
+                     ]
+                  },
+                  "location":{  
+                     "venue_address":"1000 Columbine Dr",
+                     "venue_city":"Frederick",
+                     "venue_state":"MD",
+                     "venue_country":"United States",
+                     "lat":39.429,
+                     "lng":-77.4155
+                  },
+                  "contact":{  
+                     "twitter":"",
+                     "venue_url":""
+                  },
+                  "public_venue":false,
+                  "foursquare":{  
+                     "foursquare_id":"4b85cb37f964a520657331e3",
+                     "foursquare_url":"http:\/\/4sq.com\/cAbVqh"
+                  },
+                  "venue_icon":{  
+                     "sm":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/building\/apartment_bg_64.png",
+                     "md":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/building\/apartment_bg_88.png",
+                     "lg":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/building\/apartment_bg_88.png"
+                  },
+                  "is_verified":false
+               },
+               "comments":{  
+                  "total_count":0,
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "toasts":{  
+                  "total_count":0,
+                  "count":0,
+                  "auth_toast":null,
+                  "items":[  
+
+                  ]
+               },
+               "media":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "source":{  
+                  "app_name":"Untappd for Android - (V2)",
+                  "app_website":"http:\/\/untpd.it\/androidapp"
+               },
+               "badges":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               }
+            },
+            {  
+               "checkin_id":294060046,
+               "created_at":"Thu, 31 Mar 2016 19:33:01 +0000",
+               "checkin_comment":"It's fuckin root beer!",
+               "rating_score":3.75,
+               "user":{  
+                  "uid":2052804,
+                  "user_name":"taylor_j_l",
+                  "first_name":"taylor",
+                  "last_name":"l.",
+                  "location":"",
+                  "url":"",
+                  "is_supporter":0,
+                  "bio":"",
+                  "relationship":null,
+                  "user_avatar":"https:\/\/untappd.akamaized.net\/profile\/e60c3099b01a06515ba3dd1da1f273df_100x100.jpg",
+                  "is_private":0,
+                  "contact":{  
+                     "facebook":"10153144210439145"
+                  }
+               },
+               "beer":{  
+                  "bid":867402,
+                  "beer_name":"Not Your Father's Root Beer (5.9%)",
+                  "beer_label":"https:\/\/untappd.akamaized.net\/site\/beer_logos\/beer-867402_a3046_sm.jpeg",
+                  "beer_abv":5.9,
+                  "beer_ibu":0,
+                  "beer_slug":"small-town-brewery-not-your-father-s-root-beer-5-9",
+                  "beer_description":"Not Your Fatherâ€™s Root Beer is a category-defining craft specialty ale brewed with unique spices. Brewer Tim Kovacâ€™s creativity and painstaking commitment to flavor complexity results in an unmistakable offering that masterfully blends hints of sarsaparilla, wintergreen, anise, and vanilla. A smooth and balanced Ale, NYFRB has broad appeal â€“ from discerning craft beer drinkers to non-beer drinkers.",
+                  "is_in_production":1,
+                  "beer_style_id":232,
+                  "beer_style":"Root Beer",
+                  "auth_rating":0,
+                  "wish_list":false,
+                  "beer_active":1
+               },
+               "brewery":{  
+                  "brewery_id":20144,
+                  "brewery_name":"Small Town Brewery",
+                  "brewery_slug":"small-town-brewery",
+                  "brewery_label":"https:\/\/untappd.akamaized.net\/site\/brewery_logos\/brewery-20144_c85a0.jpeg",
+                  "country_name":"United States",
+                  "contact":{  
+                     "twitter":"smalltownbrewer",
+                     "facebook":"https:\/\/www.facebook.com\/smalltownbrewery",
+                     "url":"http:\/\/smalltownbrewery.com\/"
+                  },
+                  "location":{  
+                     "brewery_city":"Wauconda",
+                     "brewery_state":"IL",
+                     "lat":42.278,
+                     "lng":-88.1515
+                  },
+                  "brewery_active":1
+               },
+               "venue":[  
+
+               ],
+               "comments":{  
+                  "total_count":0,
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "toasts":{  
+                  "total_count":0,
+                  "count":0,
+                  "auth_toast":null,
+                  "items":[  
+
+                  ]
+               },
+               "media":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "source":{  
+                  "app_name":"Untappd for Android - (V2)",
+                  "app_website":"http:\/\/untpd.it\/androidapp"
+               },
+               "badges":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               }
+            },
+            {  
+               "checkin_id":294043123,
+               "created_at":"Thu, 31 Mar 2016 18:27:35 +0000",
+               "checkin_comment":"",
+               "rating_score":0,
+               "user":{  
+                  "uid":3220168,
+                  "user_name":"ell555",
+                  "first_name":"Elliot",
+                  "last_name":"F.",
+                  "location":"",
+                  "url":"",
+                  "is_supporter":0,
+                  "bio":"",
+                  "relationship":null,
+                  "user_avatar":"https:\/\/gravatar.com\/avatar\/174448a56e90ea1c6a2051cb60f1df96?size=100&d=https%3A%2F%2Funtappd.akamaized.net%2Fsite%2Fassets%2Fimages%2Fdefault_avatar_v2.jpg%3Fv%3D1",
+                  "is_private":0,
+                  "contact":[  
+
+                  ]
+               },
+               "beer":{  
+                  "bid":867402,
+                  "beer_name":"Not Your Father's Root Beer (5.9%)",
+                  "beer_label":"https:\/\/untappd.akamaized.net\/site\/beer_logos\/beer-867402_a3046_sm.jpeg",
+                  "beer_abv":5.9,
+                  "beer_ibu":0,
+                  "beer_slug":"small-town-brewery-not-your-father-s-root-beer-5-9",
+                  "beer_description":"Not Your Fatherâ€™s Root Beer is a category-defining craft specialty ale brewed with unique spices. Brewer Tim Kovacâ€™s creativity and painstaking commitment to flavor complexity results in an unmistakable offering that masterfully blends hints of sarsaparilla, wintergreen, anise, and vanilla. A smooth and balanced Ale, NYFRB has broad appeal â€“ from discerning craft beer drinkers to non-beer drinkers.",
+                  "is_in_production":1,
+                  "beer_style_id":232,
+                  "beer_style":"Root Beer",
+                  "auth_rating":0,
+                  "wish_list":false,
+                  "beer_active":1
+               },
+               "brewery":{  
+                  "brewery_id":20144,
+                  "brewery_name":"Small Town Brewery",
+                  "brewery_slug":"small-town-brewery",
+                  "brewery_label":"https:\/\/untappd.akamaized.net\/site\/brewery_logos\/brewery-20144_c85a0.jpeg",
+                  "country_name":"United States",
+                  "contact":{  
+                     "twitter":"smalltownbrewer",
+                     "facebook":"https:\/\/www.facebook.com\/smalltownbrewery",
+                     "url":"http:\/\/smalltownbrewery.com\/"
+                  },
+                  "location":{  
+                     "brewery_city":"Wauconda",
+                     "brewery_state":"IL",
+                     "lat":42.278,
+                     "lng":-88.1515
+                  },
+                  "brewery_active":1
+               },
+               "venue":[  
+
+               ],
+               "comments":{  
+                  "total_count":0,
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "toasts":{  
+                  "total_count":0,
+                  "count":0,
+                  "auth_toast":null,
+                  "items":[  
+
+                  ]
+               },
+               "media":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "source":{  
+                  "app_name":"Untappd for iPhone - (V2)",
+                  "app_website":"http:\/\/untpd.it\/iphoneapp"
+               },
+               "badges":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               }
+            },
+            {  
+               "checkin_id":294038909,
+               "created_at":"Thu, 31 Mar 2016 18:08:44 +0000",
+               "checkin_comment":"",
+               "rating_score":3,
+               "user":{  
+                  "uid":2615254,
+                  "user_name":"patty822",
+                  "first_name":"Patty",
+                  "last_name":"B.",
+                  "location":"",
+                  "url":"",
+                  "is_supporter":0,
+                  "bio":"",
+                  "relationship":null,
+                  "user_avatar":"https:\/\/gravatar.com\/avatar\/d3c3a66f6b83d54c885388c2c1c140f7?size=100&d=https%3A%2F%2Funtappd.akamaized.net%2Fsite%2Fassets%2Fimages%2Fdefault_avatar_v2.jpg%3Fv%3D1",
+                  "is_private":0,
+                  "contact":{  
+                     "facebook":"1091172674227535"
+                  }
+               },
+               "beer":{  
+                  "bid":867402,
+                  "beer_name":"Not Your Father's Root Beer (5.9%)",
+                  "beer_label":"https:\/\/untappd.akamaized.net\/site\/beer_logos\/beer-867402_a3046_sm.jpeg",
+                  "beer_abv":5.9,
+                  "beer_ibu":0,
+                  "beer_slug":"small-town-brewery-not-your-father-s-root-beer-5-9",
+                  "beer_description":"Not Your Fatherâ€™s Root Beer is a category-defining craft specialty ale brewed with unique spices. Brewer Tim Kovacâ€™s creativity and painstaking commitment to flavor complexity results in an unmistakable offering that masterfully blends hints of sarsaparilla, wintergreen, anise, and vanilla. A smooth and balanced Ale, NYFRB has broad appeal â€“ from discerning craft beer drinkers to non-beer drinkers.",
+                  "is_in_production":1,
+                  "beer_style_id":232,
+                  "beer_style":"Root Beer",
+                  "auth_rating":0,
+                  "wish_list":false,
+                  "beer_active":1
+               },
+               "brewery":{  
+                  "brewery_id":20144,
+                  "brewery_name":"Small Town Brewery",
+                  "brewery_slug":"small-town-brewery",
+                  "brewery_label":"https:\/\/untappd.akamaized.net\/site\/brewery_logos\/brewery-20144_c85a0.jpeg",
+                  "country_name":"United States",
+                  "contact":{  
+                     "twitter":"smalltownbrewer",
+                     "facebook":"https:\/\/www.facebook.com\/smalltownbrewery",
+                     "url":"http:\/\/smalltownbrewery.com\/"
+                  },
+                  "location":{  
+                     "brewery_city":"Wauconda",
+                     "brewery_state":"IL",
+                     "lat":42.278,
+                     "lng":-88.1515
+                  },
+                  "brewery_active":1
+               },
+               "venue":{  
+                  "venue_id":28313,
+                  "venue_name":"BAR",
+                  "venue_slug":"bar",
+                  "primary_category":"Food",
+                  "parent_category_id":"4d4b7105d754a06374d81259",
+                  "categories":{  
+                     "count":2,
+                     "items":[  
+                        {  
+                           "category_name":"Pizza Place",
+                           "category_id":"4bf58dd8d48988d1ca941735",
+                           "is_primary":true
+                        },
+                        {  
+                           "category_name":"Bar",
+                           "category_id":"4bf58dd8d48988d116941735",
+                           "is_primary":false
+                        }
+                     ]
+                  },
+                  "location":{  
+                     "venue_address":"254 Crown St",
+                     "venue_city":"New Haven",
+                     "venue_state":"CT",
+                     "venue_country":"United States",
+                     "lat":41.3062,
+                     "lng":-72.9304
+                  },
+                  "contact":{  
+                     "twitter":"",
+                     "venue_url":"http:\/\/barnightclub.com"
+                  },
+                  "public_venue":true,
+                  "foursquare":{  
+                     "foursquare_id":"4b284c8bf964a520309224e3",
+                     "foursquare_url":"http:\/\/4sq.com\/4XF7XY"
+                  },
+                  "venue_icon":{  
+                     "sm":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/pizza_bg_64.png",
+                     "md":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/pizza_bg_88.png",
+                     "lg":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/pizza_bg_88.png"
+                  },
+                  "is_verified":false
+               },
+               "comments":{  
+                  "total_count":0,
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "toasts":{  
+                  "total_count":0,
+                  "count":0,
+                  "auth_toast":null,
+                  "items":[  
+
+                  ]
+               },
+               "media":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "source":{  
+                  "app_name":"Untappd for Android - (V2)",
+                  "app_website":"http:\/\/untpd.it\/androidapp"
+               },
+               "badges":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               }
+            },
+            {  
+               "checkin_id":294033149,
+               "created_at":"Thu, 31 Mar 2016 17:39:22 +0000",
+               "checkin_comment":"",
+               "rating_score":4,
+               "user":{  
+                  "uid":485476,
+                  "user_name":"2rocky",
+                  "first_name":"John",
+                  "last_name":"M.",
+                  "location":"Petaluma, CA",
+                  "url":"",
+                  "is_supporter":0,
+                  "bio":"",
+                  "relationship":null,
+                  "user_avatar":"https:\/\/untappd.akamaized.net\/profile\/92a4ec41abc2e7aacdc0dc0f44e847dc_thumb.jpg",
+                  "is_private":0,
+                  "contact":[  
+
+                  ]
+               },
+               "beer":{  
+                  "bid":867402,
+                  "beer_name":"Not Your Father's Root Beer (5.9%)",
+                  "beer_label":"https:\/\/untappd.akamaized.net\/site\/beer_logos\/beer-867402_a3046_sm.jpeg",
+                  "beer_abv":5.9,
+                  "beer_ibu":0,
+                  "beer_slug":"small-town-brewery-not-your-father-s-root-beer-5-9",
+                  "beer_description":"Not Your Fatherâ€™s Root Beer is a category-defining craft specialty ale brewed with unique spices. Brewer Tim Kovacâ€™s creativity and painstaking commitment to flavor complexity results in an unmistakable offering that masterfully blends hints of sarsaparilla, wintergreen, anise, and vanilla. A smooth and balanced Ale, NYFRB has broad appeal â€“ from discerning craft beer drinkers to non-beer drinkers.",
+                  "is_in_production":1,
+                  "beer_style_id":232,
+                  "beer_style":"Root Beer",
+                  "auth_rating":0,
+                  "wish_list":false,
+                  "beer_active":1
+               },
+               "brewery":{  
+                  "brewery_id":20144,
+                  "brewery_name":"Small Town Brewery",
+                  "brewery_slug":"small-town-brewery",
+                  "brewery_label":"https:\/\/untappd.akamaized.net\/site\/brewery_logos\/brewery-20144_c85a0.jpeg",
+                  "country_name":"United States",
+                  "contact":{  
+                     "twitter":"smalltownbrewer",
+                     "facebook":"https:\/\/www.facebook.com\/smalltownbrewery",
+                     "url":"http:\/\/smalltownbrewery.com\/"
+                  },
+                  "location":{  
+                     "brewery_city":"Wauconda",
+                     "brewery_state":"IL",
+                     "lat":42.278,
+                     "lng":-88.1515
+                  },
+                  "brewery_active":1
+               },
+               "venue":{  
+                  "venue_id":237898,
+                  "venue_name":"Sprenger's Tap Room",
+                  "venue_slug":"sprengers-tap-room",
+                  "primary_category":"Nightlife Spot",
+                  "parent_category_id":"4d4b7105d754a06376d81259",
+                  "categories":{  
+                     "count":1,
+                     "items":[  
+                        {  
+                           "category_name":"Beer Garden",
+                           "category_id":"4bf58dd8d48988d117941735",
+                           "is_primary":true
+                        }
+                     ]
+                  },
+                  "location":{  
+                     "venue_address":"446 B St",
+                     "venue_city":"Santa Rosa",
+                     "venue_state":"CA",
+                     "venue_country":"United States",
+                     "lat":38.4416,
+                     "lng":-122.717
+                  },
+                  "contact":{  
+                     "twitter":"@sprengerstaprm",
+                     "venue_url":"http:\/\/www.sprengerstaproom.com"
+                  },
+                  "public_venue":true,
+                  "foursquare":{  
+                     "foursquare_id":"4f6cfdbae4b0d638a09fa92a",
+                     "foursquare_url":"http:\/\/4sq.com\/GTDxMb"
+                  },
+                  "venue_icon":{  
+                     "sm":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/beergarden_bg_64.png",
+                     "md":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/beergarden_bg_88.png",
+                     "lg":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/beergarden_bg_88.png"
+                  },
+                  "is_verified":false
+               },
+               "comments":{  
+                  "total_count":0,
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "toasts":{  
+                  "total_count":0,
+                  "count":0,
+                  "auth_toast":null,
+                  "items":[  
+
+                  ]
+               },
+               "media":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "source":{  
+                  "app_name":"Untappd for iPhone - (V2)",
+                  "app_website":"http:\/\/untpd.it\/iphoneapp"
+               },
+               "badges":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               }
+            },
+            {  
+               "checkin_id":294032864,
+               "created_at":"Thu, 31 Mar 2016 17:37:55 +0000",
+               "checkin_comment":"Always good :)",
+               "rating_score":4.5,
+               "user":{  
+                  "uid":3153983,
+                  "user_name":"scgirl2009",
+                  "first_name":"Sarah",
+                  "last_name":"D.",
+                  "location":"",
+                  "url":"",
+                  "is_supporter":0,
+                  "bio":"",
+                  "relationship":null,
+                  "user_avatar":"https:\/\/untappd.akamaized.net\/profile\/36e81f3f27d93e13eecc7a483201e9a2_100x100.jpg",
+                  "is_private":0,
+                  "contact":[  
+
+                  ]
+               },
+               "beer":{  
+                  "bid":867402,
+                  "beer_name":"Not Your Father's Root Beer (5.9%)",
+                  "beer_label":"https:\/\/untappd.akamaized.net\/site\/beer_logos\/beer-867402_a3046_sm.jpeg",
+                  "beer_abv":5.9,
+                  "beer_ibu":0,
+                  "beer_slug":"small-town-brewery-not-your-father-s-root-beer-5-9",
+                  "beer_description":"Not Your Fatherâ€™s Root Beer is a category-defining craft specialty ale brewed with unique spices. Brewer Tim Kovacâ€™s creativity and painstaking commitment to flavor complexity results in an unmistakable offering that masterfully blends hints of sarsaparilla, wintergreen, anise, and vanilla. A smooth and balanced Ale, NYFRB has broad appeal â€“ from discerning craft beer drinkers to non-beer drinkers.",
+                  "is_in_production":1,
+                  "beer_style_id":232,
+                  "beer_style":"Root Beer",
+                  "auth_rating":0,
+                  "wish_list":false,
+                  "beer_active":1
+               },
+               "brewery":{  
+                  "brewery_id":20144,
+                  "brewery_name":"Small Town Brewery",
+                  "brewery_slug":"small-town-brewery",
+                  "brewery_label":"https:\/\/untappd.akamaized.net\/site\/brewery_logos\/brewery-20144_c85a0.jpeg",
+                  "country_name":"United States",
+                  "contact":{  
+                     "twitter":"smalltownbrewer",
+                     "facebook":"https:\/\/www.facebook.com\/smalltownbrewery",
+                     "url":"http:\/\/smalltownbrewery.com\/"
+                  },
+                  "location":{  
+                     "brewery_city":"Wauconda",
+                     "brewery_state":"IL",
+                     "lat":42.278,
+                     "lng":-88.1515
+                  },
+                  "brewery_active":1
+               },
+               "venue":{  
+                  "venue_id":25212,
+                  "venue_name":"Universal Studios Florida",
+                  "venue_slug":"universal-studios-florida",
+                  "primary_category":"Arts & Entertainment",
+                  "parent_category_id":"4d4b7104d754a06370d81259",
+                  "categories":{  
+                     "count":2,
+                     "items":[  
+                        {  
+                           "category_name":"Theme Park",
+                           "category_id":"4bf58dd8d48988d182941735",
+                           "is_primary":true
+                        },
+                        {  
+                           "category_name":"Resort",
+                           "category_id":"4bf58dd8d48988d12f951735",
+                           "is_primary":false
+                        }
+                     ]
+                  },
+                  "location":{  
+                     "venue_address":"6000 Universal Blvd",
+                     "venue_city":"Orlando",
+                     "venue_state":"FL",
+                     "venue_country":"United States",
+                     "lat":28.4753,
+                     "lng":-81.4677
+                  },
+                  "contact":{  
+                     "twitter":"@universalorl",
+                     "venue_url":"http:\/\/www.universalorlando.com"
+                  },
+                  "public_venue":true,
+                  "foursquare":{  
+                     "foursquare_id":"4ad62c90f964a5208c0521e3",
+                     "foursquare_url":"http:\/\/4sq.com\/8KYK7D"
+                  },
+                  "venue_icon":{  
+                     "sm":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/themepark_bg_64.png",
+                     "md":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/themepark_bg_88.png",
+                     "lg":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/themepark_bg_88.png"
+                  },
+                  "is_verified":false
+               },
+               "comments":{  
+                  "total_count":0,
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "toasts":{  
+                  "total_count":2,
+                  "count":2,
+                  "auth_toast":null,
+                  "items":[  
+                     {  
+                        "uid":3046641,
+                        "user":{  
+                           "uid":3046641,
+                           "user_name":"Sbowling",
+                           "first_name":"Stephanie",
+                           "last_name":"B.",
+                           "bio":"",
+                           "location":"",
+                           "user_avatar":"https:\/\/untappd.akamaized.net\/profile\/fb5d341a470ba7f4309daa0f9cdd59bb_100x100.jpg",
+                           "user_link":"https:\/\/untappd.com\/user\/Sbowling",
+                           "account_type":"user",
+                           "brewery_details":[  
+
+                           ]
+                        },
+                        "like_id":209455427,
+                        "like_owner":false,
+                        "created_at":"Thu, 31 Mar 2016 19:03:09 +0000"
+                     },
+                     {  
+                        "uid":192163,
+                        "user":{  
+                           "uid":192163,
+                           "user_name":"cbragan",
+                           "first_name":"christopher",
+                           "last_name":"b.",
+                           "bio":"",
+                           "location":"",
+                           "user_avatar":"https:\/\/untappd.akamaized.net\/profile\/15f4b4aa9abcbd131d5a5112d0a75e8e_100x100.jpg",
+                           "user_link":"https:\/\/untappd.com\/user\/cbragan",
+                           "account_type":"user",
+                           "brewery_details":[  
+
+                           ]
+                        },
+                        "like_id":209455391,
+                        "like_owner":false,
+                        "created_at":"Thu, 31 Mar 2016 19:03:01 +0000"
+                     }
+                  ]
+               },
+               "media":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "source":{  
+                  "app_name":"Untappd for iPhone - (V2)",
+                  "app_website":"http:\/\/untpd.it\/iphoneapp"
+               },
+               "badges":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               }
+            },
+            {  
+               "checkin_id":294029269,
+               "created_at":"Thu, 31 Mar 2016 17:19:18 +0000",
+               "checkin_comment":"",
+               "rating_score":0,
+               "user":{  
+                  "uid":3220124,
+                  "user_name":"N_Zernhelt",
+                  "first_name":"Nick",
+                  "last_name":"Z.",
+                  "location":"",
+                  "url":"",
+                  "is_supporter":0,
+                  "bio":"",
+                  "relationship":null,
+                  "user_avatar":"https:\/\/gravatar.com\/avatar\/a5a6d4bf83fb7695a1d3d598c1b8b5c2?size=100&d=https%3A%2F%2Funtappd.akamaized.net%2Fsite%2Fassets%2Fimages%2Fdefault_avatar_v2.jpg%3Fv%3D1",
+                  "is_private":0,
+                  "contact":[  
+
+                  ]
+               },
+               "beer":{  
+                  "bid":867402,
+                  "beer_name":"Not Your Father's Root Beer (5.9%)",
+                  "beer_label":"https:\/\/untappd.akamaized.net\/site\/beer_logos\/beer-867402_a3046_sm.jpeg",
+                  "beer_abv":5.9,
+                  "beer_ibu":0,
+                  "beer_slug":"small-town-brewery-not-your-father-s-root-beer-5-9",
+                  "beer_description":"Not Your Fatherâ€™s Root Beer is a category-defining craft specialty ale brewed with unique spices. Brewer Tim Kovacâ€™s creativity and painstaking commitment to flavor complexity results in an unmistakable offering that masterfully blends hints of sarsaparilla, wintergreen, anise, and vanilla. A smooth and balanced Ale, NYFRB has broad appeal â€“ from discerning craft beer drinkers to non-beer drinkers.",
+                  "is_in_production":1,
+                  "beer_style_id":232,
+                  "beer_style":"Root Beer",
+                  "auth_rating":0,
+                  "wish_list":false,
+                  "beer_active":1
+               },
+               "brewery":{  
+                  "brewery_id":20144,
+                  "brewery_name":"Small Town Brewery",
+                  "brewery_slug":"small-town-brewery",
+                  "brewery_label":"https:\/\/untappd.akamaized.net\/site\/brewery_logos\/brewery-20144_c85a0.jpeg",
+                  "country_name":"United States",
+                  "contact":{  
+                     "twitter":"smalltownbrewer",
+                     "facebook":"https:\/\/www.facebook.com\/smalltownbrewery",
+                     "url":"http:\/\/smalltownbrewery.com\/"
+                  },
+                  "location":{  
+                     "brewery_city":"Wauconda",
+                     "brewery_state":"IL",
+                     "lat":42.278,
+                     "lng":-88.1515
+                  },
+                  "brewery_active":1
+               },
+               "venue":[  
+
+               ],
+               "comments":{  
+                  "total_count":0,
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "toasts":{  
+                  "total_count":0,
+                  "count":0,
+                  "auth_toast":null,
+                  "items":[  
+
+                  ]
+               },
+               "media":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "source":{  
+                  "app_name":"Untappd for iPhone - (V2)",
+                  "app_website":"http:\/\/untpd.it\/iphoneapp"
+               },
+               "badges":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               }
+            },
+            {  
+               "checkin_id":294027866,
+               "created_at":"Thu, 31 Mar 2016 17:11:15 +0000",
+               "checkin_comment":"",
+               "rating_score":5,
+               "user":{  
+                  "uid":2100722,
+                  "user_name":"NovemberFox",
+                  "first_name":"Nathan",
+                  "last_name":"F.",
+                  "location":"",
+                  "url":"",
+                  "is_supporter":0,
+                  "bio":"",
+                  "relationship":null,
+                  "user_avatar":"https:\/\/untappd.akamaized.net\/profile\/ae6d6a8b22a89b652ac8309345ef9d32_100x100.jpg",
+                  "is_private":0,
+                  "contact":{  
+                     "facebook":"10152917441558751",
+                     "twitter":"NovFox07"
+                  }
+               },
+               "beer":{  
+                  "bid":867402,
+                  "beer_name":"Not Your Father's Root Beer (5.9%)",
+                  "beer_label":"https:\/\/untappd.akamaized.net\/site\/beer_logos\/beer-867402_a3046_sm.jpeg",
+                  "beer_abv":5.9,
+                  "beer_ibu":0,
+                  "beer_slug":"small-town-brewery-not-your-father-s-root-beer-5-9",
+                  "beer_description":"Not Your Fatherâ€™s Root Beer is a category-defining craft specialty ale brewed with unique spices. Brewer Tim Kovacâ€™s creativity and painstaking commitment to flavor complexity results in an unmistakable offering that masterfully blends hints of sarsaparilla, wintergreen, anise, and vanilla. A smooth and balanced Ale, NYFRB has broad appeal â€“ from discerning craft beer drinkers to non-beer drinkers.",
+                  "is_in_production":1,
+                  "beer_style_id":232,
+                  "beer_style":"Root Beer",
+                  "auth_rating":0,
+                  "wish_list":false,
+                  "beer_active":1
+               },
+               "brewery":{  
+                  "brewery_id":20144,
+                  "brewery_name":"Small Town Brewery",
+                  "brewery_slug":"small-town-brewery",
+                  "brewery_label":"https:\/\/untappd.akamaized.net\/site\/brewery_logos\/brewery-20144_c85a0.jpeg",
+                  "country_name":"United States",
+                  "contact":{  
+                     "twitter":"smalltownbrewer",
+                     "facebook":"https:\/\/www.facebook.com\/smalltownbrewery",
+                     "url":"http:\/\/smalltownbrewery.com\/"
+                  },
+                  "location":{  
+                     "brewery_city":"Wauconda",
+                     "brewery_state":"IL",
+                     "lat":42.278,
+                     "lng":-88.1515
+                  },
+                  "brewery_active":1
+               },
+               "venue":[  
+
+               ],
+               "comments":{  
+                  "total_count":0,
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "toasts":{  
+                  "total_count":0,
+                  "count":0,
+                  "auth_toast":null,
+                  "items":[  
+
+                  ]
+               },
+               "media":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "source":{  
+                  "app_name":"Untappd for iPhone - (V2)",
+                  "app_website":"http:\/\/untpd.it\/iphoneapp"
+               },
+               "badges":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               }
+            },
+            {  
+               "checkin_id":294019993,
+               "created_at":"Thu, 31 Mar 2016 16:20:20 +0000",
+               "checkin_comment":"",
+               "rating_score":0,
+               "user":{  
+                  "uid":667444,
+                  "user_name":"Mrechen02",
+                  "first_name":"Mike",
+                  "last_name":"R.",
+                  "location":"",
+                  "url":"",
+                  "is_supporter":0,
+                  "bio":"",
+                  "relationship":null,
+                  "user_avatar":"https:\/\/untappd.akamaized.net\/profile\/183eb063421b7e46d6e47e0cee491a32_thumb.jpg",
+                  "is_private":0,
+                  "contact":{  
+                     "facebook":"772898884"
+                  }
+               },
+               "beer":{  
+                  "bid":867402,
+                  "beer_name":"Not Your Father's Root Beer (5.9%)",
+                  "beer_label":"https:\/\/untappd.akamaized.net\/site\/beer_logos\/beer-867402_a3046_sm.jpeg",
+                  "beer_abv":5.9,
+                  "beer_ibu":0,
+                  "beer_slug":"small-town-brewery-not-your-father-s-root-beer-5-9",
+                  "beer_description":"Not Your Fatherâ€™s Root Beer is a category-defining craft specialty ale brewed with unique spices. Brewer Tim Kovacâ€™s creativity and painstaking commitment to flavor complexity results in an unmistakable offering that masterfully blends hints of sarsaparilla, wintergreen, anise, and vanilla. A smooth and balanced Ale, NYFRB has broad appeal â€“ from discerning craft beer drinkers to non-beer drinkers.",
+                  "is_in_production":1,
+                  "beer_style_id":232,
+                  "beer_style":"Root Beer",
+                  "auth_rating":0,
+                  "wish_list":false,
+                  "beer_active":1
+               },
+               "brewery":{  
+                  "brewery_id":20144,
+                  "brewery_name":"Small Town Brewery",
+                  "brewery_slug":"small-town-brewery",
+                  "brewery_label":"https:\/\/untappd.akamaized.net\/site\/brewery_logos\/brewery-20144_c85a0.jpeg",
+                  "country_name":"United States",
+                  "contact":{  
+                     "twitter":"smalltownbrewer",
+                     "facebook":"https:\/\/www.facebook.com\/smalltownbrewery",
+                     "url":"http:\/\/smalltownbrewery.com\/"
+                  },
+                  "location":{  
+                     "brewery_city":"Wauconda",
+                     "brewery_state":"IL",
+                     "lat":42.278,
+                     "lng":-88.1515
+                  },
+                  "brewery_active":1
+               },
+               "venue":{  
+                  "venue_id":209122,
+                  "venue_name":"Blue Mash Golf Course",
+                  "venue_slug":"blue-mash-golf-course",
+                  "primary_category":"Outdoors & Recreation",
+                  "parent_category_id":"4d4b7105d754a06377d81259",
+                  "categories":{  
+                     "count":2,
+                     "items":[  
+                        {  
+                           "category_name":"Golf Course",
+                           "category_id":"4bf58dd8d48988d1e6941735",
+                           "is_primary":true
+                        },
+                        {  
+                           "category_name":"Bar",
+                           "category_id":"4bf58dd8d48988d116941735",
+                           "is_primary":false
+                        }
+                     ]
+                  },
+                  "location":{  
+                     "venue_address":"5821 Olney Laytonsville Rd",
+                     "venue_city":"Laytonsville",
+                     "venue_state":"MD",
+                     "venue_country":"United States",
+                     "lat":39.1884,
+                     "lng":-77.1172
+                  },
+                  "contact":{  
+                     "twitter":"",
+                     "venue_url":""
+                  },
+                  "public_venue":true,
+                  "foursquare":{  
+                     "foursquare_id":"4ba4e90cf964a520ffc138e3",
+                     "foursquare_url":"http:\/\/4sq.com\/angdNa"
+                  },
+                  "venue_icon":{  
+                     "sm":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/parks_outdoors\/golfcourse_bg_64.png",
+                     "md":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/parks_outdoors\/golfcourse_bg_88.png",
+                     "lg":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/parks_outdoors\/golfcourse_bg_88.png"
+                  },
+                  "is_verified":false
+               },
+               "comments":{  
+                  "total_count":0,
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "toasts":{  
+                  "total_count":0,
+                  "count":0,
+                  "auth_toast":null,
+                  "items":[  
+
+                  ]
+               },
+               "media":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "source":{  
+                  "app_name":"Untappd for iPhone - (V2)",
+                  "app_website":"http:\/\/untpd.it\/iphoneapp"
+               },
+               "badges":{  
+                  "count":1,
+                  "items":[  
+                     {  
+                        "badge_id":3508,
+                        "user_badge_id":108634370,
+                        "badge_name":"Liquid Lunch",
+                        "badge_description":"Are you having a rough morning or perhaps just canâ€™t wait for happy hour. Why not grab a quick pint with lunch and coast through the afternoon.",
+                        "created_at":"Thu, 31 Mar 2016 16:20:20 +0000",
+                        "badge_image":{  
+                           "sm":"https:\/\/untappd.akamaized.net\/badges\/bdg_LiquidLunch_sm.jpg",
+                           "md":"https:\/\/untappd.akamaized.net\/badges\/bdg_LiquidLunch_md.jpg",
+                           "lg":"https:\/\/untappd.akamaized.net\/badges\/bdg_LiquidLunch_lg.jpg"
+                        }
+                     }
+                  ]
+               }
+            },
+            {  
+               "checkin_id":294012653,
+               "created_at":"Thu, 31 Mar 2016 15:06:47 +0000",
+               "checkin_comment":"Best root beer I've ever had!  Dinner last night",
+               "rating_score":4.75,
+               "user":{  
+                  "uid":1732218,
+                  "user_name":"Brodiepage",
+                  "first_name":"Andrew",
+                  "last_name":"P.",
+                  "location":"",
+                  "url":"",
+                  "is_supporter":0,
+                  "bio":"",
+                  "relationship":null,
+                  "user_avatar":"https:\/\/untappd.akamaized.net\/profile\/30a44f5571c5077b204f47acde17a91a_100x100.jpg",
+                  "is_private":0,
+                  "contact":[  
+
+                  ]
+               },
+               "beer":{  
+                  "bid":867402,
+                  "beer_name":"Not Your Father's Root Beer (5.9%)",
+                  "beer_label":"https:\/\/untappd.akamaized.net\/site\/beer_logos\/beer-867402_a3046_sm.jpeg",
+                  "beer_abv":5.9,
+                  "beer_ibu":0,
+                  "beer_slug":"small-town-brewery-not-your-father-s-root-beer-5-9",
+                  "beer_description":"Not Your Fatherâ€™s Root Beer is a category-defining craft specialty ale brewed with unique spices. Brewer Tim Kovacâ€™s creativity and painstaking commitment to flavor complexity results in an unmistakable offering that masterfully blends hints of sarsaparilla, wintergreen, anise, and vanilla. A smooth and balanced Ale, NYFRB has broad appeal â€“ from discerning craft beer drinkers to non-beer drinkers.",
+                  "is_in_production":1,
+                  "beer_style_id":232,
+                  "beer_style":"Root Beer",
+                  "auth_rating":0,
+                  "wish_list":false,
+                  "beer_active":1
+               },
+               "brewery":{  
+                  "brewery_id":20144,
+                  "brewery_name":"Small Town Brewery",
+                  "brewery_slug":"small-town-brewery",
+                  "brewery_label":"https:\/\/untappd.akamaized.net\/site\/brewery_logos\/brewery-20144_c85a0.jpeg",
+                  "country_name":"United States",
+                  "contact":{  
+                     "twitter":"smalltownbrewer",
+                     "facebook":"https:\/\/www.facebook.com\/smalltownbrewery",
+                     "url":"http:\/\/smalltownbrewery.com\/"
+                  },
+                  "location":{  
+                     "brewery_city":"Wauconda",
+                     "brewery_state":"IL",
+                     "lat":42.278,
+                     "lng":-88.1515
+                  },
+                  "brewery_active":1
+               },
+               "venue":{  
+                  "venue_id":11792,
+                  "venue_name":"Duffy's Sports Grill",
+                  "venue_slug":"duffys-sports-grill",
+                  "primary_category":"Nightlife Spot",
+                  "parent_category_id":"4d4b7105d754a06376d81259",
+                  "categories":{  
+                     "count":3,
+                     "items":[  
+                        {  
+                           "category_name":"Sports Bar",
+                           "category_id":"4bf58dd8d48988d11d941735",
+                           "is_primary":true
+                        },
+                        {  
+                           "category_name":"American Restaurant",
+                           "category_id":"4bf58dd8d48988d14e941735",
+                           "is_primary":false
+                        },
+                        {  
+                           "category_name":"Burger Joint",
+                           "category_id":"4bf58dd8d48988d16c941735",
+                           "is_primary":false
+                        }
+                     ]
+                  },
+                  "location":{  
+                     "venue_address":"4800 W Hillsboro Blvd",
+                     "venue_city":"Coconut Creek",
+                     "venue_state":"FL",
+                     "venue_country":"United States",
+                     "lat":26.3171,
+                     "lng":-80.1892
+                  },
+                  "contact":{  
+                     "twitter":"@duffysmvp",
+                     "venue_url":"http:\/\/duffysmvp.com"
+                  },
+                  "public_venue":true,
+                  "foursquare":{  
+                     "foursquare_id":"4c001f2d360a9c747ee9d8a0",
+                     "foursquare_url":"http:\/\/4sq.com\/9aS2uc"
+                  },
+                  "venue_icon":{  
+                     "sm":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/sportsbar_bg_64.png",
+                     "md":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/sportsbar_bg_88.png",
+                     "lg":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/sportsbar_bg_88.png"
+                  },
+                  "is_verified":false
+               },
+               "comments":{  
+                  "total_count":0,
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "toasts":{  
+                  "total_count":0,
+                  "count":0,
+                  "auth_toast":null,
+                  "items":[  
+
+                  ]
+               },
+               "media":{  
+                  "count":1,
+                  "items":[  
+                     {  
+                        "photo_id":71354651,
+                        "photo":{  
+                           "photo_img_sm":"https:\/\/untappd.akamaized.net\/photo\/2016_03_31\/98724b53a887a48aeba77c61777bfeb0_100x100.jpg",
+                           "photo_img_md":"https:\/\/untappd.akamaized.net\/photo\/2016_03_31\/98724b53a887a48aeba77c61777bfeb0_320x320.jpg",
+                           "photo_img_lg":"https:\/\/untappd.akamaized.net\/photo\/2016_03_31\/98724b53a887a48aeba77c61777bfeb0_640x640.jpg",
+                           "photo_img_og":"https:\/\/untappd.akamaized.net\/photo\/2016_03_31\/98724b53a887a48aeba77c61777bfeb0_raw.jpg"
+                        }
+                     }
+                  ]
+               },
+               "source":{  
+                  "app_name":"Untappd for iPhone - (V2)",
+                  "app_website":"http:\/\/untpd.it\/iphoneapp"
+               },
+               "badges":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               }
+            },
+            {  
+               "checkin_id":294012018,
+               "created_at":"Thu, 31 Mar 2016 14:57:35 +0000",
+               "checkin_comment":"",
+               "rating_score":0.25,
+               "user":{  
+                  "uid":3188361,
+                  "user_name":"KrunK0614",
+                  "first_name":"Kevin",
+                  "last_name":"F.",
+                  "location":"",
+                  "url":"",
+                  "is_supporter":0,
+                  "bio":"",
+                  "relationship":null,
+                  "user_avatar":"https:\/\/gravatar.com\/avatar\/1cdd2cf5ab958b64a92d0c930baada65?size=100&d=https%3A%2F%2Funtappd.akamaized.net%2Fsite%2Fassets%2Fimages%2Fdefault_avatar_v2.jpg%3Fv%3D1",
+                  "is_private":0,
+                  "contact":{  
+                     "facebook":"1096553843709133"
+                  }
+               },
+               "beer":{  
+                  "bid":867402,
+                  "beer_name":"Not Your Father's Root Beer (5.9%)",
+                  "beer_label":"https:\/\/untappd.akamaized.net\/site\/beer_logos\/beer-867402_a3046_sm.jpeg",
+                  "beer_abv":5.9,
+                  "beer_ibu":0,
+                  "beer_slug":"small-town-brewery-not-your-father-s-root-beer-5-9",
+                  "beer_description":"Not Your Fatherâ€™s Root Beer is a category-defining craft specialty ale brewed with unique spices. Brewer Tim Kovacâ€™s creativity and painstaking commitment to flavor complexity results in an unmistakable offering that masterfully blends hints of sarsaparilla, wintergreen, anise, and vanilla. A smooth and balanced Ale, NYFRB has broad appeal â€“ from discerning craft beer drinkers to non-beer drinkers.",
+                  "is_in_production":1,
+                  "beer_style_id":232,
+                  "beer_style":"Root Beer",
+                  "auth_rating":0,
+                  "wish_list":false,
+                  "beer_active":1
+               },
+               "brewery":{  
+                  "brewery_id":20144,
+                  "brewery_name":"Small Town Brewery",
+                  "brewery_slug":"small-town-brewery",
+                  "brewery_label":"https:\/\/untappd.akamaized.net\/site\/brewery_logos\/brewery-20144_c85a0.jpeg",
+                  "country_name":"United States",
+                  "contact":{  
+                     "twitter":"smalltownbrewer",
+                     "facebook":"https:\/\/www.facebook.com\/smalltownbrewery",
+                     "url":"http:\/\/smalltownbrewery.com\/"
+                  },
+                  "location":{  
+                     "brewery_city":"Wauconda",
+                     "brewery_state":"IL",
+                     "lat":42.278,
+                     "lng":-88.1515
+                  },
+                  "brewery_active":1
+               },
+               "venue":[  
+
+               ],
+               "comments":{  
+                  "total_count":0,
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "toasts":{  
+                  "total_count":0,
+                  "count":0,
+                  "auth_toast":null,
+                  "items":[  
+
+                  ]
+               },
+               "media":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "source":{  
+                  "app_name":"Untappd for Android - (V2)",
+                  "app_website":"http:\/\/untpd.it\/androidapp"
+               },
+               "badges":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               }
+            },
+            {  
+               "checkin_id":294011564,
+               "created_at":"Thu, 31 Mar 2016 14:51:27 +0000",
+               "checkin_comment":"",
+               "rating_score":3.25,
+               "user":{  
+                  "uid":3219860,
+                  "user_name":"FerrisBueller85",
+                  "first_name":"Sean",
+                  "last_name":"M.",
+                  "location":"",
+                  "url":"",
+                  "is_supporter":0,
+                  "bio":"",
+                  "relationship":null,
+                  "user_avatar":"https:\/\/gravatar.com\/avatar\/efed0c42b242abe9d2d193c6073a9c1f?size=100&d=https%3A%2F%2Funtappd.akamaized.net%2Fsite%2Fassets%2Fimages%2Fdefault_avatar_v2.jpg%3Fv%3D1",
+                  "is_private":0,
+                  "contact":{  
+                     "facebook":"10208796063039358"
+                  }
+               },
+               "beer":{  
+                  "bid":867402,
+                  "beer_name":"Not Your Father's Root Beer (5.9%)",
+                  "beer_label":"https:\/\/untappd.akamaized.net\/site\/beer_logos\/beer-867402_a3046_sm.jpeg",
+                  "beer_abv":5.9,
+                  "beer_ibu":0,
+                  "beer_slug":"small-town-brewery-not-your-father-s-root-beer-5-9",
+                  "beer_description":"Not Your Fatherâ€™s Root Beer is a category-defining craft specialty ale brewed with unique spices. Brewer Tim Kovacâ€™s creativity and painstaking commitment to flavor complexity results in an unmistakable offering that masterfully blends hints of sarsaparilla, wintergreen, anise, and vanilla. A smooth and balanced Ale, NYFRB has broad appeal â€“ from discerning craft beer drinkers to non-beer drinkers.",
+                  "is_in_production":1,
+                  "beer_style_id":232,
+                  "beer_style":"Root Beer",
+                  "auth_rating":0,
+                  "wish_list":false,
+                  "beer_active":1
+               },
+               "brewery":{  
+                  "brewery_id":20144,
+                  "brewery_name":"Small Town Brewery",
+                  "brewery_slug":"small-town-brewery",
+                  "brewery_label":"https:\/\/untappd.akamaized.net\/site\/brewery_logos\/brewery-20144_c85a0.jpeg",
+                  "country_name":"United States",
+                  "contact":{  
+                     "twitter":"smalltownbrewer",
+                     "facebook":"https:\/\/www.facebook.com\/smalltownbrewery",
+                     "url":"http:\/\/smalltownbrewery.com\/"
+                  },
+                  "location":{  
+                     "brewery_city":"Wauconda",
+                     "brewery_state":"IL",
+                     "lat":42.278,
+                     "lng":-88.1515
+                  },
+                  "brewery_active":1
+               },
+               "venue":[  
+
+               ],
+               "comments":{  
+                  "total_count":0,
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "toasts":{  
+                  "total_count":0,
+                  "count":0,
+                  "auth_toast":null,
+                  "items":[  
+
+                  ]
+               },
+               "media":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "source":{  
+                  "app_name":"Untappd for iPhone - (V2)",
+                  "app_website":"http:\/\/untpd.it\/iphoneapp"
+               },
+               "badges":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               }
+            },
+            {  
+               "checkin_id":294011373,
+               "created_at":"Thu, 31 Mar 2016 14:48:40 +0000",
+               "checkin_comment":"",
+               "rating_score":4.5,
+               "user":{  
+                  "uid":2475367,
+                  "user_name":"Abbygal14",
+                  "first_name":"Abigail",
+                  "last_name":"O.",
+                  "location":"",
+                  "url":"",
+                  "is_supporter":0,
+                  "bio":"",
+                  "relationship":null,
+                  "user_avatar":"https:\/\/untappd.akamaized.net\/profile\/924f042848b9a87d49241d6ef1f49ff5_100x100.jpg",
+                  "is_private":0,
+                  "contact":{  
+                     "facebook":"10153424269369892"
+                  }
+               },
+               "beer":{  
+                  "bid":867402,
+                  "beer_name":"Not Your Father's Root Beer (5.9%)",
+                  "beer_label":"https:\/\/untappd.akamaized.net\/site\/beer_logos\/beer-867402_a3046_sm.jpeg",
+                  "beer_abv":5.9,
+                  "beer_ibu":0,
+                  "beer_slug":"small-town-brewery-not-your-father-s-root-beer-5-9",
+                  "beer_description":"Not Your Fatherâ€™s Root Beer is a category-defining craft specialty ale brewed with unique spices. Brewer Tim Kovacâ€™s creativity and painstaking commitment to flavor complexity results in an unmistakable offering that masterfully blends hints of sarsaparilla, wintergreen, anise, and vanilla. A smooth and balanced Ale, NYFRB has broad appeal â€“ from discerning craft beer drinkers to non-beer drinkers.",
+                  "is_in_production":1,
+                  "beer_style_id":232,
+                  "beer_style":"Root Beer",
+                  "auth_rating":0,
+                  "wish_list":false,
+                  "beer_active":1
+               },
+               "brewery":{  
+                  "brewery_id":20144,
+                  "brewery_name":"Small Town Brewery",
+                  "brewery_slug":"small-town-brewery",
+                  "brewery_label":"https:\/\/untappd.akamaized.net\/site\/brewery_logos\/brewery-20144_c85a0.jpeg",
+                  "country_name":"United States",
+                  "contact":{  
+                     "twitter":"smalltownbrewer",
+                     "facebook":"https:\/\/www.facebook.com\/smalltownbrewery",
+                     "url":"http:\/\/smalltownbrewery.com\/"
+                  },
+                  "location":{  
+                     "brewery_city":"Wauconda",
+                     "brewery_state":"IL",
+                     "lat":42.278,
+                     "lng":-88.1515
+                  },
+                  "brewery_active":1
+               },
+               "venue":{  
+                  "venue_id":364259,
+                  "venue_name":"Blue Rock Pizza &Tap",
+                  "venue_slug":"blue-rock-pizza-tap",
+                  "primary_category":"Food",
+                  "parent_category_id":"4d4b7105d754a06374d81259",
+                  "categories":{  
+                     "count":2,
+                     "items":[  
+                        {  
+                           "category_name":"Pizza Place",
+                           "category_id":"4bf58dd8d48988d1ca941735",
+                           "is_primary":true
+                        },
+                        {  
+                           "category_name":"Bar",
+                           "category_id":"4bf58dd8d48988d116941735",
+                           "is_primary":false
+                        }
+                     ]
+                  },
+                  "location":{  
+                     "venue_address":"1529 N Main St",
+                     "venue_city":"High Point",
+                     "venue_state":"NC",
+                     "venue_country":"United States",
+                     "lat":35.9745,
+                     "lng":-80.0185
+                  },
+                  "contact":{  
+                     "twitter":"",
+                     "venue_url":"http:\/\/www.bluerockpizza-hp.com"
+                  },
+                  "public_venue":true,
+                  "foursquare":{  
+                     "foursquare_id":"503553dbe4b0101af244afa0",
+                     "foursquare_url":"http:\/\/4sq.com\/O2PKQW"
+                  },
+                  "venue_icon":{  
+                     "sm":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/pizza_bg_64.png",
+                     "md":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/pizza_bg_88.png",
+                     "lg":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/pizza_bg_88.png"
+                  },
+                  "is_verified":false
+               },
+               "comments":{  
+                  "total_count":0,
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "toasts":{  
+                  "total_count":0,
+                  "count":0,
+                  "auth_toast":null,
+                  "items":[  
+
+                  ]
+               },
+               "media":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "source":{  
+                  "app_name":"Untappd for iPhone - (V2)",
+                  "app_website":"http:\/\/untpd.it\/iphoneapp"
+               },
+               "badges":{  
+                  "count":1,
+                  "items":[  
+                     {  
+                        "badge_id":3784,
+                        "user_badge_id":108629702,
+                        "badge_name":"Bar Explorer (Level 2)",
+                        "badge_description":"Your quest to quench your thirst leaves no stone unturned! That's at least 10 distinct venues!",
+                        "created_at":"Thu, 31 Mar 2016 14:48:40 +0000",
+                        "badge_image":{  
+                           "sm":"https:\/\/untappd.akamaized.net\/badges\/bdg_goingPlaces_sm.jpg",
+                           "md":"https:\/\/untappd.akamaized.net\/badges\/bdg_goingPlaces_md.jpg",
+                           "lg":"https:\/\/untappd.akamaized.net\/badges\/bdg_goingPlaces_lg.jpg"
+                        }
+                     }
+                  ]
+               }
+            },
+            {  
+               "checkin_id":294005736,
+               "created_at":"Thu, 31 Mar 2016 12:55:51 +0000",
+               "checkin_comment":"",
+               "rating_score":0.25,
+               "user":{  
+                  "uid":1976952,
+                  "user_name":"Chippmover",
+                  "first_name":"Mark",
+                  "last_name":"W.",
+                  "location":"Portage Lakes",
+                  "url":"",
+                  "is_supporter":0,
+                  "bio":"I like to drink beer.",
+                  "relationship":null,
+                  "user_avatar":"https:\/\/untappd.akamaized.net\/profile\/5baa9c187d211719c6d53bc5f8fdd15f_100x100.jpg",
+                  "is_private":0,
+                  "contact":[  
+
+                  ]
+               },
+               "beer":{  
+                  "bid":867402,
+                  "beer_name":"Not Your Father's Root Beer (5.9%)",
+                  "beer_label":"https:\/\/untappd.akamaized.net\/site\/beer_logos\/beer-867402_a3046_sm.jpeg",
+                  "beer_abv":5.9,
+                  "beer_ibu":0,
+                  "beer_slug":"small-town-brewery-not-your-father-s-root-beer-5-9",
+                  "beer_description":"Not Your Fatherâ€™s Root Beer is a category-defining craft specialty ale brewed with unique spices. Brewer Tim Kovacâ€™s creativity and painstaking commitment to flavor complexity results in an unmistakable offering that masterfully blends hints of sarsaparilla, wintergreen, anise, and vanilla. A smooth and balanced Ale, NYFRB has broad appeal â€“ from discerning craft beer drinkers to non-beer drinkers.",
+                  "is_in_production":1,
+                  "beer_style_id":232,
+                  "beer_style":"Root Beer",
+                  "auth_rating":0,
+                  "wish_list":false,
+                  "beer_active":1
+               },
+               "brewery":{  
+                  "brewery_id":20144,
+                  "brewery_name":"Small Town Brewery",
+                  "brewery_slug":"small-town-brewery",
+                  "brewery_label":"https:\/\/untappd.akamaized.net\/site\/brewery_logos\/brewery-20144_c85a0.jpeg",
+                  "country_name":"United States",
+                  "contact":{  
+                     "twitter":"smalltownbrewer",
+                     "facebook":"https:\/\/www.facebook.com\/smalltownbrewery",
+                     "url":"http:\/\/smalltownbrewery.com\/"
+                  },
+                  "location":{  
+                     "brewery_city":"Wauconda",
+                     "brewery_state":"IL",
+                     "lat":42.278,
+                     "lng":-88.1515
+                  },
+                  "brewery_active":1
+               },
+               "venue":[  
+
+               ],
+               "comments":{  
+                  "total_count":0,
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "toasts":{  
+                  "total_count":0,
+                  "count":0,
+                  "auth_toast":null,
+                  "items":[  
+
+                  ]
+               },
+               "media":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "source":{  
+                  "app_name":"Untappd for iPhone - (V2)",
+                  "app_website":"http:\/\/untpd.it\/iphoneapp"
+               },
+               "badges":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               }
+            },
+            {  
+               "checkin_id":294000768,
+               "created_at":"Thu, 31 Mar 2016 10:49:42 +0000",
+               "checkin_comment":"",
+               "rating_score":5,
+               "user":{  
+                  "uid":365833,
+                  "user_name":"kglymph",
+                  "first_name":"Kristen",
+                  "last_name":"G.",
+                  "location":"The Woodlands, Texas USA",
+                  "url":"",
+                  "is_supporter":0,
+                  "bio":"",
+                  "relationship":null,
+                  "user_avatar":"https:\/\/untappd.akamaized.net\/profile\/94197f7516000f49e66945bcde0d2023_100x100.jpg",
+                  "is_private":0,
+                  "contact":{  
+                     "facebook":"1164524803",
+                     "foursquare":"44607873",
+                     "twitter":"kristeng_95"
+                  }
+               },
+               "beer":{  
+                  "bid":867402,
+                  "beer_name":"Not Your Father's Root Beer (5.9%)",
+                  "beer_label":"https:\/\/untappd.akamaized.net\/site\/beer_logos\/beer-867402_a3046_sm.jpeg",
+                  "beer_abv":5.9,
+                  "beer_ibu":0,
+                  "beer_slug":"small-town-brewery-not-your-father-s-root-beer-5-9",
+                  "beer_description":"Not Your Fatherâ€™s Root Beer is a category-defining craft specialty ale brewed with unique spices. Brewer Tim Kovacâ€™s creativity and painstaking commitment to flavor complexity results in an unmistakable offering that masterfully blends hints of sarsaparilla, wintergreen, anise, and vanilla. A smooth and balanced Ale, NYFRB has broad appeal â€“ from discerning craft beer drinkers to non-beer drinkers.",
+                  "is_in_production":1,
+                  "beer_style_id":232,
+                  "beer_style":"Root Beer",
+                  "auth_rating":0,
+                  "wish_list":false,
+                  "beer_active":1
+               },
+               "brewery":{  
+                  "brewery_id":20144,
+                  "brewery_name":"Small Town Brewery",
+                  "brewery_slug":"small-town-brewery",
+                  "brewery_label":"https:\/\/untappd.akamaized.net\/site\/brewery_logos\/brewery-20144_c85a0.jpeg",
+                  "country_name":"United States",
+                  "contact":{  
+                     "twitter":"smalltownbrewer",
+                     "facebook":"https:\/\/www.facebook.com\/smalltownbrewery",
+                     "url":"http:\/\/smalltownbrewery.com\/"
+                  },
+                  "location":{  
+                     "brewery_city":"Wauconda",
+                     "brewery_state":"IL",
+                     "lat":42.278,
+                     "lng":-88.1515
+                  },
+                  "brewery_active":1
+               },
+               "venue":{  
+                  "venue_id":1274342,
+                  "venue_name":"Down The Street",
+                  "venue_slug":"down-street",
+                  "primary_category":"Nightlife Spot",
+                  "parent_category_id":"4d4b7105d754a06376d81259",
+                  "categories":{  
+                     "count":3,
+                     "items":[  
+                        {  
+                           "category_name":"Cocktail Bar",
+                           "category_id":"4bf58dd8d48988d11e941735",
+                           "is_primary":true
+                        },
+                        {  
+                           "category_name":"Beer Garden",
+                           "category_id":"4bf58dd8d48988d117941735",
+                           "is_primary":false
+                        },
+                        {  
+                           "category_name":"Gastropub",
+                           "category_id":"4bf58dd8d48988d155941735",
+                           "is_primary":false
+                        }
+                     ]
+                  },
+                  "location":{  
+                     "venue_address":"5746 Larkin St",
+                     "venue_city":"Houston",
+                     "venue_state":"TX",
+                     "venue_country":"United States",
+                     "lat":29.7791,
+                     "lng":-95.426
+                  },
+                  "contact":{  
+                     "twitter":"@downthestreettx",
+                     "venue_url":"http:\/\/www.downthestreethouston.com"
+                  },
+                  "public_venue":true,
+                  "foursquare":{  
+                     "foursquare_id":"52bf77fd11d2e7527fea8c9e",
+                     "foursquare_url":"http:\/\/4sq.com\/1cy39y3"
+                  },
+                  "venue_icon":{  
+                     "sm":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/cocktails_bg_64.png",
+                     "md":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/cocktails_bg_88.png",
+                     "lg":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/cocktails_bg_88.png"
+                  },
+                  "is_verified":false
+               },
+               "comments":{  
+                  "total_count":0,
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "toasts":{  
+                  "total_count":0,
+                  "count":0,
+                  "auth_toast":null,
+                  "items":[  
+
+                  ]
+               },
+               "media":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "source":{  
+                  "app_name":"Untappd for iPhone - (V2)",
+                  "app_website":"http:\/\/untpd.it\/iphoneapp"
+               },
+               "badges":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               }
+            },
+            {  
+               "checkin_id":293998765,
+               "created_at":"Thu, 31 Mar 2016 09:31:07 +0000",
+               "checkin_comment":"",
+               "rating_score":4,
+               "user":{  
+                  "uid":3150873,
+                  "user_name":"megsjaco",
+                  "first_name":"megan",
+                  "last_name":"j.",
+                  "location":"",
+                  "url":"",
+                  "is_supporter":0,
+                  "bio":"",
+                  "relationship":null,
+                  "user_avatar":"https:\/\/untappd.akamaized.net\/profile\/37b5567bfe480df955ae07409f59ca44_100x100.jpeg",
+                  "is_private":0,
+                  "contact":[  
+
+                  ]
+               },
+               "beer":{  
+                  "bid":867402,
+                  "beer_name":"Not Your Father's Root Beer (5.9%)",
+                  "beer_label":"https:\/\/untappd.akamaized.net\/site\/beer_logos\/beer-867402_a3046_sm.jpeg",
+                  "beer_abv":5.9,
+                  "beer_ibu":0,
+                  "beer_slug":"small-town-brewery-not-your-father-s-root-beer-5-9",
+                  "beer_description":"Not Your Fatherâ€™s Root Beer is a category-defining craft specialty ale brewed with unique spices. Brewer Tim Kovacâ€™s creativity and painstaking commitment to flavor complexity results in an unmistakable offering that masterfully blends hints of sarsaparilla, wintergreen, anise, and vanilla. A smooth and balanced Ale, NYFRB has broad appeal â€“ from discerning craft beer drinkers to non-beer drinkers.",
+                  "is_in_production":1,
+                  "beer_style_id":232,
+                  "beer_style":"Root Beer",
+                  "auth_rating":0,
+                  "wish_list":false,
+                  "beer_active":1
+               },
+               "brewery":{  
+                  "brewery_id":20144,
+                  "brewery_name":"Small Town Brewery",
+                  "brewery_slug":"small-town-brewery",
+                  "brewery_label":"https:\/\/untappd.akamaized.net\/site\/brewery_logos\/brewery-20144_c85a0.jpeg",
+                  "country_name":"United States",
+                  "contact":{  
+                     "twitter":"smalltownbrewer",
+                     "facebook":"https:\/\/www.facebook.com\/smalltownbrewery",
+                     "url":"http:\/\/smalltownbrewery.com\/"
+                  },
+                  "location":{  
+                     "brewery_city":"Wauconda",
+                     "brewery_state":"IL",
+                     "lat":42.278,
+                     "lng":-88.1515
+                  },
+                  "brewery_active":1
+               },
+               "venue":[  
+
+               ],
+               "comments":{  
+                  "total_count":0,
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "toasts":{  
+                  "total_count":0,
+                  "count":0,
+                  "auth_toast":null,
+                  "items":[  
+
+                  ]
+               },
+               "media":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "source":{  
+                  "app_name":"Untappd for iPhone - (V2)",
+                  "app_website":"http:\/\/untpd.it\/iphoneapp"
+               },
+               "badges":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               }
+            },
+            {  
+               "checkin_id":293994493,
+               "created_at":"Thu, 31 Mar 2016 06:52:38 +0000",
+               "checkin_comment":"",
+               "rating_score":3.75,
+               "user":{  
+                  "uid":3219468,
+                  "user_name":"zman554",
+                  "first_name":"zachary",
+                  "last_name":"k.",
+                  "location":"",
+                  "url":"",
+                  "is_supporter":0,
+                  "bio":"",
+                  "relationship":null,
+                  "user_avatar":"https:\/\/gravatar.com\/avatar\/8e2230ca603ba6c8d67927991aa94aad?size=100&d=https%3A%2F%2Funtappd.akamaized.net%2Fsite%2Fassets%2Fimages%2Fdefault_avatar_v2.jpg%3Fv%3D1",
+                  "is_private":0,
+                  "contact":[  
+
+                  ]
+               },
+               "beer":{  
+                  "bid":867402,
+                  "beer_name":"Not Your Father's Root Beer (5.9%)",
+                  "beer_label":"https:\/\/untappd.akamaized.net\/site\/beer_logos\/beer-867402_a3046_sm.jpeg",
+                  "beer_abv":5.9,
+                  "beer_ibu":0,
+                  "beer_slug":"small-town-brewery-not-your-father-s-root-beer-5-9",
+                  "beer_description":"Not Your Fatherâ€™s Root Beer is a category-defining craft specialty ale brewed with unique spices. Brewer Tim Kovacâ€™s creativity and painstaking commitment to flavor complexity results in an unmistakable offering that masterfully blends hints of sarsaparilla, wintergreen, anise, and vanilla. A smooth and balanced Ale, NYFRB has broad appeal â€“ from discerning craft beer drinkers to non-beer drinkers.",
+                  "is_in_production":1,
+                  "beer_style_id":232,
+                  "beer_style":"Root Beer",
+                  "auth_rating":0,
+                  "wish_list":false,
+                  "beer_active":1
+               },
+               "brewery":{  
+                  "brewery_id":20144,
+                  "brewery_name":"Small Town Brewery",
+                  "brewery_slug":"small-town-brewery",
+                  "brewery_label":"https:\/\/untappd.akamaized.net\/site\/brewery_logos\/brewery-20144_c85a0.jpeg",
+                  "country_name":"United States",
+                  "contact":{  
+                     "twitter":"smalltownbrewer",
+                     "facebook":"https:\/\/www.facebook.com\/smalltownbrewery",
+                     "url":"http:\/\/smalltownbrewery.com\/"
+                  },
+                  "location":{  
+                     "brewery_city":"Wauconda",
+                     "brewery_state":"IL",
+                     "lat":42.278,
+                     "lng":-88.1515
+                  },
+                  "brewery_active":1
+               },
+               "venue":[  
+
+               ],
+               "comments":{  
+                  "total_count":0,
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "toasts":{  
+                  "total_count":0,
+                  "count":0,
+                  "auth_toast":null,
+                  "items":[  
+
+                  ]
+               },
+               "media":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "source":{  
+                  "app_name":"Untappd for iPhone - (V2)",
+                  "app_website":"http:\/\/untpd.it\/iphoneapp"
+               },
+               "badges":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               }
+            },
+            {  
+               "checkin_id":293993020,
+               "created_at":"Thu, 31 Mar 2016 06:20:08 +0000",
+               "checkin_comment":"",
+               "rating_score":0.25,
+               "user":{  
+                  "uid":565621,
+                  "user_name":"ItGoesOn",
+                  "first_name":"Joseph",
+                  "last_name":"T.",
+                  "location":"",
+                  "url":"",
+                  "is_supporter":0,
+                  "bio":"",
+                  "relationship":null,
+                  "user_avatar":"https:\/\/untappd.akamaized.net\/profile\/9006371ab8eabe5767d7f68a40ee48c5_100x100.jpg",
+                  "is_private":0,
+                  "contact":{  
+                     "facebook":"537527257"
+                  }
+               },
+               "beer":{  
+                  "bid":867402,
+                  "beer_name":"Not Your Father's Root Beer (5.9%)",
+                  "beer_label":"https:\/\/untappd.akamaized.net\/site\/beer_logos\/beer-867402_a3046_sm.jpeg",
+                  "beer_abv":5.9,
+                  "beer_ibu":0,
+                  "beer_slug":"small-town-brewery-not-your-father-s-root-beer-5-9",
+                  "beer_description":"Not Your Fatherâ€™s Root Beer is a category-defining craft specialty ale brewed with unique spices. Brewer Tim Kovacâ€™s creativity and painstaking commitment to flavor complexity results in an unmistakable offering that masterfully blends hints of sarsaparilla, wintergreen, anise, and vanilla. A smooth and balanced Ale, NYFRB has broad appeal â€“ from discerning craft beer drinkers to non-beer drinkers.",
+                  "is_in_production":1,
+                  "beer_style_id":232,
+                  "beer_style":"Root Beer",
+                  "auth_rating":0,
+                  "wish_list":false,
+                  "beer_active":1
+               },
+               "brewery":{  
+                  "brewery_id":20144,
+                  "brewery_name":"Small Town Brewery",
+                  "brewery_slug":"small-town-brewery",
+                  "brewery_label":"https:\/\/untappd.akamaized.net\/site\/brewery_logos\/brewery-20144_c85a0.jpeg",
+                  "country_name":"United States",
+                  "contact":{  
+                     "twitter":"smalltownbrewer",
+                     "facebook":"https:\/\/www.facebook.com\/smalltownbrewery",
+                     "url":"http:\/\/smalltownbrewery.com\/"
+                  },
+                  "location":{  
+                     "brewery_city":"Wauconda",
+                     "brewery_state":"IL",
+                     "lat":42.278,
+                     "lng":-88.1515
+                  },
+                  "brewery_active":1
+               },
+               "venue":[  
+
+               ],
+               "comments":{  
+                  "total_count":0,
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "toasts":{  
+                  "total_count":0,
+                  "count":0,
+                  "auth_toast":null,
+                  "items":[  
+
+                  ]
+               },
+               "media":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "source":{  
+                  "app_name":"Untappd for iPhone - (V2)",
+                  "app_website":"http:\/\/untpd.it\/iphoneapp"
+               },
+               "badges":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               }
+            },
+            {  
+               "checkin_id":293990667,
+               "created_at":"Thu, 31 Mar 2016 05:40:29 +0000",
+               "checkin_comment":"Nice little spice. Not the best root beer I've had, but the only with an abv. Great with root beer barrel medibles and a gigantic burrito!!",
+               "rating_score":4,
+               "user":{  
+                  "uid":462451,
+                  "user_name":"scottharnell",
+                  "first_name":"Scott",
+                  "last_name":"H.",
+                  "location":"Portland, OR",
+                  "url":"",
+                  "is_supporter":0,
+                  "bio":"",
+                  "relationship":null,
+                  "user_avatar":"https:\/\/untappd.akamaized.net\/profile\/3e46441f20ec44635340b87dc993c4e8_thumb.jpg",
+                  "is_private":0,
+                  "contact":{  
+                     "facebook":"515505825",
+                     "twitter":"skipperdean",
+                     "foursquare":"53593665"
+                  }
+               },
+               "beer":{  
+                  "bid":867402,
+                  "beer_name":"Not Your Father's Root Beer (5.9%)",
+                  "beer_label":"https:\/\/untappd.akamaized.net\/site\/beer_logos\/beer-867402_a3046_sm.jpeg",
+                  "beer_abv":5.9,
+                  "beer_ibu":0,
+                  "beer_slug":"small-town-brewery-not-your-father-s-root-beer-5-9",
+                  "beer_description":"Not Your Fatherâ€™s Root Beer is a category-defining craft specialty ale brewed with unique spices. Brewer Tim Kovacâ€™s creativity and painstaking commitment to flavor complexity results in an unmistakable offering that masterfully blends hints of sarsaparilla, wintergreen, anise, and vanilla. A smooth and balanced Ale, NYFRB has broad appeal â€“ from discerning craft beer drinkers to non-beer drinkers.",
+                  "is_in_production":1,
+                  "beer_style_id":232,
+                  "beer_style":"Root Beer",
+                  "auth_rating":0,
+                  "wish_list":false,
+                  "beer_active":1
+               },
+               "brewery":{  
+                  "brewery_id":20144,
+                  "brewery_name":"Small Town Brewery",
+                  "brewery_slug":"small-town-brewery",
+                  "brewery_label":"https:\/\/untappd.akamaized.net\/site\/brewery_logos\/brewery-20144_c85a0.jpeg",
+                  "country_name":"United States",
+                  "contact":{  
+                     "twitter":"smalltownbrewer",
+                     "facebook":"https:\/\/www.facebook.com\/smalltownbrewery",
+                     "url":"http:\/\/smalltownbrewery.com\/"
+                  },
+                  "location":{  
+                     "brewery_city":"Wauconda",
+                     "brewery_state":"IL",
+                     "lat":42.278,
+                     "lng":-88.1515
+                  },
+                  "brewery_active":1
+               },
+               "venue":[  
+
+               ],
+               "comments":{  
+                  "total_count":0,
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "toasts":{  
+                  "total_count":0,
+                  "count":0,
+                  "auth_toast":null,
+                  "items":[  
+
+                  ]
+               },
+               "media":{  
+                  "count":1,
+                  "items":[  
+                     {  
+                        "photo_id":71347372,
+                        "photo":{  
+                           "photo_img_sm":"https:\/\/untappd.akamaized.net\/photo\/2016_03_31\/c05b046e029da01a9a6077b9d5adce9c_100x100.jpg",
+                           "photo_img_md":"https:\/\/untappd.akamaized.net\/photo\/2016_03_31\/c05b046e029da01a9a6077b9d5adce9c_320x320.jpg",
+                           "photo_img_lg":"https:\/\/untappd.akamaized.net\/photo\/2016_03_31\/c05b046e029da01a9a6077b9d5adce9c_640x640.jpg",
+                           "photo_img_og":"https:\/\/untappd.akamaized.net\/photo\/2016_03_31\/c05b046e029da01a9a6077b9d5adce9c_raw.jpg"
+                        }
+                     }
+                  ]
+               },
+               "source":{  
+                  "app_name":"Untappd for iPhone - (V2)",
+                  "app_website":"http:\/\/untpd.it\/iphoneapp"
+               },
+               "badges":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               }
+            },
+            {  
+               "checkin_id":293986929,
+               "created_at":"Thu, 31 Mar 2016 04:59:45 +0000",
+               "checkin_comment":"",
+               "rating_score":4.5,
+               "user":{  
+                  "uid":645280,
+                  "user_name":"Pudge21",
+                  "first_name":"Sean",
+                  "last_name":"C.",
+                  "location":"",
+                  "url":"",
+                  "is_supporter":0,
+                  "bio":"",
+                  "relationship":null,
+                  "user_avatar":"https:\/\/untappd.akamaized.net\/profile\/30a7513260e16bc32402d212467911c2_thumb.jpg",
+                  "is_private":0,
+                  "contact":[  
+
+                  ]
+               },
+               "beer":{  
+                  "bid":867402,
+                  "beer_name":"Not Your Father's Root Beer (5.9%)",
+                  "beer_label":"https:\/\/untappd.akamaized.net\/site\/beer_logos\/beer-867402_a3046_sm.jpeg",
+                  "beer_abv":5.9,
+                  "beer_ibu":0,
+                  "beer_slug":"small-town-brewery-not-your-father-s-root-beer-5-9",
+                  "beer_description":"Not Your Fatherâ€™s Root Beer is a category-defining craft specialty ale brewed with unique spices. Brewer Tim Kovacâ€™s creativity and painstaking commitment to flavor complexity results in an unmistakable offering that masterfully blends hints of sarsaparilla, wintergreen, anise, and vanilla. A smooth and balanced Ale, NYFRB has broad appeal â€“ from discerning craft beer drinkers to non-beer drinkers.",
+                  "is_in_production":1,
+                  "beer_style_id":232,
+                  "beer_style":"Root Beer",
+                  "auth_rating":0,
+                  "wish_list":false,
+                  "beer_active":1
+               },
+               "brewery":{  
+                  "brewery_id":20144,
+                  "brewery_name":"Small Town Brewery",
+                  "brewery_slug":"small-town-brewery",
+                  "brewery_label":"https:\/\/untappd.akamaized.net\/site\/brewery_logos\/brewery-20144_c85a0.jpeg",
+                  "country_name":"United States",
+                  "contact":{  
+                     "twitter":"smalltownbrewer",
+                     "facebook":"https:\/\/www.facebook.com\/smalltownbrewery",
+                     "url":"http:\/\/smalltownbrewery.com\/"
+                  },
+                  "location":{  
+                     "brewery_city":"Wauconda",
+                     "brewery_state":"IL",
+                     "lat":42.278,
+                     "lng":-88.1515
+                  },
+                  "brewery_active":1
+               },
+               "venue":[  
+
+               ],
+               "comments":{  
+                  "total_count":0,
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "toasts":{  
+                  "total_count":0,
+                  "count":0,
+                  "auth_toast":null,
+                  "items":[  
+
+                  ]
+               },
+               "media":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "source":{  
+                  "app_name":"Untappd for Android - (V2)",
+                  "app_website":"http:\/\/untpd.it\/androidapp"
+               },
+               "badges":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               }
+            },
+            {  
+               "checkin_id":293985443,
+               "created_at":"Thu, 31 Mar 2016 04:46:52 +0000",
+               "checkin_comment":"",
+               "rating_score":1.5,
+               "user":{  
+                  "uid":3183366,
+                  "user_name":"Messflower",
+                  "first_name":"Michael",
+                  "last_name":"M.",
+                  "location":"",
+                  "url":"",
+                  "is_supporter":0,
+                  "bio":"",
+                  "relationship":null,
+                  "user_avatar":"https:\/\/gravatar.com\/avatar\/f9b12aeada6c453cf96854a556ab7717?size=100&d=https%3A%2F%2Funtappd.akamaized.net%2Fsite%2Fassets%2Fimages%2Fdefault_avatar_v2.jpg%3Fv%3D1",
+                  "is_private":0,
+                  "contact":[  
+
+                  ]
+               },
+               "beer":{  
+                  "bid":867402,
+                  "beer_name":"Not Your Father's Root Beer (5.9%)",
+                  "beer_label":"https:\/\/untappd.akamaized.net\/site\/beer_logos\/beer-867402_a3046_sm.jpeg",
+                  "beer_abv":5.9,
+                  "beer_ibu":0,
+                  "beer_slug":"small-town-brewery-not-your-father-s-root-beer-5-9",
+                  "beer_description":"Not Your Fatherâ€™s Root Beer is a category-defining craft specialty ale brewed with unique spices. Brewer Tim Kovacâ€™s creativity and painstaking commitment to flavor complexity results in an unmistakable offering that masterfully blends hints of sarsaparilla, wintergreen, anise, and vanilla. A smooth and balanced Ale, NYFRB has broad appeal â€“ from discerning craft beer drinkers to non-beer drinkers.",
+                  "is_in_production":1,
+                  "beer_style_id":232,
+                  "beer_style":"Root Beer",
+                  "auth_rating":0,
+                  "wish_list":false,
+                  "beer_active":1
+               },
+               "brewery":{  
+                  "brewery_id":20144,
+                  "brewery_name":"Small Town Brewery",
+                  "brewery_slug":"small-town-brewery",
+                  "brewery_label":"https:\/\/untappd.akamaized.net\/site\/brewery_logos\/brewery-20144_c85a0.jpeg",
+                  "country_name":"United States",
+                  "contact":{  
+                     "twitter":"smalltownbrewer",
+                     "facebook":"https:\/\/www.facebook.com\/smalltownbrewery",
+                     "url":"http:\/\/smalltownbrewery.com\/"
+                  },
+                  "location":{  
+                     "brewery_city":"Wauconda",
+                     "brewery_state":"IL",
+                     "lat":42.278,
+                     "lng":-88.1515
+                  },
+                  "brewery_active":1
+               },
+               "venue":[  
+
+               ],
+               "comments":{  
+                  "total_count":0,
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "toasts":{  
+                  "total_count":1,
+                  "count":1,
+                  "auth_toast":null,
+                  "items":[  
+                     {  
+                        "uid":583280,
+                        "user":{  
+                           "uid":583280,
+                           "user_name":"Jweidner1",
+                           "first_name":"Josh",
+                           "last_name":"W.",
+                           "bio":"",
+                           "location":"The Weidner watering hole",
+                           "user_avatar":"https:\/\/untappd.akamaized.net\/profile\/10e6063d251409ac8e00df78522c465e_thumb.jpg",
+                           "user_link":"https:\/\/untappd.com\/user\/Jweidner1",
+                           "account_type":"user",
+                           "brewery_details":[  
+
+                           ]
+                        },
+                        "like_id":209382798,
+                        "like_owner":false,
+                        "created_at":"Thu, 31 Mar 2016 09:57:59 +0000"
+                     }
+                  ]
+               },
+               "media":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "source":{  
+                  "app_name":"Untappd for Android - (V2)",
+                  "app_website":"http:\/\/untpd.it\/androidapp"
+               },
+               "badges":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               }
+            },
+            {  
+               "checkin_id":293983360,
+               "created_at":"Thu, 31 Mar 2016 04:30:39 +0000",
+               "checkin_comment":"Fun, nice root beer, better than most I've tasted!",
+               "rating_score":3.25,
+               "user":{  
+                  "uid":779998,
+                  "user_name":"Bubies",
+                  "first_name":"Alexander",
+                  "last_name":"E.",
+                  "location":"",
+                  "url":"",
+                  "is_supporter":0,
+                  "bio":"",
+                  "relationship":null,
+                  "user_avatar":"https:\/\/untappd.akamaized.net\/profile\/ecc4dfc3e84f18965840ea1e24f1f0f1_100x100.jpg",
+                  "is_private":0,
+                  "contact":{  
+                     "facebook":"613675092"
+                  }
+               },
+               "beer":{  
+                  "bid":867402,
+                  "beer_name":"Not Your Father's Root Beer (5.9%)",
+                  "beer_label":"https:\/\/untappd.akamaized.net\/site\/beer_logos\/beer-867402_a3046_sm.jpeg",
+                  "beer_abv":5.9,
+                  "beer_ibu":0,
+                  "beer_slug":"small-town-brewery-not-your-father-s-root-beer-5-9",
+                  "beer_description":"Not Your Fatherâ€™s Root Beer is a category-defining craft specialty ale brewed with unique spices. Brewer Tim Kovacâ€™s creativity and painstaking commitment to flavor complexity results in an unmistakable offering that masterfully blends hints of sarsaparilla, wintergreen, anise, and vanilla. A smooth and balanced Ale, NYFRB has broad appeal â€“ from discerning craft beer drinkers to non-beer drinkers.",
+                  "is_in_production":1,
+                  "beer_style_id":232,
+                  "beer_style":"Root Beer",
+                  "auth_rating":0,
+                  "wish_list":false,
+                  "beer_active":1
+               },
+               "brewery":{  
+                  "brewery_id":20144,
+                  "brewery_name":"Small Town Brewery",
+                  "brewery_slug":"small-town-brewery",
+                  "brewery_label":"https:\/\/untappd.akamaized.net\/site\/brewery_logos\/brewery-20144_c85a0.jpeg",
+                  "country_name":"United States",
+                  "contact":{  
+                     "twitter":"smalltownbrewer",
+                     "facebook":"https:\/\/www.facebook.com\/smalltownbrewery",
+                     "url":"http:\/\/smalltownbrewery.com\/"
+                  },
+                  "location":{  
+                     "brewery_city":"Wauconda",
+                     "brewery_state":"IL",
+                     "lat":42.278,
+                     "lng":-88.1515
+                  },
+                  "brewery_active":1
+               },
+               "venue":{  
+                  "venue_id":18893,
+                  "venue_name":"Burgers and Brew",
+                  "venue_slug":"burgers-brew",
+                  "primary_category":"Food",
+                  "parent_category_id":"4d4b7105d754a06374d81259",
+                  "categories":{  
+                     "count":3,
+                     "items":[  
+                        {  
+                           "category_name":"Burger Joint",
+                           "category_id":"4bf58dd8d48988d16c941735",
+                           "is_primary":true
+                        },
+                        {  
+                           "category_name":"American Restaurant",
+                           "category_id":"4bf58dd8d48988d14e941735",
+                           "is_primary":false
+                        },
+                        {  
+                           "category_name":"Pub",
+                           "category_id":"4bf58dd8d48988d11b941735",
+                           "is_primary":false
+                        }
+                     ]
+                  },
+                  "location":{  
+                     "venue_address":"1409 R St #105",
+                     "venue_city":"Sacramento",
+                     "venue_state":"CA",
+                     "venue_country":"United States",
+                     "lat":38.5699,
+                     "lng":-121.491
+                  },
+                  "contact":{  
+                     "twitter":"@bandb_sac",
+                     "venue_url":"http:\/\/burgersbrew.com"
+                  },
+                  "public_venue":true,
+                  "foursquare":{  
+                     "foursquare_id":"4b196fb7f964a52052dd23e3",
+                     "foursquare_url":"http:\/\/4sq.com\/5J13xW"
+                  },
+                  "venue_icon":{  
+                     "sm":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/burger_bg_64.png",
+                     "md":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/burger_bg_88.png",
+                     "lg":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/burger_bg_88.png"
+                  },
+                  "is_verified":false
+               },
+               "comments":{  
+                  "total_count":0,
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "toasts":{  
+                  "total_count":0,
+                  "count":0,
+                  "auth_toast":null,
+                  "items":[  
+
+                  ]
+               },
+               "media":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               },
+               "source":{  
+                  "app_name":"Untappd for Android - (V2)",
+                  "app_website":"http:\/\/untpd.it\/androidapp"
+               },
+               "badges":{  
+                  "count":0,
+                  "items":[  
+
+                  ]
+               }
+            }
+         ]
+      }
+   }
+}

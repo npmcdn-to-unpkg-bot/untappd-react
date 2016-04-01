@@ -1,0 +1,1421 @@
+{
+  "meta": {
+    "code": 200,
+    "response_time": {
+      "time": 0.148,
+      "measure": "seconds"
+    },
+    "init_time": {
+      "time": 0.005,
+      "measure": "seconds"
+    }
+  },
+  "notifications": [],
+  "response": {
+    "message": "",
+    "brewery_id": false,
+    "search_type": "",
+    "type_id": 0,
+    "search_version": 3,
+    "found": 568,
+    "offset": 0,
+    "limit": 25,
+    "term": "Pliny",
+    "parsed_term": "pliny*",
+    "beers": {
+      "count": 4,
+      "items": [
+        {
+          "checkin_count": 366235,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 4499,
+            "beer_name": "Pliny the Elder",
+            "beer_label": "https://untappd.akamaized.net/site/beer_logos/beer-4499_dc04a_sm.jpeg",
+            "beer_abv": 8,
+            "beer_slug": "russian-river-brewing-company-pliny-the-elder",
+            "beer_ibu": 100,
+            "beer_description": "A true leader in the hop-wars of the west coast, Pliny the Elder hits you over the head with hoppy bitterness and manages to smooth the rough edges out enough to become an enjoyable brew.",
+            "created_at": "Sat, 21 Aug 2010 09:26:35 +0000",
+            "beer_style": "IPA - Imperial / Double",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 5143,
+            "brewery_name": "Russian River Brewing Company",
+            "brewery_slug": "russian-river-brewing-company",
+            "brewery_label": "https://untappd.akamaized.net/site/brewery_logos/brewery-russianRiver.jpg",
+            "country_name": "United States",
+            "contact": {
+              "twitter": "",
+              "facebook": "https://www.facebook.com/russianriverbrewing",
+              "instagram": "russianriverbrewing",
+              "url": "http://www.russianriverbrewing.com/"
+            },
+            "location": {
+              "brewery_city": "Santa Rosa",
+              "brewery_state": "CA",
+              "lat": 38.4418,
+              "lng": -122.712
+            },
+            "brewery_active": 1
+          }
+        },
+        {
+          "checkin_count": 3623495,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 4499,
+            "beer_name": "Pliny the Elder",
+            "beer_label": "https://untappd.akamaized.net/site/beer_logos/beer-4499_dc04a_sm.jpeg",
+            "beer_abv": 8,
+            "beer_slug": "russian-river-brewing-company-pliny-the-elder",
+            "beer_ibu": 100,
+            "beer_description": "A true leader in the hop-wars of the west coast, Pliny the Elder hits you over the head with hoppy bitterness and manages to smooth the rough edges out enough to become an enjoyable brew.",
+            "created_at": "Sat, 21 Aug 2010 09:26:35 +0000",
+            "beer_style": "IPA - Imperial / Double",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 5143,
+            "brewery_name": "Russian River Brewing Company",
+            "brewery_slug": "russian-river-brewing-company",
+            "brewery_label": "https://untappd.akamaized.net/site/brewery_logos/brewery-russianRiver.jpg",
+            "country_name": "United States",
+            "contact": {
+              "twitter": "",
+              "facebook": "https://www.facebook.com/russianriverbrewing",
+              "instagram": "russianriverbrewing",
+              "url": "http://www.russianriverbrewing.com/"
+            },
+            "location": {
+              "brewery_city": "Santa Rosa",
+              "brewery_state": "CA",
+              "lat": 38.4418,
+              "lng": -122.712
+            },
+            "brewery_active": 1
+          }
+        },
+        {
+          "checkin_count": 366234,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 4499,
+            "beer_name": "Pliny the Elder",
+            "beer_label": "https://untappd.akamaized.net/site/beer_logos/beer-4499_dc04a_sm.jpeg",
+            "beer_abv": 8,
+            "beer_slug": "russian-river-brewing-company-pliny-the-elder",
+            "beer_ibu": 100,
+            "beer_description": "A true leader in the hop-wars of the west coast, Pliny the Elder hits you over the head with hoppy bitterness and manages to smooth the rough edges out enough to become an enjoyable brew.",
+            "created_at": "Sat, 21 Aug 2010 09:26:35 +0000",
+            "beer_style": "IPA - Imperial / Double",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 5143,
+            "brewery_name": "Russian River Brewing Company",
+            "brewery_slug": "russian-river-brewing-company",
+            "brewery_label": "https://untappd.akamaized.net/site/brewery_logos/brewery-russianRiver.jpg",
+            "country_name": "United States",
+            "contact": {
+              "twitter": "",
+              "facebook": "https://www.facebook.com/russianriverbrewing",
+              "instagram": "russianriverbrewing",
+              "url": "http://www.russianriverbrewing.com/"
+            },
+            "location": {
+              "brewery_city": "Santa Rosa",
+              "brewery_state": "CA",
+              "lat": 38.4418,
+              "lng": -122.712
+            },
+            "brewery_active": 1
+          }
+        },
+        {
+          "checkin_count": 366134,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 4499,
+            "beer_name": "Pliny the Elder",
+            "beer_label": "https://untappd.akamaized.net/site/beer_logos/beer-4499_dc04a_sm.jpeg",
+            "beer_abv": 8,
+            "beer_slug": "russian-river-brewing-company-pliny-the-elder",
+            "beer_ibu": 100,
+            "beer_description": "A true leader in the hop-wars of the west coast, Pliny the Elder hits you over the head with hoppy bitterness and manages to smooth the rough edges out enough to become an enjoyable brew.",
+            "created_at": "Sat, 21 Aug 2010 09:26:35 +0000",
+            "beer_style": "IPA - Imperial / Double",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 5143,
+            "brewery_name": "Russian River Brewing Company",
+            "brewery_slug": "russian-river-brewing-company",
+            "brewery_label": "https://untappd.akamaized.net/site/brewery_logos/brewery-russianRiver.jpg",
+            "country_name": "United States",
+            "contact": {
+              "twitter": "",
+              "facebook": "https://www.facebook.com/russianriverbrewing",
+              "instagram": "russianriverbrewing",
+              "url": "http://www.russianriverbrewing.com/"
+            },
+            "location": {
+              "brewery_city": "Santa Rosa",
+              "brewery_state": "CA",
+              "lat": 38.4418,
+              "lng": -122.712
+            },
+            "brewery_active": 1
+          }
+        },
+        {
+          "checkin_count": 362395,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 4499,
+            "beer_name": "Pliny the Elder",
+            "beer_label": "https://untappd.akamaized.net/site/beer_logos/beer-4499_dc04a_sm.jpeg",
+            "beer_abv": 8,
+            "beer_slug": "russian-river-brewing-company-pliny-the-elder",
+            "beer_ibu": 100,
+            "beer_description": "A true leader in the hop-wars of the west coast, Pliny the Elder hits you over the head with hoppy bitterness and manages to smooth the rough edges out enough to become an enjoyable brew.",
+            "created_at": "Sat, 21 Aug 2010 09:26:35 +0000",
+            "beer_style": "IPA - Imperial / Double",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 5143,
+            "brewery_name": "Russian River Brewing Company",
+            "brewery_slug": "russian-river-brewing-company",
+            "brewery_label": "https://untappd.akamaized.net/site/brewery_logos/brewery-russianRiver.jpg",
+            "country_name": "United States",
+            "contact": {
+              "twitter": "",
+              "facebook": "https://www.facebook.com/russianriverbrewing",
+              "instagram": "russianriverbrewing",
+              "url": "http://www.russianriverbrewing.com/"
+            },
+            "location": {
+              "brewery_city": "Santa Rosa",
+              "brewery_state": "CA",
+              "lat": 38.4418,
+              "lng": -122.712
+            },
+            "brewery_active": 1
+          }
+        },
+        {
+          "checkin_count": 366145,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 4499,
+            "beer_name": "Pliny the Elder",
+            "beer_label": "https://untappd.akamaized.net/site/beer_logos/beer-4499_dc04a_sm.jpeg",
+            "beer_abv": 8,
+            "beer_slug": "russian-river-brewing-company-pliny-the-elder",
+            "beer_ibu": 100,
+            "beer_description": "A true leader in the hop-wars of the west coast, Pliny the Elder hits you over the head with hoppy bitterness and manages to smooth the rough edges out enough to become an enjoyable brew.",
+            "created_at": "Sat, 21 Aug 2010 09:26:35 +0000",
+            "beer_style": "IPA - Imperial / Double",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 5143,
+            "brewery_name": "Russian River Brewing Company",
+            "brewery_slug": "russian-river-brewing-company",
+            "brewery_label": "https://untappd.akamaized.net/site/brewery_logos/brewery-russianRiver.jpg",
+            "country_name": "United States",
+            "contact": {
+              "twitter": "",
+              "facebook": "https://www.facebook.com/russianriverbrewing",
+              "instagram": "russianriverbrewing",
+              "url": "http://www.russianriverbrewing.com/"
+            },
+            "location": {
+              "brewery_city": "Santa Rosa",
+              "brewery_state": "CA",
+              "lat": 38.4418,
+              "lng": -122.712
+            },
+            "brewery_active": 1
+          }
+        },
+        {
+          "checkin_count": 362195,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 4499,
+            "beer_name": "Pliny the Elder",
+            "beer_label": "https://untappd.akamaized.net/site/beer_logos/beer-4499_dc04a_sm.jpeg",
+            "beer_abv": 8,
+            "beer_slug": "russian-river-brewing-company-pliny-the-elder",
+            "beer_ibu": 100,
+            "beer_description": "A true leader in the hop-wars of the west coast, Pliny the Elder hits you over the head with hoppy bitterness and manages to smooth the rough edges out enough to become an enjoyable brew.",
+            "created_at": "Sat, 21 Aug 2010 09:26:35 +0000",
+            "beer_style": "IPA - Imperial / Double",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 5143,
+            "brewery_name": "Russian River Brewing Company",
+            "brewery_slug": "russian-river-brewing-company",
+            "brewery_label": "https://untappd.akamaized.net/site/brewery_logos/brewery-russianRiver.jpg",
+            "country_name": "United States",
+            "contact": {
+              "twitter": "",
+              "facebook": "https://www.facebook.com/russianriverbrewing",
+              "instagram": "russianriverbrewing",
+              "url": "http://www.russianriverbrewing.com/"
+            },
+            "location": {
+              "brewery_city": "Santa Rosa",
+              "brewery_state": "CA",
+              "lat": 38.4418,
+              "lng": -122.712
+            },
+            "brewery_active": 1
+          }
+        },
+
+
+
+
+        {
+          "checkin_count": 366195,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 4499,
+            "beer_name": "Pliny the Elder",
+            "beer_label": "https://untappd.akamaized.net/site/beer_logos/beer-4499_dc04a_sm.jpeg",
+            "beer_abv": 8,
+            "beer_slug": "russian-river-brewing-company-pliny-the-elder",
+            "beer_ibu": 100,
+            "beer_description": "A true leader in the hop-wars of the west coast, Pliny the Elder hits you over the head with hoppy bitterness and manages to smooth the rough edges out enough to become an enjoyable brew.",
+            "created_at": "Sat, 21 Aug 2010 09:26:35 +0000",
+            "beer_style": "IPA - Imperial / Double",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 5143,
+            "brewery_name": "Russian River Brewing Company",
+            "brewery_slug": "russian-river-brewing-company",
+            "brewery_label": "https://untappd.akamaized.net/site/brewery_logos/brewery-russianRiver.jpg",
+            "country_name": "United States",
+            "contact": {
+              "twitter": "",
+              "facebook": "https://www.facebook.com/russianriverbrewing",
+              "instagram": "russianriverbrewing",
+              "url": "http://www.russianriverbrewing.com/"
+            },
+            "location": {
+              "brewery_city": "Santa Rosa",
+              "brewery_state": "CA",
+              "lat": 38.4418,
+              "lng": -122.712
+            },
+            "brewery_active": 1
+          }
+        },
+        {
+          "checkin_count": 25156,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 28331,
+            "beer_name": "Pliny the Younger",
+            "beer_label": "https://untappd.akamaized.net/site/beer_logos/beer-_28331_sm.jpeg",
+            "beer_abv": 10.25,
+            "beer_slug": "russian-river-brewing-company-pliny-the-younger",
+            "beer_ibu": 90,
+            "beer_description": "Pliny the Younger was Pliny the Elder’s nephew, in the case of this beer, the \"Younger\" is a triple IPA. Pliny the Younger is hopped three times more than our standard IPA, and is dry hopped four different times.",
+            "created_at": "Thu, 03 Feb 2011 20:00:48 +0000",
+            "beer_style": "IPA - Triple",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 5143,
+            "brewery_name": "Russian River Brewing Company",
+            "brewery_slug": "russian-river-brewing-company",
+            "brewery_label": "https://untappd.akamaized.net/site/brewery_logos/brewery-russianRiver.jpg",
+            "country_name": "United States",
+            "contact": {
+              "twitter": "",
+              "facebook": "https://www.facebook.com/russianriverbrewing",
+              "instagram": "russianriverbrewing",
+              "url": "http://www.russianriverbrewing.com/"
+            },
+            "location": {
+              "brewery_city": "Santa Rosa",
+              "brewery_state": "CA",
+              "lat": 38.4418,
+              "lng": -122.712
+            },
+            "brewery_active": 1
+          }
+        },
+        {
+          "checkin_count": 5228,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 1411925,
+            "beer_name": "Pliny the Younger (2016)",
+            "beer_label": "https://untappd.akamaized.net/site/beer_logos/beer-_28331_sm.jpeg",
+            "beer_abv": 10.25,
+            "beer_slug": "russian-river-brewing-company-pliny-the-younger-2016",
+            "beer_ibu": 90,
+            "beer_description": "Pliny the Younger, the man, was Pliny the Elder’s nephew and adopted son. They lived nearly 2,000 years ago! Pliny the Elder is our Double IPA, so we felt it was fitting to name our Triple IPA after his son. It is almost a true Triple IPA with triple the amount of hops as a regular I.P.A. That said, it is extremely difficult, time and space consuming, and very expensive to make. And that is why we don’t make it more often! This beer is very full-bodied with tons of hop character in the nose and throughout. It is also deceptively well-balanced and smooth. ",
+            "created_at": "Sun, 31 Jan 2016 20:26:14 +0000",
+            "beer_style": "IPA - Triple",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 5143,
+            "brewery_name": "Russian River Brewing Company",
+            "brewery_slug": "russian-river-brewing-company",
+            "brewery_label": "https://untappd.akamaized.net/site/brewery_logos/brewery-russianRiver.jpg",
+            "country_name": "United States",
+            "contact": {
+              "twitter": "",
+              "facebook": "https://www.facebook.com/russianriverbrewing",
+              "instagram": "russianriverbrewing",
+              "url": "http://www.russianriverbrewing.com/"
+            },
+            "location": {
+              "brewery_city": "Santa Rosa",
+              "brewery_state": "CA",
+              "lat": 38.4418,
+              "lng": -122.712
+            },
+            "brewery_active": 1
+          }
+        },
+        {
+          "checkin_count": 28,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 666337,
+            "beer_name": "Pliny The Elderflower",
+            "beer_label": "https://untappd.akamaized.net/site/beer_logos/beer-666337_ee5f9_sm.jpeg",
+            "beer_abv": 3.8,
+            "beer_slug": "corinium-ales-pliny-the-elderflower",
+            "beer_ibu": 0,
+            "beer_description": "",
+            "created_at": "Thu, 01 May 2014 23:56:19 +0000",
+            "beer_style": "Golden Ale",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 66098,
+            "brewery_name": "Corinium Ales",
+            "brewery_slug": "corinium-ales",
+            "brewery_label": "https://untappd.akamaized.net/site/brewery_logos/brewery-66098_99175.jpeg",
+            "country_name": "England",
+            "contact": {
+              "twitter": "",
+              "facebook": "https://www.facebook.com/coriniumales",
+              "instagram": "",
+              "url": "http://www.coriniumales.co.uk"
+            },
+            "location": {
+              "brewery_city": "",
+              "brewery_state": "",
+              "lat": 0,
+              "lng": 0
+            },
+            "brewery_active": 1
+          }
+        }
+      ]
+    },
+    "homebrew": {
+      "count": 21,
+      "items": [
+        {
+          "checkin_count": 98,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 99191,
+            "beer_name": "Pliny the Coloradoan",
+            "beer_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-beer-default.png",
+            "beer_abv": 7,
+            "beer_slug": "cinq-chats-home-brewing-pliny-the-coloradoan",
+            "beer_ibu": 0,
+            "beer_description": "My take on Vinnie's masterpiece.",
+            "created_at": "Tue, 15 Nov 2011 18:49:24 +0000",
+            "beer_style": "IPA - Imperial / Double",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 18318,
+            "brewery_name": "Cinq Chats Home Brewing",
+            "brewery_slug": "cinq-chats-home-brewing",
+            "brewery_label": "https://untappd.akamaized.net/site/brewery_logos/brewery-CinqChatsHomeBrewing_18318.jpeg",
+            "country_name": "United States",
+            "contact": {
+              "twitter": "",
+              "facebook": "",
+              "instagram": "",
+              "url": "http://www.3d0g.net/brewing"
+            },
+            "location": {
+              "brewery_city": "Elizabeth",
+              "brewery_state": "CO",
+              "lat": 0,
+              "lng": 0
+            },
+            "brewery_active": 1
+          }
+        },
+        {
+          "checkin_count": 69,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 1047125,
+            "beer_name": "Pliny the Clone",
+            "beer_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-beer-default.png",
+            "beer_abv": 6.5,
+            "beer_slug": "homebrew-pliny-the-clone",
+            "beer_ibu": 95,
+            "beer_description": "Home brewed in SLC.  Tastes like magic and sex",
+            "created_at": "Mon, 13 Apr 2015 01:45:34 +0000",
+            "beer_style": "Imperial Pale Ale",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 1775,
+            "brewery_name": "Homebrew",
+            "brewery_slug": "homebrew",
+            "brewery_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-brewery-default.png",
+            "country_name": "Other",
+            "contact": {
+              "twitter": "",
+              "facebook": "",
+              "instagram": "",
+              "url": ""
+            },
+            "location": {
+              "brewery_city": "",
+              "brewery_state": "",
+              "lat": 43.0853,
+              "lng": -77.9422
+            },
+            "brewery_active": 1
+          }
+        },
+        {
+          "checkin_count": 50,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 816918,
+            "beer_name": "Father Pliny",
+            "beer_label": "https://untappd.akamaized.net/site/beer_logos/beer-816918_020bf_sm.jpeg",
+            "beer_abv": 8.3,
+            "beer_slug": "heatonk-brewing-co-father-pliny",
+            "beer_ibu": 99,
+            "beer_description": "Perfect Copy... Thanks Russian River",
+            "created_at": "Sat, 20 Sep 2014 01:10:43 +0000",
+            "beer_style": "IPA - Imperial / Double",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 6515,
+            "brewery_name": "Heatonk Brewing Co. ",
+            "brewery_slug": "heatonk-brewing-co",
+            "brewery_label": "https://untappd.akamaized.net/site/brewery_logos/brewery-HeatonkBrewingCo_6515.jpeg",
+            "country_name": "United States",
+            "contact": {
+              "twitter": "HeatonkBrewing",
+              "facebook": "https://www.facebook.com/pages/Heatonk-Brewing-Co/79153229330",
+              "instagram": "",
+              "url": ""
+            },
+            "location": {
+              "brewery_city": "Arlington Heights",
+              "brewery_state": "IL",
+              "lat": 42.0853,
+              "lng": -87.9777
+            },
+            "brewery_active": 1
+          }
+        },
+        {
+          "checkin_count": 46,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 273574,
+            "beer_name": "Pliny The Dumbass",
+            "beer_label": "https://untappd.akamaized.net/site/beer_logos/beer-_273574_44377f8a34b111a68bc093b72350.jpeg",
+            "beer_abv": 8.14,
+            "beer_slug": "red-dirt-brewery-pliny-the-dumbass",
+            "beer_ibu": 100,
+            "beer_description": "A Pliny the Elder clone in which I boiled the skin off of my leg/ankle/foot.",
+            "created_at": "Tue, 04 Dec 2012 16:11:13 +0000",
+            "beer_style": "IPA - Imperial / Double",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 16786,
+            "brewery_name": "Red Dirt Brewery",
+            "brewery_slug": "red-dirt-brewery",
+            "brewery_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-brewery-default.png",
+            "country_name": "United States",
+            "contact": {
+              "twitter": "",
+              "facebook": "",
+              "instagram": "",
+              "url": ""
+            },
+            "location": {
+              "brewery_city": "Fort Worth",
+              "brewery_state": "TX",
+              "lat": 0,
+              "lng": 0
+            },
+            "brewery_active": 1
+          }
+        },
+        {
+          "checkin_count": 43,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 448317,
+            "beer_name": "Pliny The Ignorant",
+            "beer_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-beer-default.png",
+            "beer_abv": 9.7,
+            "beer_slug": "meek-brewing-co-pliny-the-ignorant",
+            "beer_ibu": 0,
+            "beer_description": "Pliny the Younger clone attempt.",
+            "created_at": "Sat, 07 Sep 2013 07:16:48 +0000",
+            "beer_style": "IPA - Imperial / Double",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 17865,
+            "brewery_name": "Meek Brewing Co.",
+            "brewery_slug": "meek-brewing-co",
+            "brewery_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-brewery-default.png",
+            "country_name": "Canada",
+            "contact": {
+              "twitter": "meekbrewingco",
+              "facebook": "https://www.facebook.com/pages/Meek-Brewing-Co/225808144224376?ref=hl",
+              "instagram": "meekbrewingco",
+              "url": "http://meekbrewingco.blogspot.com"
+            },
+            "location": {
+              "brewery_city": "Fredericton",
+              "brewery_state": "NB",
+              "lat": 0,
+              "lng": 0
+            },
+            "brewery_active": 1
+          }
+        },
+        {
+          "checkin_count": 39,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 448061,
+            "beer_name": "Pliny The Toddler",
+            "beer_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-beer-default.png",
+            "beer_abv": 5,
+            "beer_slug": "two-if-by-sea-brewing-co-pliny-the-toddler",
+            "beer_ibu": 0,
+            "beer_description": "",
+            "created_at": "Fri, 06 Sep 2013 20:24:42 +0000",
+            "beer_style": "IPA - American",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 74984,
+            "brewery_name": "Two If By Sea Brewing Co.",
+            "brewery_slug": "two-if-by-sea-brewing-co",
+            "brewery_label": "https://untappd.akamaized.net/site/brewery_logos/brewery-twoifbyseabrewingco_74984.jpeg",
+            "country_name": "United States",
+            "contact": {
+              "twitter": "",
+              "facebook": "https://www.facebook.com/pages/Two-if-By-Sea-Brewing/325827650940",
+              "instagram": "",
+              "url": ""
+            },
+            "location": {
+              "brewery_city": "Wareham",
+              "brewery_state": "MA",
+              "lat": 0,
+              "lng": 0
+            },
+            "brewery_active": 1
+          }
+        },
+        {
+          "checkin_count": 39,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 228374,
+            "beer_name": "Pliny The HopHead",
+            "beer_label": "https://untappd.akamaized.net/site/beer_logos/beer-_228374_sm_c4892cfca0c95115df33fe8661a787.jpeg",
+            "beer_abv": 8.1,
+            "beer_slug": "beerbills-brewing-lounge-pliny-the-hophead",
+            "beer_ibu": 0,
+            "beer_description": "This started out as a Pliny The Elder clone, but then I thought maybe it needed even a little more Simcoe & Centennial in dry hop than normal, so I turned it up to 11.",
+            "created_at": "Tue, 11 Sep 2012 01:02:03 +0000",
+            "beer_style": "IPA - Imperial / Double",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 37010,
+            "brewery_name": "BeerBill's Brewing Lounge",
+            "brewery_slug": "beerbill-s-brewing-lounge",
+            "brewery_label": "https://untappd.akamaized.net/site/brewery_logos/brewery-beerbillsbrewinglounge_37010.jpeg",
+            "country_name": "United States",
+            "contact": {
+              "twitter": "",
+              "facebook": "",
+              "instagram": "",
+              "url": ""
+            },
+            "location": {
+              "brewery_city": "",
+              "brewery_state": "CA",
+              "lat": 0,
+              "lng": 0
+            },
+            "brewery_active": 1
+          }
+        },
+        {
+          "checkin_count": 36,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 227848,
+            "beer_name": "Pliny The Baby",
+            "beer_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-beer-default.png",
+            "beer_abv": 7.8,
+            "beer_slug": "beaches-beer-works-pliny-the-baby",
+            "beer_ibu": 0,
+            "beer_description": "Pliny clone",
+            "created_at": "Sun, 09 Sep 2012 13:51:37 +0000",
+            "beer_style": "IPA - American",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 34215,
+            "brewery_name": "Beaches Beer Works",
+            "brewery_slug": "beaches-beer-works",
+            "brewery_label": "https://untappd.akamaized.net/site/brewery_logos/brewery-beachesbeerworks_34215.jpeg",
+            "country_name": "United States",
+            "contact": {
+              "twitter": "",
+              "facebook": "",
+              "instagram": "",
+              "url": ""
+            },
+            "location": {
+              "brewery_city": "",
+              "brewery_state": "",
+              "lat": 0,
+              "lng": 0
+            },
+            "brewery_active": 1
+          }
+        },
+        {
+          "checkin_count": 35,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 419703,
+            "beer_name": "Pliny El Mayor",
+            "beer_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-beer-default.png",
+            "beer_abv": 8.4,
+            "beer_slug": "joshua-tree-brewing-pliny-el-mayor",
+            "beer_ibu": 0,
+            "beer_description": "Pliny The Elder clone",
+            "created_at": "Thu, 01 Aug 2013 17:35:11 +0000",
+            "beer_style": "IPA - Imperial / Double",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 74782,
+            "brewery_name": "Joshua Tree Brewing",
+            "brewery_slug": "joshua-tree-brewing",
+            "brewery_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-brewery-default.png",
+            "country_name": "United States",
+            "contact": {
+              "twitter": "",
+              "facebook": "",
+              "instagram": "",
+              "url": ""
+            },
+            "location": {
+              "brewery_city": "",
+              "brewery_state": "",
+              "lat": 0,
+              "lng": 0
+            },
+            "brewery_active": 1
+          }
+        },
+        {
+          "checkin_count": 34,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 514840,
+            "beer_name": "Pliny The Welder",
+            "beer_label": "https://untappd.akamaized.net/site/beer_logos/beer-_514840_sm_41097560081a3b3f6ee4c754279eb7.jpeg",
+            "beer_abv": 8.9,
+            "beer_slug": "abbaye-du-chat-noir-pliny-the-welder",
+            "beer_ibu": 200,
+            "beer_description": "",
+            "created_at": "Tue, 26 Nov 2013 09:35:58 +0000",
+            "beer_style": "IPA - Imperial / Double",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 93429,
+            "brewery_name": "Abbaye du Chat Noir",
+            "brewery_slug": "abbaye-du-chat-noir",
+            "brewery_label": "https://untappd.akamaized.net/site/brewery_logos/brewery-abbayeduchatnoir_93429.jpeg",
+            "country_name": "United States",
+            "contact": {
+              "twitter": "",
+              "facebook": "",
+              "instagram": "",
+              "url": ""
+            },
+            "location": {
+              "brewery_city": "",
+              "brewery_state": "",
+              "lat": 0,
+              "lng": 0
+            },
+            "brewery_active": 1
+          }
+        },
+        {
+          "checkin_count": 30,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 471840,
+            "beer_name": "Attack Of The Pliny",
+            "beer_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-beer-default.png",
+            "beer_abv": 8.5,
+            "beer_slug": "mebasement-brewery-attack-of-the-pliny",
+            "beer_ibu": 0,
+            "beer_description": "Pliny the Elder Clone. Collaboration with Nuuga Brew House. ",
+            "created_at": "Tue, 08 Oct 2013 08:31:05 +0000",
+            "beer_style": "IPA - Imperial / Double",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 72866,
+            "brewery_name": "MeBasement Brewery",
+            "brewery_slug": "mebasement-brewery",
+            "brewery_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-brewery-default.png",
+            "country_name": "Canada",
+            "contact": {
+              "twitter": "",
+              "facebook": "",
+              "instagram": "",
+              "url": ""
+            },
+            "location": {
+              "brewery_city": "",
+              "brewery_state": "",
+              "lat": 0,
+              "lng": 0
+            },
+            "brewery_active": 1
+          }
+        },
+        {
+          "checkin_count": 30,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 200217,
+            "beer_name": "Pliny The Toddler",
+            "beer_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-beer-default.png",
+            "beer_abv": 4.7,
+            "beer_slug": "big-brents-homebrew-pliny-the-toddler",
+            "beer_ibu": 0,
+            "beer_description": "Session IPA",
+            "created_at": "Sat, 14 Jul 2012 15:15:23 +0000",
+            "beer_style": "IPA - American",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 21951,
+            "brewery_name": "Big Brent's Homebrew",
+            "brewery_slug": "big-brent-s-homebrew",
+            "brewery_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-brewery-default.png",
+            "country_name": "United States",
+            "contact": {
+              "twitter": "",
+              "facebook": "",
+              "instagram": "",
+              "url": ""
+            },
+            "location": {
+              "brewery_city": "Santa Ana",
+              "brewery_state": "CA",
+              "lat": 0,
+              "lng": 0
+            },
+            "brewery_active": 1
+          }
+        },
+        {
+          "checkin_count": 27,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 36052,
+            "beer_name": "Pliny the Anhorn",
+            "beer_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-beer-default.png",
+            "beer_abv": 0,
+            "beer_slug": "anhorn-brewery-pliny-the-anhorn",
+            "beer_ibu": 0,
+            "beer_description": "",
+            "created_at": "Wed, 09 Mar 2011 20:10:07 +0000",
+            "beer_style": "IPA - American",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 7407,
+            "brewery_name": "Anhorn  Brewery",
+            "brewery_slug": "anhorn-brewery",
+            "brewery_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-brewery-default.png",
+            "country_name": "United States",
+            "contact": {
+              "twitter": "",
+              "facebook": "",
+              "instagram": "",
+              "url": ""
+            },
+            "location": {
+              "brewery_city": "",
+              "brewery_state": "",
+              "lat": 0,
+              "lng": 0
+            },
+            "brewery_active": 1
+          }
+        },
+        {
+          "checkin_count": 25,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 125886,
+            "beer_name": "Pliny The Toddler",
+            "beer_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-beer-default.png",
+            "beer_abv": 0,
+            "beer_slug": "kinnear-brewing-pliny-the-toddler",
+            "beer_ibu": 0,
+            "beer_description": "",
+            "created_at": "Sun, 29 Jan 2012 19:05:27 +0000",
+            "beer_style": "IPA - American",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 13845,
+            "brewery_name": "Kinnear Brewing",
+            "brewery_slug": "kinnear-brewing",
+            "brewery_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-brewery-default.png",
+            "country_name": "United States",
+            "contact": {
+              "twitter": "",
+              "facebook": "",
+              "instagram": "",
+              "url": ""
+            },
+            "location": {
+              "brewery_city": "Henderson",
+              "brewery_state": "NV",
+              "lat": 0,
+              "lng": 0
+            },
+            "brewery_active": 1
+          }
+        },
+        {
+          "checkin_count": 25,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 559197,
+            "beer_name": "Pliny The Doodler (elder Clone)",
+            "beer_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-beer-default.png",
+            "beer_abv": 8,
+            "beer_slug": "austin-homebrew-supply-pliny-the-doodler-elder-clone",
+            "beer_ibu": 0,
+            "beer_description": "",
+            "created_at": "Sat, 11 Jan 2014 20:02:51 +0000",
+            "beer_style": "IPA - Imperial / Double",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 3323,
+            "brewery_name": "Austin Homebrew Supply",
+            "brewery_slug": "austin-homebrew-supply",
+            "brewery_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-brewery-default.png",
+            "country_name": "United States",
+            "contact": {
+              "twitter": "",
+              "facebook": "https://www.facebook.com/austinhomebrew?ref=br_tf",
+              "instagram": "",
+              "url": "www.austinhomebrew.com"
+            },
+            "location": {
+              "brewery_city": "",
+              "brewery_state": "",
+              "lat": 0,
+              "lng": 0
+            },
+            "brewery_active": 1
+          }
+        },
+        {
+          "checkin_count": 24,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 288068,
+            "beer_name": "Pliny the Twin IPA",
+            "beer_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-beer-default.png",
+            "beer_abv": 9,
+            "beer_slug": "revolt-brewing-pliny-the-twin-ipa",
+            "beer_ibu": 100,
+            "beer_description": "",
+            "created_at": "Mon, 31 Dec 2012 16:24:22 +0000",
+            "beer_style": "Red Ale - Imperial / Double",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 26792,
+            "brewery_name": "Revolt Brewing",
+            "brewery_slug": "revolt-brewing",
+            "brewery_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-brewery-default.png",
+            "country_name": "United States",
+            "contact": {
+              "twitter": "",
+              "facebook": "",
+              "instagram": "",
+              "url": ""
+            },
+            "location": {
+              "brewery_city": "",
+              "brewery_state": "",
+              "lat": 0,
+              "lng": 0
+            },
+            "brewery_active": 1
+          }
+        },
+        {
+          "checkin_count": 23,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 675412,
+            "beer_name": "Pliny The CAHLder",
+            "beer_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-beer-default.png",
+            "beer_abv": 8.2,
+            "beer_slug": "cahl-pliny-the-cahlder",
+            "beer_ibu": 250,
+            "beer_description": "",
+            "created_at": "Sat, 10 May 2014 05:52:29 +0000",
+            "beer_style": "IPA - Imperial / Double",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 118897,
+            "brewery_name": "CAHL",
+            "brewery_slug": "cahl",
+            "brewery_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-brewery-default.png",
+            "country_name": "Norway",
+            "contact": {
+              "twitter": "",
+              "facebook": "",
+              "instagram": "",
+              "url": ""
+            },
+            "location": {
+              "brewery_city": "",
+              "brewery_state": "",
+              "lat": 0,
+              "lng": 0
+            },
+            "brewery_active": 1
+          }
+        },
+        {
+          "checkin_count": 23,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 452279,
+            "beer_name": "Pliny The Eldest",
+            "beer_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-beer-default.png",
+            "beer_abv": 6.6,
+            "beer_slug": "bj-brewing-pliny-the-eldest",
+            "beer_ibu": 0,
+            "beer_description": "",
+            "created_at": "Thu, 12 Sep 2013 21:44:47 +0000",
+            "beer_style": "IPA - American",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 80881,
+            "brewery_name": "BJ Brewing",
+            "brewery_slug": "bj-brewing",
+            "brewery_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-brewery-default.png",
+            "country_name": "United States",
+            "contact": {
+              "twitter": "",
+              "facebook": "",
+              "instagram": "",
+              "url": ""
+            },
+            "location": {
+              "brewery_city": "",
+              "brewery_state": "",
+              "lat": 0,
+              "lng": 0
+            },
+            "brewery_active": 1
+          }
+        },
+        {
+          "checkin_count": 22,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 623120,
+            "beer_name": "Pliny The Senior-ish",
+            "beer_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-beer-default.png",
+            "beer_abv": 6.7,
+            "beer_slug": "jlos-pliny-the-seniorish",
+            "beer_ibu": 0,
+            "beer_description": "",
+            "created_at": "Thu, 20 Mar 2014 21:39:36 +0000",
+            "beer_style": "IPA - American",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 12695,
+            "brewery_name": "JLo's",
+            "brewery_slug": "jlo-s",
+            "brewery_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-brewery-default.png",
+            "country_name": "Canada",
+            "contact": {
+              "twitter": "jlongland",
+              "facebook": "",
+              "instagram": "",
+              "url": "http://jlongland.wordpress.com/"
+            },
+            "location": {
+              "brewery_city": "Vancouver",
+              "brewery_state": "BC",
+              "lat": 0,
+              "lng": 0
+            },
+            "brewery_active": 1
+          }
+        },
+        {
+          "checkin_count": 22,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 768539,
+            "beer_name": "Plinys' Brother Dan",
+            "beer_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-beer-default.png",
+            "beer_abv": 7.09,
+            "beer_slug": "dc-brewery-plinys-brother-dan",
+            "beer_ibu": 100,
+            "beer_description": "",
+            "created_at": "Mon, 04 Aug 2014 12:41:34 +0000",
+            "beer_style": "IPA - American",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 137158,
+            "brewery_name": "DC Brewery",
+            "brewery_slug": "dc-brewery",
+            "brewery_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-brewery-default.png",
+            "country_name": "United States",
+            "contact": {
+              "twitter": "",
+              "facebook": "",
+              "instagram": "",
+              "url": ""
+            },
+            "location": {
+              "brewery_city": "",
+              "brewery_state": "",
+              "lat": 0,
+              "lng": 0
+            },
+            "brewery_active": 1
+          }
+        },
+        {
+          "checkin_count": 22,
+          "have_had": false,
+          "your_count": 0,
+          "beer": {
+            "bid": 370448,
+            "beer_name": "Pliny The Flander",
+            "beer_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-beer-default.png",
+            "beer_abv": 0,
+            "beer_slug": "nemesis-brewing-pliny-the-flander",
+            "beer_ibu": 0,
+            "beer_description": "",
+            "created_at": "Thu, 23 May 2013 16:53:29 +0000",
+            "beer_style": "IPA - Belgian",
+            "auth_rating": 0,
+            "wish_list": false,
+            "in_production": 1
+          },
+          "brewery": {
+            "brewery_id": 61072,
+            "brewery_name": "Nemesis Brewing",
+            "brewery_slug": "nemesis-brewing",
+            "brewery_label": "https://untappd.akamaized.net/site/brewery_logos/brewery-nemesisbrewing_61072.jpeg",
+            "country_name": "United States",
+            "contact": {
+              "twitter": "nemesisbrew",
+              "facebook": "",
+              "instagram": "",
+              "url": ""
+            },
+            "location": {
+              "brewery_city": "Merriam",
+              "brewery_state": "KS",
+              "lat": 0,
+              "lng": 0
+            },
+            "brewery_active": 1
+          }
+        }
+      ]
+    },
+    "breweries": {
+      "items": [
+        {
+          "brewery": {
+            "brewery_id": 121210,
+            "beer_count": 1,
+            "brewery_name": "Tiny Pliny (Homebrew)",
+            "brewery_slug": "tiny-pliny",
+            "brewery_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-brewery-default.png",
+            "country_name": "United States",
+            "location": {
+              "brewery_city": "",
+              "brewery_state": "",
+              "lat": 0,
+              "lng": 0
+            }
+          }
+        },
+        {
+          "brewery": {
+            "brewery_id": 141750,
+            "beer_count": 1,
+            "brewery_name": "Pliny East (Homebrew)",
+            "brewery_slug": "pliny-east",
+            "brewery_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-brewery-default.png",
+            "country_name": "United States",
+            "location": {
+              "brewery_city": "",
+              "brewery_state": "",
+              "lat": 0,
+              "lng": 0
+            }
+          }
+        },
+        {
+          "brewery": {
+            "brewery_id": 195958,
+            "beer_count": 2,
+            "brewery_name": "Pliny 243 (Homebrew)",
+            "brewery_slug": "pliny-243",
+            "brewery_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-brewery-default.png",
+            "country_name": "United States",
+            "location": {
+              "brewery_city": "",
+              "brewery_state": "",
+              "lat": 0,
+              "lng": 0
+            }
+          }
+        },
+        {
+          "brewery": {
+            "brewery_id": 184431,
+            "beer_count": 3,
+            "brewery_name": "Pliny The Water (Homebrew)",
+            "brewery_slug": "pliny-the-water",
+            "brewery_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-brewery-default.png",
+            "country_name": "United States",
+            "location": {
+              "brewery_city": "",
+              "brewery_state": "",
+              "lat": 0,
+              "lng": 0
+            }
+          }
+        },
+        {
+          "brewery": {
+            "brewery_id": 147552,
+            "beer_count": 1,
+            "brewery_name": "Pliny 1 (Homebrew)",
+            "brewery_slug": "pliny-1",
+            "brewery_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-brewery-default.png",
+            "country_name": "United States",
+            "location": {
+              "brewery_city": "",
+              "brewery_state": "",
+              "lat": 0,
+              "lng": 0
+            }
+          }
+        },
+        {
+          "brewery": {
+            "brewery_id": 75224,
+            "beer_count": 1,
+            "brewery_name": "Pliny Wet Only (Homebrew)",
+            "brewery_slug": "pliny-wet-only",
+            "brewery_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-brewery-default.png",
+            "country_name": "United States",
+            "location": {
+              "brewery_city": "",
+              "brewery_state": "",
+              "lat": 0,
+              "lng": 0
+            }
+          }
+        },
+        {
+          "brewery": {
+            "brewery_id": 112342,
+            "beer_count": 1,
+            "brewery_name": "Pliny The Buttmunch (Homebrew)",
+            "brewery_slug": "pliny-the-buttmunch",
+            "brewery_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-brewery-default.png",
+            "country_name": "United States",
+            "location": {
+              "brewery_city": "",
+              "brewery_state": "",
+              "lat": 0,
+              "lng": 0
+            }
+          }
+        },
+        {
+          "brewery": {
+            "brewery_id": 185953,
+            "beer_count": 1,
+            "brewery_name": "Pliny The 2nd Peach (Homebrew)",
+            "brewery_slug": "pliny-the-2nd-peach",
+            "brewery_label": "https://untappd.akamaized.net/site/assets/images/temp/badge-brewery-default.png",
+            "country_name": "United States",
+            "location": {
+              "brewery_city": "",
+              "brewery_state": "",
+              "lat": 0,
+              "lng": 0
+            }
+          }
+        }
+      ],
+      "count": 8
+    }
+  }
+}
