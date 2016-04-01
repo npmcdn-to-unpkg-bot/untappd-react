@@ -7,6 +7,8 @@ class ListItem extends React.Component {
 
         super(props);
 
+        this.state = { selected: false };
+        
     }
 
     componentDidMount() {
@@ -18,8 +20,19 @@ class ListItem extends React.Component {
     handleClick() {
 
         //AppActions.selectItem(this);
+        this.setState({ selected: !this.state.selected });
+        
 
-        console.log(this);
+    }
+
+    componentWillReceiveProps(nextProps) {
+
+        console.log("nextProps", nextPRops);
+
+    }
+
+    componentWillMount() {
+
 
     }
 
@@ -30,10 +43,14 @@ class ListItem extends React.Component {
         //console.log(this.props.item.payload.action);
         var _thisItemContent = this.props.item.payload.action.item;
 
+        console.log("ListItem Selected", this.state.selected);
+
+        var selected = this.state.selected ? 'checked' : '';
+
         return (
 
             <li name='list-item' onClick={this.handleClick.bind(this)}>
-              <input type="checkbox" id="cbox1" value="first_checkbox" />
+              <input type="checkbox" id="cbox1" value="first_checkbox" defaultChecked={selected} />
 
               <p>{_thisItemContent.checkin_comment}</p>
               <div>
@@ -50,4 +67,4 @@ class ListItem extends React.Component {
 
 };
 
-module.exports = ListItem;
+export default ListItem;

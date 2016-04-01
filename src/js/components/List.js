@@ -1,8 +1,6 @@
 import React from 'react';
-
 import AppActions from './../actions/AppActions';
 import AppStore from './../stores/AppStore';
-
 import ListItem from './ListItem';
 
 class List extends React.Component {
@@ -47,4 +45,4 @@ class List extends React.Component {
     }
 };
 
-module.exports = List;
+export default List;

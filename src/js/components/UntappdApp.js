@@ -1,10 +1,7 @@
 import React from 'react';
-
 import AppActions from './../actions/AppActions';
 import AppStore from './../stores/AppStore';
-
 import List from './List';
-
 import config from './../../../config.json';
 
 /**
