@@ -216,6 +216,7 @@ class UntappdApp extends React.Component {
                                       labelPosition="left"
                                       style={styles.toggle}
                                       onToggle={this.handleToggle}
+                                      defaultToggled={true}
                                     />
                                 }
                                 >
@@ -236,7 +237,6 @@ class UntappdApp extends React.Component {
                     <List className="list">
                         {items}
                     </List>
-                    <RaisedButton label="Block" style={buttonStyle} />
                 </div>
                 
         );

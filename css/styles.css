@@ -9,13 +9,13 @@ ul li{
 #main-container{
   margin: 40px auto;
   width:600px;
-  height:400px;
+  max-height:700px;
   
 }
 
 .list{
   
-  height:400px;
+  max-height:700px;
   overflow-y: scroll;
   border: 1px dashed #bdbdbd;
 
