@@ -7,6 +7,6 @@ var config = require('../../config.json');
 //var _apiURL = config['api_url'];
 
 ReactDOM.render(
-    <UntappdApp source={config['dummy-load']}/>,
+    <UntappdApp source={config['api_url']}/>,
     document.getElementById('main')
 );
