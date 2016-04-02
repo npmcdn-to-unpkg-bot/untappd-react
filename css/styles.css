@@ -1,5 +1,6 @@
-ul{
-
+body{
+  font-family: Roboto, sans-serif;
+  color:rgba(0, 0, 0, 0.87);
 }
 
 ul li{
@@ -17,7 +18,7 @@ ul li{
   
   max-height:700px;
   overflow-y: scroll;
-  border: 1px dashed #bdbdbd;
+  /*border: 1px dashed #bdbdbd;*/
 
 }
 
@@ -27,128 +28,36 @@ ul li{
 
 .list-item{
 
-    border-bottom: 1px dashed #bdbdbd;
+    /*border-bottom: 1px dashed #bdbdbd;*/
 
 }
 
-/** {
-  box-sizing: border-box;
+.list-item:hover {
+  background: #2980b9;
 }
-
-body {
-  padding: 20px;
-  background: #2c3e50;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-  font-weight: 300;
-}
-
-.filter-list {
-  margin: auto;
-  margin-top: 20px;
-  width: 450px;
-  background: #3498db;
-  border-radius: 5px;
-  border: 1px solid #196090;
-}
-.filter-list > input {
-  width: 100%;
-  display: block;
-  padding: 10px;
-  border-radius: 5px 5px 0px 0px;
-  border: 0;
-  font-size: 24px;
-}
-.filter-list > input:focus {
-  outline: none;
-}
-.filter-list ul {
-  margin: 0;
-  padding: 0;
-}
-.filter-list ul li {
-  list-style-type: none;
-  margin: 0;
-  color: white;
-  padding: 10px 20px;
-  border-top: 1px solid #196090;
-}
-.filter-list ul li:hover {
+.list-item .blocked {
   background: #2980b9;
 }
 
-.filter-list ul li input {
-    width: 20px;
-    float: left;
-    margin-right: 10px;
+.allow-title{
+
+  float:right;
+  padding-right:28px;
+  padding-top:12px;
 }
 
-.filter-list ul li span {
-  display: inline-block;
-  width: 70%;
-  float:left;
-  font-style: oblique;
-  font-size: 16px;
-  font-weight: 300;
-  color: white;
-  line-height: 23px;
-}
+.allow-title h3{
 
-.filter-list ul li img {
-  display: inline-block;
-  /*padding:10px;
-  margin-left: 30px;*/
-  width:80px;
-  height:80px;
-  float: right;
-  border: 1px solid white;
-}
-
-.filter-list ul li p{
-   margin-bottom: 0;
-}
-
-.filter-list ul li:after { 
-   content: "."; 
-   visibility: hidden; 
-   display: block; 
-   height: 0; 
-   clear: both;
-}
-
-.username-signature{
-
-    display: inline-block;
-    float: right;
-    padding-right: 30px;
-    padding-top: 20px;
+  margin:0!important;
+  font-weight: 100;
+  font-size: 11pt;
+  line-height: 36px;
 
 }
 
-/*** Animations ***/
-
-.example-enter {
-  opacity: 0.01;
+.allow-title:after {
+    content: '';
+    display: block;
+    clear: both;
 }
 
-.example-enter.example-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
-}
-
-.example-leave {
-  opacity: 1;
-}
-
-.example-leave.example-leave-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in;
-}
-
-.example-appear {
-  opacity: 0.01;
-}
-
-.example-appear.example-appear-active {
-  opacity: 1;
-  transition: opacity .5s ease-in;
-}*/

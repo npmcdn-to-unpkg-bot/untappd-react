@@ -34,7 +34,8 @@ function getAppState() {
 const Colors = {
   grey400:'#bdbdbd',
   lightBlack: 'rgba(0, 0, 0, 0.54)',
-  darkBlack: 'rgba(0, 0, 0, 0.87)'
+  darkBlack: 'rgba(0, 0, 0, 0.87)',
+  red400: '#ef5350'
 }
 
 const iconButtonElement = (
@@ -198,14 +199,15 @@ class UntappdApp extends React.Component {
         for (var key in allItems) {
             //console.log(allItems[key])
             let _itemContent = allItems[key].payload.action.item;
-            let _listItem =  <ListItem 
-                                className="list-item"
-                                key={_itemContent.checkin_id}
+            let _listItem = 
+                            <div key={_itemContent.checkin_id}>    
+                            <ListItem 
+                                className="list-item"                                
                                 leftAvatar={<Avatar src={(_itemContent.media.length > 0) ? _itemContent.user_avatar : "./images/default_avatar.jpg"} />}
-                                primaryText={<span style={{fontStyle: "italic"}}>{_itemContent.checkin_comment}</span>}
+                                primaryText={<span style={{fontStyle: "italic"}}>{'"'+_itemContent.checkin_comment+'"'}</span>}
                                 secondaryText={
-                                    <p>
-                                      {"- " + _itemContent.user_first_name + " " + _itemContent.user_last_name}
+                                    <p><span style={{color:Colors.red400}}>Rating: {_itemContent.rating_score}</span><br/>
+                                      <span style={{float:"right"}}>{"- " + _itemContent.user_first_name + " " + _itemContent.user_last_name}</span>
                                     </p>
                                 }
                                 secondaryTextLines={2}
@@ -220,7 +222,9 @@ class UntappdApp extends React.Component {
                                     />
                                 }
                                 >
-                            </ListItem>;
+                            </ListItem>
+                            <Divider inset={true} />
+                            </div>;
                             
 
             items.push(_listItem);
@@ -234,6 +238,7 @@ class UntappdApp extends React.Component {
                         <MenuItem value={1} primaryText="Not Your Fathers Rootbeer"/>
                         <MenuItem value={2} primaryText="Not Your Fathers Ginger Ale"/>
                     </DropDownMenu>
+                    <div className="allow-title"><h3>Allow?</h3><Divider /></div>
                     <List className="list">
                         {items}
                     </List>
