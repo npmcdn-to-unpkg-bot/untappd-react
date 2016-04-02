@@ -17,7 +17,7 @@ ul li{
   
   height:400px;
   overflow-y: scroll;
-  border: 1px solid #bdbdbd;
+  border: 1px dashed #bdbdbd;
 
 }
 
@@ -27,7 +27,7 @@ ul li{
 
 .list-item{
 
-    border-bottom: 1px solid #bdbdbd;
+    border-bottom: 1px dashed #bdbdbd;
 
 }
 
