@@ -5,7 +5,6 @@ import AppActions from './../actions/AppActions';
 import AppStore from './../stores/AppStore';
 /*import List from './List';*/
 import config from './../../../config.json';
-import RaisedButton from 'material-ui/lib/raised-button';
 
 import List from 'material-ui/lib/lists/list';
 import ListItem from 'material-ui/lib/lists/list-item';
@@ -16,8 +15,11 @@ import IconButton from 'material-ui/lib/icon-button';
 import MoreVertIcon from 'material-ui/lib/svg-icons/navigation/more-vert';
 import IconMenu from 'material-ui/lib/menus/icon-menu';
 import MenuItem from 'material-ui/lib/menus/menu-item';
+import DropDownMenu from 'material-ui/lib/DropDownMenu';
 import Toggle from 'material-ui/lib/toggle';
 import {SelectableContainerEnhance} from 'material-ui/lib/hoc/selectable-enhance';
+
+import RaisedButton from 'material-ui/lib/raised-button';
 //let SelectableList = SelectableContainerEnhance(List);
 
 /**
@@ -62,6 +64,10 @@ const styles = {
   },
 };
 
+const buttonStyle = {
+  margin: 12,
+};
+
 class UntappdApp extends React.Component {
 
     constructor(props) {
@@ -72,7 +78,8 @@ class UntappdApp extends React.Component {
 
         this.state = {
             allItems: getAppState().allItems,
-            selectedIndex: 1
+            selectedIndex: 1, 
+            dropdown: 2
         };
 
         //this._onChange = this._onChange.bind(this);
@@ -176,7 +183,14 @@ class UntappdApp extends React.Component {
         })
     }
 
+    handleDropdownChange(event, index, value){
+        this.setState({dropdown:value});
+    }
+
     render() {
+
+        
+
         //console.log(this.state.allItems);
         var allItems = this.state.allItems;
         var items = [];
@@ -187,7 +201,7 @@ class UntappdApp extends React.Component {
             let _listItem =  <ListItem 
                                 className="list-item"
                                 key={_itemContent.checkin_id}
-                                leftAvatar={<Avatar src={(_itemContent.media.length > 0) ? _itemContent.user_avatar : "./images/no-img.jpg"} />}
+                                leftAvatar={<Avatar src={(_itemContent.media.length > 0) ? _itemContent.user_avatar : "./images/default_avatar.jpg"} />}
                                 primaryText={<span style={{fontStyle: "italic"}}>{_itemContent.checkin_comment}</span>}
                                 secondaryText={
                                     <p>
@@ -213,9 +227,18 @@ class UntappdApp extends React.Component {
 
         //console.log(items);
         return (
-                <List className="list">
-                    {items}
-                </List>
+                
+                <div id="main-container">
+                    <DropDownMenu value={this.state.dropdown} onChange={this.handleDropdownChange.bind(this)}>
+                        <MenuItem value={1} primaryText="Not Your Fathers Rootbeer"/>
+                        <MenuItem value={2} primaryText="Not Your Fathers Ginger Ale"/>
+                    </DropDownMenu>
+                    <List className="list">
+                        {items}
+                    </List>
+                    <RaisedButton label="Block" style={buttonStyle} />
+                </div>
+                
         );
     }
 }
