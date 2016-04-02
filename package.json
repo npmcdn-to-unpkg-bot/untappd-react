@@ -1,5 +1,5 @@
 {
-  "name":"testing",
+  "name": "testing",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -24,9 +24,11 @@
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-util": "^3.0.7",
+    "material-ui": "^0.15.0-alpha.2",
     "object-assign": "^4.0.1",
     "react": "^0.14.8",
     "react-dom": "^0.14.8",
+    "react-tap-event-plugin": "^0.2.2",
     "reactify": "^1.1.1",
     "utils-merge": "^1.0.0",
     "vinyl-buffer": "^1.0.0",

@@ -1,4 +1,24 @@
-* {
+ul li{
+  list-style: none;
+}
+
+.container{
+
+  width:600px;
+
+}
+
+.vertIcon{
+  margin-top: 100px;
+}
+
+.list-item{
+
+    border-bottom: 1px solid #bdbdbd;
+
+}
+
+/** {
   box-sizing: border-box;
 }
 
@@ -118,4 +138,4 @@ body {
 .example-appear.example-appear-active {
   opacity: 1;
   transition: opacity .5s ease-in;
-}
+}*/
