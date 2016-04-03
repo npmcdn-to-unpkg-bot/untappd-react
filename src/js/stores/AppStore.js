@@ -18,6 +18,12 @@ function create(action) {
     //console.log(action.action.item.checkin_id);
     var id = action.action.item.checkin_id;
     console.log('AppStore', id);
+
+    if(_items[id]){
+        console.log("item already exists in Store", _items[id]);
+        return;
+    }
+
     _items[id] = {
         id: id,
         payload: action,

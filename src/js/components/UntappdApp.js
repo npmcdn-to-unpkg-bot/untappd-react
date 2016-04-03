@@ -80,6 +80,16 @@ const buttonStyle = {
   margin: 12,
 };
 
+const blockedStyles = {
+
+    opacity: .6
+
+}
+
+const nextButtonStyle = {
+  margin: 12,
+};
+
 class UntappdApp extends React.Component {
 
     constructor(props) {
@@ -91,7 +101,8 @@ class UntappdApp extends React.Component {
         this.state = {
             allItems: getAppState().allItems,
             selectedIndex: 1, 
-            dropdown: 2
+            dropdown: 2, 
+            nextPaginationURL:""
         };
 
         //this._onChange = this._onChange.bind(this);
@@ -167,7 +178,8 @@ class UntappdApp extends React.Component {
             }
 
             this.setState({
-                allItems: getAppState().allItems
+                allItems: getAppState().allItems,
+                nextPaginationURL: result.response.pagination.next_url
             });
 
         }.bind(this));
@@ -206,6 +218,67 @@ class UntappdApp extends React.Component {
         this.setState({dropdown:value});
     }
 
+    handleNextButton(){
+        console.log("clicked next button");
+        console.log(this.state.nextPaginationURL);
+
+         this.serverRequest = $.get(this.state.nextPaginationURL + "&client_id=D61A064777B99988FC78379C3DD54B4DC6D06156&client_secret=DD849EE330F363C397616097FF4487CBE7DFFCCA", function(result) {
+
+            var _beerObjArr = [];
+            var _beerNamesArr = [];
+
+            var _apiObj = "checkins";
+
+            console.log(result);
+
+            for (var i = 0; i < result.response[_apiObj].items.length; i++) {
+
+                if (result.response[_apiObj].items[i].checkin_comment != "") {
+
+                    var _beerObj = {
+                        checkin_id: result.response[_apiObj].items[i].checkin_id,
+                        created_at: result.response[_apiObj].items[i].created_at,
+                        checkin_comment: result.response[_apiObj].items[i].checkin_comment,
+                        rating_score: result.response[_apiObj].items[i].rating_score,
+                        rawBeerObj: result.response[_apiObj].items[i],
+                        beer_name: result.response[_apiObj].items[i].beer.beer_name,
+                        beer_label: result.response[_apiObj].items[i].beer.beer_label,
+                        beer_description: result.response[_apiObj].items[i].beer.beer_description,
+                        bid: result.response[_apiObj].items[i].beer.bid,
+                        brewery_name: result.response[_apiObj].items[i].brewery.brewery_name,
+                        brewery_label: result.response[_apiObj].items[i].brewery.brewery_label,
+                        brewery_id: result.response[_apiObj].items[i].brewery.brewery_id,
+                        media: result.response[_apiObj].items[i].media.items,
+                        user_first_name: result.response[_apiObj].items[i].user.first_name,
+                        user_last_name: result.response[_apiObj].items[i].user.last_name,
+                        user_avatar: result.response[_apiObj].items[i].user.user_avatar,
+                        user_name: result.response[_apiObj].items[i].user.user_name,
+                        venue: result.response[_apiObj].items[i].venue
+                    }
+
+                    _beerObjArr.push(_beerObj);
+
+                    AppActions.addItem(_beerObj);
+
+                    //console.log(result.response[_apiObj].items[i].media.items)
+
+                    _beerNamesArr.push(result.response[_apiObj].items[i].checkin_comment);
+
+                }
+
+            }
+
+            console.log("HERE!!!!!!!");
+            console.log(result.response.pagination.next_url);
+
+            this.setState({
+                allItems: getAppState().allItems,
+                nextPaginationURL: result.response.pagination.next_url
+            });
+
+        }.bind(this));
+    }
+
     render() {
 
         //console.log('Hi there', );
@@ -222,17 +295,17 @@ class UntappdApp extends React.Component {
                             <div key={_itemContent.checkin_id}>    
                             <ListItem style={{background: (this.state.allItems[key]['blocked'] == true) ? '#f1f1f1' : ''}}
                                 className="list-item"                                
-                                leftAvatar={<Avatar src={(_itemContent.media.length > 0) ? _itemContent.user_avatar : "./images/default_avatar.jpg"} />}
-                                primaryText={<span style={{fontStyle: "italic"}}>{'"'+_itemContent.checkin_comment+'"'}</span>}
+                                leftAvatar={<Avatar style={{opacity: (this.state.allItems[key]['blocked'] == true) ? blockedStyles.opacity : 1}} src={(_itemContent.media.length > 0) ? _itemContent.user_avatar : "./images/default_avatar.jpg"} />}
+                                primaryText={<span style={{fontStyle: "italic", opacity: (this.state.allItems[key]['blocked'] == true) ? blockedStyles.opacity : 1}}>{'"'+_itemContent.checkin_comment+'"'}</span>}
                                 secondaryText={
-                                    <p><span style={{color:Colors.red400}}>Rating: {_itemContent.rating_score}</span><br/>
+                                    <p style={{opacity: (this.state.allItems[key]['blocked'] == true) ? blockedStyles.opacity : 1}} ><span style={{color:Colors.red400}}>Rating: {_itemContent.rating_score}</span><br/>
                                       <span style={{float:"right"}}>{"- " + _itemContent.user_first_name + " " + _itemContent.user_last_name}</span>
                                     </p>
                                 }
                                 secondaryTextLines={2}
                             
                                 rightToggle={
-                                    <Toggle
+                                    <Toggle 
                                       label=""
                                       labelPosition="left"
                                       style={styles.toggle}
@@ -312,6 +385,10 @@ class UntappdApp extends React.Component {
                     <List className="list">
                         {items}
                     </List>
+                    <RaisedButton 
+                        label="Next" 
+                        style={nextButtonStyle} 
+                        onMouseDown={this.handleNextButton.bind(this)}/>
                 </div>
                 
         );
