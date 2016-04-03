@@ -17,9 +17,18 @@ import IconMenu from 'material-ui/lib/menus/icon-menu';
 import MenuItem from 'material-ui/lib/menus/menu-item';
 import DropDownMenu from 'material-ui/lib/DropDownMenu';
 import Toggle from 'material-ui/lib/toggle';
+import ActionInfo from 'material-ui/lib/svg-icons/action/info';
+
 import {SelectableContainerEnhance} from 'material-ui/lib/hoc/selectable-enhance';
 
 import RaisedButton from 'material-ui/lib/raised-button';
+
+import Card from 'material-ui/lib/card/card';
+import CardActions from 'material-ui/lib/card/card-actions';
+import CardHeader from 'material-ui/lib/card/card-header';
+import FlatButton from 'material-ui/lib/flat-button';
+import CardText from 'material-ui/lib/card/card-text';
+
 //let SelectableList = SelectableContainerEnhance(List);
 
 /**
@@ -135,7 +144,8 @@ class UntappdApp extends React.Component {
                         media: result.response[_apiObj].items[i].media.items,
                         user_first_name: result.response[_apiObj].items[i].user.first_name,
                         user_last_name: result.response[_apiObj].items[i].user.last_name,
-                        user_avatar: result.response[_apiObj].items[i].user.user_avatar
+                        user_avatar: result.response[_apiObj].items[i].user.user_avatar,
+                        user_name: result.response[_apiObj].items[i].user.user_name
                     }
 
                     _beerObjArr.push(_beerObj);
@@ -199,6 +209,7 @@ class UntappdApp extends React.Component {
         for (var key in allItems) {
             //console.log(allItems[key])
             let _itemContent = allItems[key].payload.action.item;
+
             let _listItem = 
                             <div key={_itemContent.checkin_id}>    
                             <ListItem 
@@ -225,7 +236,29 @@ class UntappdApp extends React.Component {
                             </ListItem>
                             <Divider inset={true} />
                             </div>;
-                            
+            /*let _cardItem = <Card>
+                                <CardHeader
+                                  title={<span style={{fontStyle: "italic"}}>{'"'+_itemContent.checkin_comment+'"'}</span>}
+                                  subtitle={
+                                    <p><span style={{color:Colors.red400}}>Rating: {_itemContent.rating_score}</span><br/>
+                                      <span>{"- " + _itemContent.user_first_name + " " + _itemContent.user_last_name + " ("+_itemContent.user_name+")"}</span>
+                                    </p>
+                                }
+                                  actAsExpander={true}
+                                  showExpandableButton={true}
+                                  avatar={<Avatar src={(_itemContent.media.length > 0) ? _itemContent.user_avatar : "./images/default_avatar.jpg"} />}
+                                />
+                                <CardText expandable={true}>
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                  Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
+                                  Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
+                                  Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
+                                </CardText>
+                                <CardActions expandable={true}>
+                                  <FlatButton label="Action1"/>
+                                  <FlatButton label="Action2"/>
+                                </CardActions>
+                            </Card>*/
 
             items.push(_listItem);
         }

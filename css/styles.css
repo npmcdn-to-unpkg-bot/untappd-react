@@ -18,6 +18,7 @@ ul li{
   
   max-height:700px;
   overflow-y: scroll;
+  overflow-x: hidden; 
   /*border: 1px dashed #bdbdbd;*/
 
 }
