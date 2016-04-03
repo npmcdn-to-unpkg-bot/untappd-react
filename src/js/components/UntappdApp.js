@@ -38,6 +38,7 @@ import API from './../controller/api';
 let nyfrbURL ='https://api.untappd.com/v4/beer/checkins/867402';
 let nyfgaURL ='https://api.untappd.com/v4/beer/checkins/1297475';
 let secrets = 'client_id=D61A064777B99988FC78379C3DD54B4DC6D06156&client_secret=DD849EE330F363C397616097FF4487CBE7DFFCCA';
+let _arrOfNextPaginationURLs = [nyfrbURL+'?'+secrets, nyfgaURL+'?'+secrets];
 
 //let SelectableList = SelectableContainerEnhance(List);
 
@@ -149,8 +150,6 @@ class UntappdApp extends React.Component {
 
         var _apiObj = "checkins";
 
-        let _arrOfNextPaginationURLs = [nyfrbURL+'?'+secrets, nyfgaURL+'?'+secrets];
-
         // Use it!
         API.getURL(_arrOfNextPaginationURLs[0]).then(function(result) {
 
@@ -213,7 +212,7 @@ class UntappdApp extends React.Component {
                 }
 
             }
-            
+
             _arrOfNextPaginationURLs.push(result.response.pagination.next_url+'&'+secrets);
             _arrOfNextPaginationURLs.shift();
 
