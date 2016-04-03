@@ -35,8 +35,9 @@ import Moment from 'moment';
 
 import API from './../controller/api';
 
-let nyfrbURL ='https://api.untappd.com/v4/beer/checkins/867402?client_id=D61A064777B99988FC78379C3DD54B4DC6D06156&client_secret=DD849EE330F363C397616097FF4487CBE7DFFCCA';
-let nyfgaURL ='https://api.untappd.com/v4/beer/checkins/1297475?client_id=D61A064777B99988FC78379C3DD54B4DC6D06156&client_secret=DD849EE330F363C397616097FF4487CBE7DFFCCA';
+let nyfrbURL ='https://api.untappd.com/v4/beer/checkins/867402';
+let nyfgaURL ='https://api.untappd.com/v4/beer/checkins/1297475';
+let secrets = 'client_id=D61A064777B99988FC78379C3DD54B4DC6D06156&client_secret=DD849EE330F363C397616097FF4487CBE7DFFCCA';
 
 //let SelectableList = SelectableContainerEnhance(List);
 
@@ -136,24 +137,36 @@ class UntappdApp extends React.Component {
 
         AppStore.addChangeListener(this._onChange.bind(this));
 
+        this.grabItemsFromAPI();
+
+    }
+
+    grabItemsFromAPI(){
+
         //console.log("componentDidMount");
         var _beerObjArr = [];
         var _beerNamesArr = [];
 
         var _apiObj = "checkins";
 
-        // Use it!
-        API.getURL(nyfrbURL).then(function(result) {
+        let _arrOfNextPaginationURLs = [nyfrbURL+'?'+secrets, nyfgaURL+'?'+secrets];
 
+        // Use it!
+        API.getURL(_arrOfNextPaginationURLs[0]).then(function(result) {
+
+            
             //console.log("Success!", result);
             parseResultsAndStore(result);
+            /*_arrOfNextPaginationURLs.shift();*/
             
         }, function(error) {
             console.error("Failed!", error);
 
-        }).then(API.getURL(nyfgaURL).then(function(result) {
+        }).then(API.getURL(_arrOfNextPaginationURLs[1]).then(function(result) {
 
             parseResultsAndStore(result);
+            /*_arrOfNextPaginationURLs.shift();*/
+            
             
         }, function(error) {
             console.error("Failed!", error);
@@ -193,21 +206,26 @@ class UntappdApp extends React.Component {
 
                     AppActions.addItem(_beerObj);
 
-                    //console.log(result.response[_apiObj].items[i].media.items)
+                    console.log("HERE GERE", _beerObj.checkin_id)
 
                     _beerNamesArr.push(result.response[_apiObj].items[i].checkin_comment);
 
                 }
 
             }
+            
+            _arrOfNextPaginationURLs.push(result.response.pagination.next_url+'&'+secrets);
+            _arrOfNextPaginationURLs.shift();
 
             console.log("Success!", result);
-            this.setState({
-                allItems: getAppState().allItems,
-                nextPaginationURL: result.response.pagination.next_url
-            });
+            
 
         }
+
+        this.setState({
+            allItems: getAppState().allItems,
+            nextPaginationURL: _arrOfNextPaginationURLs
+        });
 
     }
 
@@ -247,61 +265,7 @@ class UntappdApp extends React.Component {
         console.log("clicked next button");
         console.log(this.state.nextPaginationURL);
 
-         this.serverRequest = $.get(this.state.nextPaginationURL + "&client_id=D61A064777B99988FC78379C3DD54B4DC6D06156&client_secret=DD849EE330F363C397616097FF4487CBE7DFFCCA", function(result) {
-
-            var _beerObjArr = [];
-            var _beerNamesArr = [];
-
-            var _apiObj = "checkins";
-
-            console.log(result);
-
-            for (var i = 0; i < result.response[_apiObj].items.length; i++) {
-
-                if (result.response[_apiObj].items[i].checkin_comment != "") {
-
-                    var _beerObj = {
-                        checkin_id: result.response[_apiObj].items[i].checkin_id,
-                        created_at: result.response[_apiObj].items[i].created_at,
-                        checkin_comment: result.response[_apiObj].items[i].checkin_comment,
-                        rating_score: result.response[_apiObj].items[i].rating_score,
-                        rawBeerObj: result.response[_apiObj].items[i],
-                        beer_name: result.response[_apiObj].items[i].beer.beer_name,
-                        beer_label: result.response[_apiObj].items[i].beer.beer_label,
-                        beer_description: result.response[_apiObj].items[i].beer.beer_description,
-                        bid: result.response[_apiObj].items[i].beer.bid,
-                        brewery_name: result.response[_apiObj].items[i].brewery.brewery_name,
-                        brewery_label: result.response[_apiObj].items[i].brewery.brewery_label,
-                        brewery_id: result.response[_apiObj].items[i].brewery.brewery_id,
-                        media: result.response[_apiObj].items[i].media.items,
-                        user_first_name: result.response[_apiObj].items[i].user.first_name,
-                        user_last_name: result.response[_apiObj].items[i].user.last_name,
-                        user_avatar: result.response[_apiObj].items[i].user.user_avatar,
-                        user_name: result.response[_apiObj].items[i].user.user_name,
-                        venue: result.response[_apiObj].items[i].venue
-                    }
-
-                    _beerObjArr.push(_beerObj);
-
-                    AppActions.addItem(_beerObj);
-
-                    //console.log(result.response[_apiObj].items[i].media.items)
-
-                    _beerNamesArr.push(result.response[_apiObj].items[i].checkin_comment);
-
-                }
-
-            }
-
-            console.log("HERE!!!!!!!");
-            console.log(result.response.pagination.next_url);
-
-            this.setState({
-                allItems: getAppState().allItems,
-                nextPaginationURL: result.response.pagination.next_url
-            });
-
-        }.bind(this));
+        this.grabItemsFromAPI();
     }
 
     render() {
