@@ -1,4 +1,11 @@
+"use strict";
+
 import React from 'react';
+import AppActions from './../actions/AppActions';
+import AppStore from './../stores/AppStore';
+/*import List from './List';*/
+import config from './../../../config.json';
+
 import List from 'material-ui/lib/lists/list';
 import ListItem from 'material-ui/lib/lists/list-item';
 import Divider from 'material-ui/lib/divider';
@@ -8,11 +15,35 @@ import IconButton from 'material-ui/lib/icon-button';
 import MoreVertIcon from 'material-ui/lib/svg-icons/navigation/more-vert';
 import IconMenu from 'material-ui/lib/menus/icon-menu';
 import MenuItem from 'material-ui/lib/menus/menu-item';
+import DropDownMenu from 'material-ui/lib/DropDownMenu';
+import Toggle from 'material-ui/lib/toggle';
+import ActionInfo from 'material-ui/lib/svg-icons/action/info';
+
+import {SelectableContainerEnhance} from 'material-ui/lib/hoc/selectable-enhance';
+
+import RaisedButton from 'material-ui/lib/raised-button';
+
+import Card from 'material-ui/lib/card/card';
+import CardActions from 'material-ui/lib/card/card-actions';
+import CardHeader from 'material-ui/lib/card/card-header';
+import FlatButton from 'material-ui/lib/flat-button';
+import CardText from 'material-ui/lib/card/card-text';
+
+import MapsPlace from 'material-ui/lib/svg-icons/maps/place';
+
+import ListElement from './ListElement';
+
+//let SelectableList = SelectableContainerEnhance(List);
+
+/**
+ * Retrieve the current TODO data from the TodoStore
+ */
 
 const Colors = {
   grey400:'#bdbdbd',
   lightBlack: 'rgba(0, 0, 0, 0.54)',
-  darkBlack: 'rgba(0, 0, 0, 0.87)'
+  darkBlack: 'rgba(0, 0, 0, 0.87)',
+  red400: '#ef5350'
 }
 
 const iconButtonElement = (
@@ -33,75 +64,189 @@ const rightIconMenu = (
   </IconMenu>
 );
 
-const ListContainer = () => (
-  <div>
-      <List >
-        <ListItem
-          leftAvatar={<Avatar src="images/ok-128.jpg" />}
-          rightIconButton={rightIconMenu}
-          primaryText="Brendan Lim"
-          secondaryText={
-            <p>
-              <span style={{color: Colors.darkBlack}}>Brunch this weekend?</span><br/>
-              I&apos;ll be in your neighborhood doing errands this weekend. Do you want to grab brunch?
-            </p>
-          }
-          secondaryTextLines={2}
-        />
-        <Divider inset={true} />
-        <ListItem
-          leftAvatar={<Avatar src="images/kolage-128.jpg" />}
-          rightIconButton={rightIconMenu}
-          primaryText="me, Scott, Jennifer"
-          secondaryText={
-            <p>
-              <span style={{color: Colors.darkBlack}}>Summer BBQ</span><br/>
-              Wish I could come, but I&apos;m out of town this weekend.
-            </p>
-          }
-          secondaryTextLines={2}
-        />
-        <Divider inset={true} />
-        <ListItem
-          leftAvatar={<Avatar src="images/uxceo-128.jpg" />}
-          rightIconButton={rightIconMenu}
-          primaryText="Grace Ng"
-          secondaryText={
-            <p>
-              <span style={{color: Colors.darkBlack}}>Oui oui</span><br/>
-              Do you have any Paris recs? Have you ever been?
-            </p>
-          }
-          secondaryTextLines={2}
-        />
-        <Divider inset={true} />
-        <ListItem
-          leftAvatar={<Avatar src="images/kerem-128.jpg" />}
-          rightIconButton={rightIconMenu}
-          primaryText="Kerem Suer"
-          secondaryText={
-            <p>
-              <span style={{color: Colors.darkBlack}}>Birthday gift</span><br/>
-              Do you have any ideas what we can get Heidi for her birthday? How about a pony?
-            </p>
-          }
-          secondaryTextLines={2}
-        />
-        <Divider inset={true} />
-        <ListItem
-          leftAvatar={<Avatar src="images/raquelromanp-128.jpg" />}
-          rightIconButton={rightIconMenu}
-          primaryText="Raquel Parrado"
-          secondaryText={
-            <p>
-              <span style={{color: Colors.darkBlack}}>Recipe to try</span><br/>
-              We should eat this: grated squash. Corn and tomatillo tacos.
-            </p>
-          }
-          secondaryTextLines={2}
-        />
-      </List>
-  </div>
-);
+const styles = {
+  block: {
+    maxWidth: 250,
+  },
+  toggle: {
+    marginBottom: 16,
+  },
+};
+
+const buttonStyle = {
+  margin: 12,
+};
+
+class ListContainer extends React.Component {
+
+    constructor(props) {
+
+        super(props);
+
+        //AppActions.addItem({checkin_comment: "testing"});
+
+        this.state = {
+            selectedIndex: 1, 
+            dropdown: 2
+        };
+
+        //this._onChange = this._onChange.bind(this);
+
+    }
+
+    componentWillUnmount() {
+
+        //AppStore.removeChangeListener(this._onChange);
+
+    }
+
+    _onChange() {
+
+        //this.setState(getAppState());
+        //console.log('_onChange');
+
+    }
+
+    componentDidMount() {
+
+        //AppStore.addChangeListener(this._onChange);
+
+       
+
+    }
+
+    handleClick() {
+
+        //AppActions.selectItem(this);
+         console.log("handleClick");
+
+    }
+
+    handleToggle(e){
+
+        //console.log(e.target.parentElement.parentElement);
+        console.log(this);
+
+    }
+
+    handleUpdateSelectedIndex(){
+
+        console.log("handleUpdateSelectedIndex");
+
+    }
+
+    handleUpdateSelectedIndex(e,index) {
+        console.log(e);
+        this.setState({
+            selectedIndex: index,
+        })
+    }
+
+    handleDropdownChange(event, index, value){
+        this.setState({dropdown:value});
+    }
+
+    render() {
+
+        //console.log(this.state.allItems);
+        var allItems = this.props.allItems;
+        var items = [];
+
+        for (var key in allItems) {
+            //console.log(allItems[key])
+            let _itemContent = allItems[key].payload.action.item;
+
+            let _listItem = 
+                            <div key={_itemContent.checkin_id}>    
+                            <ListItem 
+                                className="list-item"                                
+                                leftAvatar={<Avatar src={(_itemContent.media.length > 0) ? _itemContent.user_avatar : "./images/default_avatar.jpg"} />}
+                                primaryText={<span style={{fontStyle: "italic"}}>{'"'+_itemContent.checkin_comment+'"'}</span>}
+                                secondaryText={
+                                    <p><span style={{color:Colors.red400}}>Rating: {_itemContent.rating_score}</span><br/>
+                                      <span style={{float:"right"}}>{"- " + _itemContent.user_first_name + " " + _itemContent.user_last_name}</span>
+                                    </p>
+                                }
+                                secondaryTextLines={2}
+                            
+                                rightToggle={
+                                    <Toggle
+                                      label=""
+                                      labelPosition="left"
+                                      style={styles.toggle}
+                                      onToggle={this.handleToggle.bind(this)}
+                                      defaultToggled={true}
+                                    />
+                                }
+
+                                rightAvatar={
+                                    <span>
+                                    {(_itemContent.venue.length == 0) ? "" : <IconMenu style={{"marginTop": 20}}
+                                        iconButtonElement={<IconButton><MapsPlace /></IconButton>}
+                                        anchorOrigin={{horizontal: 'left', vertical: 'top'}}
+                                        targetOrigin={{horizontal: 'left', vertical: 'top'}}
+                                        maxHeight={350}
+                                        width={120}
+                                    >
+
+                                    <div style={{padding:30}}>
+
+                                    <p style={{textAlign:"center", float:"left", fontSize:12, width:100}}><span style={{}}>{(_itemContent.venue.length === 0) ? "" : '"'+ _itemContent.venue.venue_name +'"'}</span><br />
+                                        <span style={{fontStyle:"italic"}}>{(_itemContent.venue.length === 0) ?"" : _itemContent.venue.location.venue_state} </span><br/>
+                                        <span style={{fontStyle:"italic"}}>{(_itemContent.venue.length === 0) ?"" : _itemContent.venue.location.venue_country} </span><br/>
+                                    </p>
+
+                                    <a target="_blank" href={(_itemContent.media.length > 0) ? _itemContent.media[0].photo.photo_img_lg : "#"}><img style={{marginLeft:3}} src={(_itemContent.media.length > 0) ? _itemContent.media[0].photo.photo_img_sm : "./images/no-img.jpg"} width="100" height="100"/></a>
+                                    </div>
+
+                                  </IconMenu>}
+                                    
+                                  </span>
+                                  
+                                  
+                                }
+                                >
+                                
+                                    
+                            </ListItem>
+                            <Divider inset={true} />
+                            </div>;
+            /*let _cardItem = <Card>
+                                <CardHeader
+                                  title={<span style={{fontStyle: "italic"}}>{'"'+_itemContent.checkin_comment+'"'}</span>}
+                                  subtitle={
+                                    <p><span style={{color:Colors.red400}}>Rating: {_itemContent.rating_score}</span><br/>
+                                      <span>{"- " + _itemContent.user_first_name + " " + _itemContent.user_last_name + " ("+_itemContent.user_name+")"}</span>
+                                    </p>
+                                }
+                                  actAsExpander={true}
+                                  showExpandableButton={true}
+                                  avatar={<Avatar src={(_itemContent.media.length > 0) ? _itemContent.user_avatar : "./images/default_avatar.jpg"} />}
+                                />
+                                <CardText expandable={true}>
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                  Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
+                                  Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
+                                  Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
+                                </CardText>
+                                <CardActions expandable={true}>
+                                  <FlatButton label="Action1"/>
+                                  <FlatButton label="Action2"/>
+                                </CardActions>
+                            </Card>*/
+
+            items.push(_listItem);
+        }
+
+        console.log("here");
+        return (
+
+                    <List className="list" >
+                      <ListElement allItems={this.props.allItems} />
+                    </List>
+                
+        );
+    }
+}
 
 export default ListContainer;

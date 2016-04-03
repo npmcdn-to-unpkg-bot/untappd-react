@@ -34,7 +34,7 @@ ul li{
 }
 
 .list-item:hover {
-  background: #2980b9;
+  background: #f1f1f1;
 }
 .list-item .blocked {
   background: #2980b9;

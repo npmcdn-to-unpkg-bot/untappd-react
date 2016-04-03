@@ -15,6 +15,14 @@ var AppActions = {
             item: item
         })
 
+    }, 
+    toggleItem: function(item) {
+
+        AppDispatcher.handleViewAction({
+            actionType: AppConstants.TOGGLE_ITEM,
+            item: item
+        })
+
     }
 }
 

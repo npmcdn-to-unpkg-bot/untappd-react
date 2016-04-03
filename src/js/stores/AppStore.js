@@ -17,20 +17,20 @@ function create(action) {
     //var id = action.action.item.props.item.id;
     //console.log(action.action.item.checkin_id);
     var id = action.action.item.checkin_id;
-
+    console.log('AppStore', id);
     _items[id] = {
         id: id,
         payload: action,
-        selected: false
+        blocked: false
     };
-    console.log(_items[id]);
+    console.log('AppStore', _items);
     //console.log(_items);
 
 }
 
 function select(action) {
 
-  console.log(action.action.item.props.item.id);
+  //console.log("AppStore", action.action.item.props.item.id);
 
   var id = action.action.item.props.item.id;
 
@@ -46,6 +46,20 @@ function deselect(action) {
 
 }
 
+
+function toggle(action) {
+
+    var id = action.action.item;
+
+    //console.log('AppStore toggle', id);
+    //console.log('AppStore toggle', _items[295489131]);
+    //console.log(_items[id]['blocked']);
+
+    (_items[id]['blocked'] === false) ? _items[id]['blocked'] = true : _items[id]['blocked'] = false;
+    
+    console.log(_items[id]);
+
+}
 /**
  * Delete a TODO item.
  * @param  {string} id
@@ -98,6 +112,11 @@ AppDispatcher.register(function(action) {
         case AppConstants.SELECT_ITEM:
             //create(action);
             select(action);
+            AppStore.emitChange();
+            break;
+        case AppConstants.TOGGLE_ITEM:
+            //create(action);
+            toggle(action);
             AppStore.emitChange();
             break;
     }

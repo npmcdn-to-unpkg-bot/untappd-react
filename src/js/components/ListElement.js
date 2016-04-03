@@ -36,11 +36,6 @@ import MapsPlace from 'material-ui/lib/svg-icons/maps/place';
 /**
  * Retrieve the current TODO data from the TodoStore
  */
-function getAppState() {
-    return {
-        allItems: AppStore.getAll()
-    };
-}
 
 const Colors = {
   grey400:'#bdbdbd',
@@ -80,7 +75,7 @@ const buttonStyle = {
   margin: 12,
 };
 
-class UntappdApp extends React.Component {
+class ListElement extends React.Component {
 
     constructor(props) {
 
@@ -89,7 +84,6 @@ class UntappdApp extends React.Component {
         //AppActions.addItem({checkin_comment: "testing"});
 
         this.state = {
-            allItems: getAppState().allItems,
             selectedIndex: 1, 
             dropdown: 2
         };
@@ -100,77 +94,22 @@ class UntappdApp extends React.Component {
 
     componentWillUnmount() {
 
-        AppStore.removeChangeListener(this._onChange);
+        //AppStore.removeChangeListener(this._onChange);
 
     }
 
     _onChange() {
 
         //this.setState(getAppState());
-        console.log('_onChange');
-        this.setState({
-            allItems: getAppState().allItems
-        });
+        //console.log('_onChange');
 
     }
 
     componentDidMount() {
 
-        AppStore.addChangeListener(this._onChange.bind(this));
+        //AppStore.addChangeListener(this._onChange);
 
-        //console.log("componentDidMount");
-
-        this.serverRequest = $.get(this.props.source, function(result) {
-
-            var _beerObjArr = [];
-            var _beerNamesArr = [];
-
-            var _apiObj = "checkins";
-
-            console.log(result);
-
-            for (var i = 0; i < result.response[_apiObj].items.length; i++) {
-
-                if (result.response[_apiObj].items[i].checkin_comment != "") {
-
-                    var _beerObj = {
-                        checkin_id: result.response[_apiObj].items[i].checkin_id,
-                        created_at: result.response[_apiObj].items[i].created_at,
-                        checkin_comment: result.response[_apiObj].items[i].checkin_comment,
-                        rating_score: result.response[_apiObj].items[i].rating_score,
-                        rawBeerObj: result.response[_apiObj].items[i],
-                        beer_name: result.response[_apiObj].items[i].beer.beer_name,
-                        beer_label: result.response[_apiObj].items[i].beer.beer_label,
-                        beer_description: result.response[_apiObj].items[i].beer.beer_description,
-                        bid: result.response[_apiObj].items[i].beer.bid,
-                        brewery_name: result.response[_apiObj].items[i].brewery.brewery_name,
-                        brewery_label: result.response[_apiObj].items[i].brewery.brewery_label,
-                        brewery_id: result.response[_apiObj].items[i].brewery.brewery_id,
-                        media: result.response[_apiObj].items[i].media.items,
-                        user_first_name: result.response[_apiObj].items[i].user.first_name,
-                        user_last_name: result.response[_apiObj].items[i].user.last_name,
-                        user_avatar: result.response[_apiObj].items[i].user.user_avatar,
-                        user_name: result.response[_apiObj].items[i].user.user_name,
-                        venue: result.response[_apiObj].items[i].venue
-                    }
-
-                    _beerObjArr.push(_beerObj);
-
-                    AppActions.addItem(_beerObj);
-
-                    //console.log(result.response[_apiObj].items[i].media.items)
-
-                    _beerNamesArr.push(result.response[_apiObj].items[i].checkin_comment);
-
-                }
-
-            }
-
-            this.setState({
-                allItems: getAppState().allItems
-            });
-
-        }.bind(this));
+       
 
     }
 
@@ -185,7 +124,6 @@ class UntappdApp extends React.Component {
 
         //console.log(e.target.parentElement.parentElement);
         console.log(this);
-        AppActions.toggleItem(this);//checin_id
 
     }
 
@@ -208,10 +146,8 @@ class UntappdApp extends React.Component {
 
     render() {
 
-        //console.log('Hi there', );
-
         //console.log(this.state.allItems);
-        var allItems = this.state.allItems;
+        var allItems = this.props.allItems;
         var items = [];
 
         for (var key in allItems) {
@@ -220,7 +156,7 @@ class UntappdApp extends React.Component {
 
             let _listItem = 
                             <div key={_itemContent.checkin_id}>    
-                            <ListItem style={{backgroundColor: (this.state.allItems[key]['blocked'] == true) ? '#f1f1f1' : '#FFF'}}
+                            <ListItem 
                                 className="list-item"                                
                                 leftAvatar={<Avatar src={(_itemContent.media.length > 0) ? _itemContent.user_avatar : "./images/default_avatar.jpg"} />}
                                 primaryText={<span style={{fontStyle: "italic"}}>{'"'+_itemContent.checkin_comment+'"'}</span>}
@@ -236,7 +172,7 @@ class UntappdApp extends React.Component {
                                       label=""
                                       labelPosition="left"
                                       style={styles.toggle}
-                                      onToggle={this.handleToggle.bind(_itemContent.checkin_id)}
+                                      onToggle={this.handleToggle.bind(this)}
                                       defaultToggled={true}
                                     />
                                 }
@@ -300,22 +236,15 @@ class UntappdApp extends React.Component {
             items.push(_listItem);
         }
 
-        //console.log(items);
+        console.log("ListElement");
         return (
-                
-                <div id="main-container">
-                    <DropDownMenu value={this.state.dropdown} onChange={this.handleDropdownChange.bind(this)}>
-                        <MenuItem value={1} primaryText="Not Your Fathers Rootbeer"/>
-                        <MenuItem value={2} primaryText="Not Your Fathers Ginger Ale"/>
-                    </DropDownMenu>
-                    <div className="allow-title"><h3>Allow?</h3><Divider /></div>
-                    <List className="list">
+
+                    <div>
                         {items}
-                    </List>
-                </div>
+                    </div>
                 
         );
     }
 }
 
-export default UntappdApp;
+export default ListElement;
