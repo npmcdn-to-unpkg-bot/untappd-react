@@ -220,7 +220,7 @@ class UntappdApp extends React.Component {
 
             let _listItem = 
                             <div key={_itemContent.checkin_id}>    
-                            <ListItem style={{backgroundColor: (this.state.allItems[key]['blocked'] == true) ? '#f1f1f1' : '#FFF'}}
+                            <ListItem style={{background: (this.state.allItems[key]['blocked'] == true) ? '#f1f1f1' : ''}}
                                 className="list-item"                                
                                 leftAvatar={<Avatar src={(_itemContent.media.length > 0) ? _itemContent.user_avatar : "./images/default_avatar.jpg"} />}
                                 primaryText={<span style={{fontStyle: "italic"}}>{'"'+_itemContent.checkin_comment+'"'}</span>}
