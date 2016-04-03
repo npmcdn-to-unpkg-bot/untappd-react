@@ -226,6 +226,8 @@ class UntappdApp extends React.Component {
             nextPaginationURL: _arrOfNextPaginationURLs
         });
 
+        document.getElementById('main-list').scrollTop=0;
+
     }
 
     handleClick() {
@@ -374,7 +376,7 @@ class UntappdApp extends React.Component {
                         <MenuItem value={2} primaryText="Not Your Fathers Ginger Ale"/>
                     </DropDownMenu>
                     <div className="allow-title"><h3>Allow?</h3><Divider /></div>
-                    <List className="list">
+                    <List className="list" id="main-list">
                         {items}
                     </List>
                     <RaisedButton 
