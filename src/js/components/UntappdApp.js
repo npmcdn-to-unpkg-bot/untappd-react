@@ -386,7 +386,7 @@ class UntappdApp extends React.Component {
                         {items}
                     </List>
                     <RaisedButton 
-                        label="Next" 
+                        label="Load More" 
                         style={nextButtonStyle} 
                         onMouseDown={this.handleNextButton.bind(this)}/>
                 </div>
