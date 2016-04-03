@@ -243,16 +243,17 @@ class UntappdApp extends React.Component {
                                         anchorOrigin={{horizontal: 'left', vertical: 'top'}}
                                         targetOrigin={{horizontal: 'left', vertical: 'top'}}
                                         maxHeight={350}
+                                        width={120}
                                     >
 
-                                    <div style={{textAlign:"center", minWidth: 95, minHeight: 100, padding:10}}>
+                                    <div style={{padding:30}}>
 
-                                    <p><span style={{float:"left"}}>{(_itemContent.venue.length === 0) ? "" : _itemContent.venue.venue_name }</span><br />
+                                    <p style={{textAlign:"center", float:"left", fontSize:12, width:100}}><span style={{}}>{(_itemContent.venue.length === 0) ? "" : '"'+ _itemContent.venue.venue_name +'"'}</span><br />
                                         <span>{(_itemContent.venue.length === 0) ?"" : _itemContent.venue.location.venue_state} </span><br/>
                                         <span>{(_itemContent.venue.length === 0) ?"" : _itemContent.venue.location.venue_country} </span><br/>
                                     </p>
 
-                                    <img style={{padding:10, float:"left"}} src={(_itemContent.media.length > 0) ? _itemContent.media[0].photo.photo_img_sm : "./images/no-img.jpg"}/>
+                                    <img style={{marginLeft:3}} src={(_itemContent.media.length > 0) ? _itemContent.media[0].photo.photo_img_sm : "./images/no-img.jpg"}/>
                                     </div>
 
                                   </IconMenu>}
