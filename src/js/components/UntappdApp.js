@@ -29,6 +29,8 @@ import CardHeader from 'material-ui/lib/card/card-header';
 import FlatButton from 'material-ui/lib/flat-button';
 import CardText from 'material-ui/lib/card/card-text';
 
+import MapsPlace from 'material-ui/lib/svg-icons/maps/place';
+
 //let SelectableList = SelectableContainerEnhance(List);
 
 /**
@@ -145,7 +147,8 @@ class UntappdApp extends React.Component {
                         user_first_name: result.response[_apiObj].items[i].user.first_name,
                         user_last_name: result.response[_apiObj].items[i].user.last_name,
                         user_avatar: result.response[_apiObj].items[i].user.user_avatar,
-                        user_name: result.response[_apiObj].items[i].user.user_name
+                        user_name: result.response[_apiObj].items[i].user.user_name,
+                        venue: result.response[_apiObj].items[i].venue
                     }
 
                     _beerObjArr.push(_beerObj);
@@ -232,7 +235,35 @@ class UntappdApp extends React.Component {
                                       defaultToggled={true}
                                     />
                                 }
+
+                                rightAvatar={
+                                    <span>
+                                    {(_itemContent.venue.length == 0) ? "" : <IconMenu style={{"marginTop": 20}}
+                                        iconButtonElement={<IconButton><MapsPlace /></IconButton>}
+                                        anchorOrigin={{horizontal: 'left', vertical: 'top'}}
+                                        targetOrigin={{horizontal: 'left', vertical: 'top'}}
+                                        maxHeight={350}
+                                    >
+
+                                    <div style={{textAlign:"center", minWidth: 95, minHeight: 100, padding:10}}>
+
+                                    <p><span style={{float:"left"}}>{(_itemContent.venue.length === 0) ? "" : _itemContent.venue.venue_name }</span><br />
+                                        <span>{(_itemContent.venue.length === 0) ?"" : _itemContent.venue.location.venue_state} </span><br/>
+                                        <span>{(_itemContent.venue.length === 0) ?"" : _itemContent.venue.location.venue_country} </span><br/>
+                                    </p>
+
+                                    <img style={{padding:10, float:"left"}} src={(_itemContent.media.length > 0) ? _itemContent.media[0].photo.photo_img_sm : "./images/no-img.jpg"}/>
+                                    </div>
+
+                                  </IconMenu>}
+                                    
+                                  </span>
+                                  
+                                  
+                                }
                                 >
+                                
+                                    
                             </ListItem>
                             <Divider inset={true} />
                             </div>;
