@@ -31,6 +31,8 @@ import CardText from 'material-ui/lib/card/card-text';
 
 import MapsPlace from 'material-ui/lib/svg-icons/maps/place';
 
+import Moment from 'moment';
+
 //let SelectableList = SelectableContainerEnhance(List);
 
 /**
@@ -162,7 +164,7 @@ class UntappdApp extends React.Component {
                         user_last_name: result.response[_apiObj].items[i].user.last_name,
                         user_avatar: result.response[_apiObj].items[i].user.user_avatar,
                         user_name: result.response[_apiObj].items[i].user.user_name,
-                        venue: result.response[_apiObj].items[i].venue
+                        venue: result.response[_apiObj].items[i].venue,
                     }
 
                     _beerObjArr.push(_beerObj);
@@ -291,6 +293,9 @@ class UntappdApp extends React.Component {
             //console.log(allItems[key])
             let _itemContent = allItems[key].payload.action.item;
 
+            let d = Date.parse(_itemContent.created_at);
+            let newTime = Moment(d).format('MMMM D YYYY, h:mm a');
+
             let _listItem = 
                             <div key={_itemContent.checkin_id}>    
                             <ListItem style={{background: (this.state.allItems[key]['blocked'] == true) ? '#f1f1f1' : ''}}
@@ -299,6 +304,7 @@ class UntappdApp extends React.Component {
                                 primaryText={<span style={{fontStyle: "italic", opacity: (this.state.allItems[key]['blocked'] == true) ? blockedStyles.opacity : 1}}>{'"'+_itemContent.checkin_comment+'"'}</span>}
                                 secondaryText={
                                     <p style={{opacity: (this.state.allItems[key]['blocked'] == true) ? blockedStyles.opacity : 1}} ><span style={{color:Colors.red400}}>Rating: {_itemContent.rating_score}</span><br/>
+                                    <span>{"Posted: "+newTime}</span>
                                       <span style={{float:"right"}}>{"- " + _itemContent.user_first_name + " " + _itemContent.user_last_name}</span>
                                     </p>
                                 }
