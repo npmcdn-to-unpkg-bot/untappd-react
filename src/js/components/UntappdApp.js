@@ -33,6 +33,11 @@ import MapsPlace from 'material-ui/lib/svg-icons/maps/place';
 
 import Moment from 'moment';
 
+import API from './../controller/api';
+
+let nyfrbURL ='https://api.untappd.com/v4/beer/checkins/867402?client_id=D61A064777B99988FC78379C3DD54B4DC6D06156&client_secret=DD849EE330F363C397616097FF4487CBE7DFFCCA';
+let nyfgaURL ='https://api.untappd.com/v4/beer/checkins/1297475?client_id=D61A064777B99988FC78379C3DD54B4DC6D06156&client_secret=DD849EE330F363C397616097FF4487CBE7DFFCCA';
+
 //let SelectableList = SelectableContainerEnhance(List);
 
 /**
@@ -132,14 +137,31 @@ class UntappdApp extends React.Component {
         AppStore.addChangeListener(this._onChange.bind(this));
 
         //console.log("componentDidMount");
+        var _beerObjArr = [];
+        var _beerNamesArr = [];
 
-        this.serverRequest = $.get(this.props.source, function(result) {
+        var _apiObj = "checkins";
 
-            var _beerObjArr = [];
-            var _beerNamesArr = [];
+        // Use it!
+        API.getURL(nyfrbURL).then(function(result) {
 
-            var _apiObj = "checkins";
+            //console.log("Success!", result);
+            parseResultsAndStore(result);
+            
+        }, function(error) {
+            console.error("Failed!", error);
 
+        }).then(API.getURL(nyfgaURL).then(function(result) {
+
+            parseResultsAndStore(result);
+            
+        }, function(error) {
+            console.error("Failed!", error);
+        }));
+
+        function parseResultsAndStore(res){
+
+            let result = JSON.parse(res);
             console.log(result);
 
             for (var i = 0; i < result.response[_apiObj].items.length; i++) {
@@ -179,12 +201,13 @@ class UntappdApp extends React.Component {
 
             }
 
+            console.log("Success!", result);
             this.setState({
                 allItems: getAppState().allItems,
                 nextPaginationURL: result.response.pagination.next_url
             });
 
-        }.bind(this));
+        }
 
     }
 
