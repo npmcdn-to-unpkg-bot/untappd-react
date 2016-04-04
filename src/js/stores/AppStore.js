@@ -17,7 +17,7 @@ function create(action) {
     //var id = action.action.item.props.item.id;
     //console.log(action.action.item.checkin_id);
     var id = action.action.item.checkin_id;
-    console.log('AppStore', id);
+   // console.log('AppStore', id);
 
     if(_items[id]){
         console.log("item already exists in Store", _items[id]);
@@ -27,9 +27,10 @@ function create(action) {
     _items[id] = {
         id: id,
         payload: action,
-        blocked: false
+        blocked: false,
+        date: action.action.item.created_at
     };
-    console.log('AppStore', _items);
+    //console.log('AppStore', _items);
     //console.log(_items);
 
 }
@@ -57,9 +58,11 @@ function toggle(action) {
 
     var id = action.action.item;
 
-    //console.log('AppStore toggle', id);
-    //console.log('AppStore toggle', _items[295489131]);
-    //console.log(_items[id]['blocked']);
+    if(!_items[id]){
+        console.log("Notice: item doesnt exist in Store to pre toggle");
+        return;
+    }
+    console.log("TOGGLING ITEM TO BE BLOCKED", _items[id]);
 
     (_items[id]['blocked'] === false) ? _items[id]['blocked'] = true : _items[id]['blocked'] = false;
     
@@ -83,7 +86,9 @@ var AppStore = assign({}, EventEmitter.prototype, {
      * @return {object}
      */
     getAll: function() {
+
         return _items;
+
     },
 
     emitChange: function() {

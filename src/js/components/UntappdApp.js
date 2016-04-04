@@ -111,7 +111,8 @@ class UntappdApp extends React.Component {
             allItems: getAppState().allItems,
             selectedIndex: 1, 
             dropdown: 2, 
-            nextPaginationURL:""
+            nextPaginationURL:"",
+            previouslyBlockedItems: {}
         };
 
         //this._onChange = this._onChange.bind(this);
@@ -136,9 +137,34 @@ class UntappdApp extends React.Component {
 
     componentDidMount() {
 
+        let _this = this;
+
         AppStore.addChangeListener(this._onChange.bind(this));
 
-        this.grabItemsFromAPI();
+        //Get previously saved json items to know what has been blocked
+        var getJSONPromise = new Promise(function(resolve, reject) {
+
+            $.ajax({
+                url: './db/get_blocked_items.php',
+                type: 'GET',
+                dataType: 'json',
+                success: function(data)
+                {
+                    //console.log(data);
+                    _this.setState({
+                        previouslyBlockedItems : data
+                    })
+                    return resolve(data);
+                },
+                error: function(err)
+                {
+                    return reject(err);
+                }
+            });
+
+        }).then(function(){
+            _this.grabItemsFromAPI();
+        });
 
     }
 
@@ -149,6 +175,8 @@ class UntappdApp extends React.Component {
         var _beerNamesArr = [];
 
         var _apiObj = "checkins";
+
+        let _this = this;
 
         // Use it!
         API.getURL(_arrOfNextPaginationURLs[0]).then(function(result) {
@@ -169,12 +197,20 @@ class UntappdApp extends React.Component {
             
         }, function(error) {
             console.error("Failed!", error);
+        }).then(function(){
+
+            //Check the previously blocked items and tell the server to block them (if they exist in the new feed);
+            for (var key in _this.state.previouslyBlockedItems){
+                //console.log(_this.state.previouslyBlockedItems[key]);
+                AppActions.toggleItem(key)
+            }
+
         }));
 
         function parseResultsAndStore(res){
 
             let result = JSON.parse(res);
-            console.log(result);
+            //console.log(result);
 
             for (var i = 0; i < result.response[_apiObj].items.length; i++) {
 
@@ -205,8 +241,6 @@ class UntappdApp extends React.Component {
 
                     AppActions.addItem(_beerObj);
 
-                    console.log("HERE GERE", _beerObj.checkin_id)
-
                     _beerNamesArr.push(result.response[_apiObj].items[i].checkin_comment);
 
                 }
@@ -216,7 +250,7 @@ class UntappdApp extends React.Component {
             _arrOfNextPaginationURLs.push(result.response.pagination.next_url+'&'+secrets);
             _arrOfNextPaginationURLs.shift();
 
-            console.log("Success!", result);
+            //console.log("Success!", result);
             
 
         }
@@ -225,8 +259,7 @@ class UntappdApp extends React.Component {
             allItems: getAppState().allItems,
             nextPaginationURL: _arrOfNextPaginationURLs
         });
-
-        document.getElementById('main-list').scrollTop=0;
+        //document.getElementById('main-list').scrollTop=0;
 
     }
 
@@ -239,9 +272,32 @@ class UntappdApp extends React.Component {
 
     handleToggle(e){
 
-        //console.log(e.target.parentElement.parentElement);
-        console.log(this);
+        //Update the model through this action to tell it that this item has been blocked
         AppActions.toggleItem(this);//checin_id
+
+        //NEXT: form a new object to send to this php method to save only the item id that has been blocked
+        let _allItems = getAppState().allItems;
+        let _blockedItems = {};
+
+        for (var key in getAppState().allItems){
+
+            if(_allItems[key]['blocked'] == true){
+                _blockedItems[key] = 'blocked';
+            }
+
+        }
+
+        $.ajax({
+            url: './db/blocked_items.php',
+            type: 'post',
+            dataType: 'json',
+            success: function (data) {
+                console.log("successfully sent json to be saved to file by php. ")
+            },
+            data: {
+                data: JSON.stringify(_blockedItems)
+            }
+        });
 
     }
 
@@ -271,18 +327,15 @@ class UntappdApp extends React.Component {
 
     render() {
 
-        //console.log('Hi there', );
-
-        //console.log(this.state.allItems);
-        var allItems = this.state.allItems;
+        var allItems =  this.state.allItems;
         var items = [];
 
         for (var key in allItems) {
-            //console.log(allItems[key])
             let _itemContent = allItems[key].payload.action.item;
 
-            let d = Date.parse(_itemContent.created_at);
-            let newTime = Moment(d).format('MMMM D YYYY, h:mm a');
+            let d = Moment(new Date(_itemContent.created_at));
+
+            var date = d.format("MMM D YYYY h:mm a");
 
             let _listItem = 
                             <div key={_itemContent.checkin_id}>    
@@ -292,7 +345,7 @@ class UntappdApp extends React.Component {
                                 primaryText={<span style={{fontStyle: "italic", opacity: (this.state.allItems[key]['blocked'] == true) ? blockedStyles.opacity : 1}}>{'"'+_itemContent.checkin_comment+'"'}</span>}
                                 secondaryText={
                                     <p style={{opacity: (this.state.allItems[key]['blocked'] == true) ? blockedStyles.opacity : 1}} ><span style={{color:Colors.red400}}>Rating: {_itemContent.rating_score}</span><br/>
-                                    <span>{"Posted: "+newTime}</span>
+                                    <span>{"Posted: "+date}</span>
                                       <span style={{float:"right"}}>{"- " + _itemContent.user_first_name + " " + _itemContent.user_last_name}</span>
                                     </p>
                                 }
@@ -340,34 +393,9 @@ class UntappdApp extends React.Component {
                             </ListItem>
                             <Divider inset={true} />
                             </div>;
-            /*let _cardItem = <Card>
-                                <CardHeader
-                                  title={<span style={{fontStyle: "italic"}}>{'"'+_itemContent.checkin_comment+'"'}</span>}
-                                  subtitle={
-                                    <p><span style={{color:Colors.red400}}>Rating: {_itemContent.rating_score}</span><br/>
-                                      <span>{"- " + _itemContent.user_first_name + " " + _itemContent.user_last_name + " ("+_itemContent.user_name+")"}</span>
-                                    </p>
-                                }
-                                  actAsExpander={true}
-                                  showExpandableButton={true}
-                                  avatar={<Avatar src={(_itemContent.media.length > 0) ? _itemContent.user_avatar : "./images/default_avatar.jpg"} />}
-                                />
-                                <CardText expandable={true}>
-                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                  Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-                                  Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-                                  Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
-                                </CardText>
-                                <CardActions expandable={true}>
-                                  <FlatButton label="Action1"/>
-                                  <FlatButton label="Action2"/>
-                                </CardActions>
-                            </Card>*/
 
             items.push(_listItem);
         }
-
-        //console.log(items);
         return (
                 
                 <div id="main-container">
