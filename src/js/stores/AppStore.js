@@ -12,7 +12,7 @@ function create(action) {
     // Hand waving here -- not showing how this interacts with XHR or persistent
     // server-side storage.
     // Using the current timestamp + random number in place of a real id.
-    console.log("In create function of - AppStore adding Item");
+    //console.log("In create function of - AppStore adding Item");
     //var id = (+new Date() + Math.floor(Math.random() * 999999)).toString(36);
     //var id = action.action.item.props.item.id;
     //console.log(action.action.item.checkin_id);
@@ -53,20 +53,35 @@ function deselect(action) {
 
 }
 
+function setBlocked(action){
+
+    var id = action.action.item;
+
+    if(!_items[id]){
+        //console.log("Notice: item doesnt exist in Store to pre toggle");
+        return;
+    }
+
+    //console.log("TOGGLING ITEM TO BE BLOCKED", _items[id]);
+
+    _items[id]['blocked'] = true;
+
+}
+
 
 function toggle(action) {
 
     var id = action.action.item;
 
     if(!_items[id]){
-        console.log("Notice: item doesnt exist in Store to pre toggle");
+        //console.log("Notice: item doesnt exist in Store to pre toggle");
         return;
     }
-    console.log("TOGGLING ITEM TO BE BLOCKED", _items[id]);
+    //console.log("TOGGLING ITEM TO BE BLOCKED", _items[id]);
 
     (_items[id]['blocked'] === false) ? _items[id]['blocked'] = true : _items[id]['blocked'] = false;
     
-    console.log(_items[id]);
+    //console.log(_items[id]);
 
 }
 /**
@@ -128,6 +143,11 @@ AppDispatcher.register(function(action) {
         case AppConstants.TOGGLE_ITEM:
             //create(action);
             toggle(action);
+            AppStore.emitChange();
+            break;
+        case AppConstants.SET_BLOCKED:
+            //create(action);
+            setBlocked(action);
             AppStore.emitChange();
             break;
     }

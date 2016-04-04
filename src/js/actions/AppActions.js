@@ -23,6 +23,14 @@ var AppActions = {
             item: item
         })
 
+    },
+    setBlocked: function(item) {
+
+        AppDispatcher.handleViewAction({
+            actionType: AppConstants.SET_BLOCKED,
+            item: item
+        })
+
     }
 }
 

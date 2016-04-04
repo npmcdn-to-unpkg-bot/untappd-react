@@ -202,7 +202,7 @@ class UntappdApp extends React.Component {
             //Check the previously blocked items and tell the server to block them (if they exist in the new feed);
             for (var key in _this.state.previouslyBlockedItems){
                 //console.log(_this.state.previouslyBlockedItems[key]);
-                AppActions.toggleItem(key)
+                AppActions.setBlocked(key)
             }
 
         }));
