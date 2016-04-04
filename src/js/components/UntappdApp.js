@@ -357,7 +357,7 @@ class UntappdApp extends React.Component {
                                       labelPosition="left"
                                       style={styles.toggle}
                                       onToggle={this.handleToggle.bind(_itemContent.checkin_id)}
-                                      defaultToggled={true}
+                                      defaultToggled={(this.state.allItems[key]['blocked'] == true) ? false : true}
                                     />
                                 }
 
