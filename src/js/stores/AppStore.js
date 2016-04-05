@@ -65,14 +65,17 @@ function createBulk(action) {
 function addBulkBlocked(action){
 
     console.log("addBulkBlocked", action);
+    
 
     let item = action.action.item
 
     for (var key in item){
-        
-        _items[key]['blocked'] = true;
-        console.log("blocking", _items[key]);
 
+        if(_items[key]){
+            _items[key]['blocked'] = true;
+            console.log("blocking", _items[key]);
+        }
+        
     }
 
 }
