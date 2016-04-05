@@ -6,20 +6,30 @@ var CHANGE_EVENT = 'change';
 
 import AppConstants from '../constants/AppConstants';
 
+/**
+ * The main object that stores all checkin items retrieved by the API calls
+ * @type {Object}
+ */
 var _items = {};
 
+/**
+ * Adds a single item to the _items store after making sure the passed item
+ * does not already exist in the store.         
+ * @param  {AppAction}
+ * @return {bool}
+ */
 function create(action) {
 
     // Hand waving here -- not showing how this interacts with XHR or persistent
     // server-side storage.
     // Using the current timestamp + random number in place of a real id.
     //console.log("In create function of - AppStore adding Item");
-    //var id = (+new Date() + Math.floor(Math.random() * 999999)).toString(36);
-    //var id = action.action.item.props.item.id;
-    //console.log(action.action.item.checkin_id);
     var id = action.action.item.checkin_id;
     //console.log('AppStore', id);
 
+    /**
+     * If the item already exists in the store skip it.
+     */
     if(_items[id]){
         console.log("item already exists in Store", _items[id]);
         return;
@@ -31,11 +41,17 @@ function create(action) {
         blocked: false,
         date: action.action.item.created_at
     };
-    //console.log('AppStore', _items);
-    //console.log(_items);
+    
+    return true;
 
 }
 
+/**
+ * Adds a bulk amount of items to the _items store 
+ * to cut down on event dispatches
+ * @param  {AppAction}
+ * @return {bool}
+ */
 function createBulk(action) {
 
     console.log("createBulk", action);
@@ -60,8 +76,16 @@ function createBulk(action) {
 
     }
 
+    return true;
+
 }
 
+/**
+ * After retrieving the blocked checkin id's update 
+ * the stored existing items as blocked.
+ * @param {AppAction}
+ * @return {bool}
+ */
 function addBulkBlocked(action){
 
     console.log("addBulkBlocked", action);
@@ -78,26 +102,15 @@ function addBulkBlocked(action){
         
     }
 
-}
-
-function select(action) {
-
-  //console.log("AppStore", action.action.item.props.item.id);
-
-  var id = action.action.item.props.item.id;
-
-  (_items[id]['selected'] === false ) ? _items[id]['selected'] = true : _items[id]['selected'] = false;
-
-  return true;
+    return true;
 
 }
 
-function deselect(action) {
-
-  
-
-}
-
+/**
+ * Block individual items
+ * @param {AppAction}
+ * @return {bool}
+ */
 function setBlocked(action){
 
     var id = action.action.item;
@@ -111,9 +124,16 @@ function setBlocked(action){
 
     _items[id]['blocked'] = true;
 
+    return true;
+
 }
 
-
+/**
+ * When toggling an item on or off, update 
+ * the stored _items[id] with it's new blocked state.
+ * @param  {AppAction}
+ * @return {bool}
+ */
 function toggle(action) {
 
     var id = action.action.item;
@@ -130,7 +150,7 @@ function toggle(action) {
 
 }
 /**
- * Delete a TODO item.
+ * Delete an item.
  * @param  {string} id
  */
 function destroy(id) {
@@ -169,6 +189,11 @@ var AppStore = assign({}, EventEmitter.prototype, {
     }
 });
 
+/**
+ * The Untappd Store API 
+ * @param  {AppAction}
+ * @return {bool}
+ */
 AppDispatcher.register(function(action) {
     //console.log(action.action);
 

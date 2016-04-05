@@ -42,9 +42,6 @@ let _arrOfNextPaginationURLs = [nyfrbURL+'?'+secrets, nyfgaURL+'?'+secrets];
 
 //let SelectableList = SelectableContainerEnhance(List);
 
-/**
- * Retrieve the current TODO data from the TodoStore
- */
 function getAppState() {
     return {
         allItems: AppStore.getAll()
@@ -141,7 +138,10 @@ class UntappdApp extends React.Component {
 
         AppStore.addChangeListener(this._onChange.bind(this));
 
-        //Get previously saved json items to know what has been blocked
+        /**
+         * Get previously saved json items to know what has been blocked with a promise.
+         * Then trigger the method to grab Untappd items from the API
+         */
         var getJSONPromise = new Promise(function(resolve, reject) {
 
             $.ajax({
@@ -178,7 +178,12 @@ class UntappdApp extends React.Component {
 
         let _this = this;
 
-        // Use it!
+        /**
+         * Using a simple XmlHtmlRequest to grab data from Untappd API with promise.
+         * Grab frist URL stored in the ARR and then when complete grab data from 
+         * socond URL in API. Push and shift the ARR with new Pagination URL's in 
+         * parseResultsAndStore method. 
+         */
         API.getURL(_arrOfNextPaginationURLs[0]).then(function(result) {
 
             
@@ -199,12 +204,19 @@ class UntappdApp extends React.Component {
             console.error("Failed!", error);
         }).then(function(){
 
-            //Check the previously blocked items and tell the server to block them (if they exist in the new feed);
-
+            /**
+             * After both links have been loaded and parsed, dispatched previously blocked items
+             * up to the store to mark any newly added items as blocked if needed. 
+             */
             AppActions.addBulkBlocked(_this.state.previouslyBlockedItems);
 
         }));
 
+        /**
+         * Parses the returned data from the API and dispatches
+         * an array of the newly parsed data to be added to the store via
+         * AppActions.addBulk().
+         */
         function parseResultsAndStore(res){
 
             let result = JSON.parse(res);
@@ -260,6 +272,10 @@ class UntappdApp extends React.Component {
 
         }
 
+        /**
+         * Populate the state of the Untappd APP with both the new items stored
+         * in the Store and also the newly firmed arr of NEXT pagination URL's
+         */
         this.setState({
             allItems: getAppState().allItems,
             nextPaginationURL: _arrOfNextPaginationURLs
@@ -268,6 +284,9 @@ class UntappdApp extends React.Component {
 
     }
 
+    /**
+     * NOT USED
+     */
     handleClick() {
 
         //AppActions.selectItem(this);
@@ -275,12 +294,36 @@ class UntappdApp extends React.Component {
 
     }
 
+    /**
+     * When clicking a toggle on an item dispatch an event to tell the store
+     * and then if the item toggle is to block the item send an ajax call
+     * to the php function to write out all blocked items to a json file
+     * @param  {SyntheticEvent} - Material UI Event
+     * @return {bool}
+     */
+    /**
+    
+        TODO:
+        - Post only newly selected blocked items to a php function 
+        that determines whether or not to add or remove checkin_id from 
+        the saved .json file. 
+    
+     */
     handleToggle(e){
 
-        //Update the model through this action to tell it that this item has been blocked
         AppActions.toggleItem(this);//checin_id
 
-        //NEXT: form a new object to send to this php method to save only the item id that has been blocked
+        /**
+         * Forming a brand new object specifically from the json output to the 
+         * php function. 
+         */
+        /**
+        
+            TODO:
+            - Send only checkin_id's
+        
+         */
+        
         let _allItems = getAppState().allItems;
         let _blockedItems = {};
 
@@ -304,25 +347,21 @@ class UntappdApp extends React.Component {
             }
         });
 
-    }
-
-    handleUpdateSelectedIndex(){
-
-        console.log("handleUpdateSelectedIndex");
+        return true;
 
     }
 
-    handleUpdateSelectedIndex(e,index) {
-        console.log(e);
-        this.setState({
-            selectedIndex: index,
-        })
-    }
-
+    /**
+     * Triggered when a dropdown menu item has been selected
+     */
     handleDropdownChange(event, index, value){
         this.setState({dropdown:value});
     }
 
+    /**
+     * Next button handler. Simply triggers the grabItemsFromAPI that was 
+     * triggered at the start of the app after the blocked json file was retrieved.
+     */
     handleNextButton(){
         console.log("clicked next button");
         console.log(this.state.nextPaginationURL);
@@ -330,6 +369,17 @@ class UntappdApp extends React.Component {
         this.grabItemsFromAPI();
     }
 
+    /**
+     * Main view portion of the APP. Using a lot of ternary conditionals
+     * to seet the view according to the state of each item from the Store.
+     */
+    /**
+    
+        TODO:
+        - Move state logic out of the JSX renderer.
+    
+     */
+    
     render() {
 
         var allItems =  this.state.allItems;
