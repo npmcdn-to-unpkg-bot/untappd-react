@@ -125,9 +125,9 @@ class UntappdApp extends React.Component {
 
     }
 
-    _onChange() {
+    _onChange(e) {
 
-        //this.setState(getAppState());
+        //console.log(e);
         console.log('_onChange');
         this.setState({
             allItems: getAppState().allItems
@@ -171,7 +171,7 @@ class UntappdApp extends React.Component {
     grabItemsFromAPI(){
 
         //console.log("componentDidMount");
-        var _beerObjArr = [];
+        
         var _beerNamesArr = [];
 
         var _apiObj = "checkins";
@@ -200,16 +200,16 @@ class UntappdApp extends React.Component {
         }).then(function(){
 
             //Check the previously blocked items and tell the server to block them (if they exist in the new feed);
-            for (var key in _this.state.previouslyBlockedItems){
-                //console.log(_this.state.previouslyBlockedItems[key]);
-                AppActions.setBlocked(key)
-            }
+
+            AppActions.addBulkBlocked(_this.state.previouslyBlockedItems);
 
         }));
 
         function parseResultsAndStore(res){
 
             let result = JSON.parse(res);
+            let bulkItemObj = {};
+            let _beerObjArr = [];
             //console.log(result);
 
             for (var i = 0; i < result.response[_apiObj].items.length; i++) {
@@ -239,13 +239,18 @@ class UntappdApp extends React.Component {
 
                     _beerObjArr.push(_beerObj);
 
-                    AppActions.addItem(_beerObj);
+                    /*removing this because of performance, using "setBulk" instead.*/
+                    //AppActions.addItem(_beerObj);
 
                     _beerNamesArr.push(result.response[_apiObj].items[i].checkin_comment);
 
                 }
 
             }
+
+            //console.log(bulkItemObj2);
+
+            AppActions.addBulk(_beerObjArr);
 
             _arrOfNextPaginationURLs.push(result.response.pagination.next_url+'&'+secrets);
             _arrOfNextPaginationURLs.shift();
@@ -331,7 +336,8 @@ class UntappdApp extends React.Component {
         var items = [];
 
         for (var key in allItems) {
-            let _itemContent = allItems[key].payload.action.item;
+            //console.log(allItems[key]);
+            let _itemContent = allItems[key]['payload'];
 
             let d = Moment(new Date(_itemContent.created_at));
 

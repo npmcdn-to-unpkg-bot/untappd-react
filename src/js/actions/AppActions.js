@@ -31,6 +31,22 @@ var AppActions = {
             item: item
         })
 
+    },
+    addBulk: function(bulk) {
+
+        AppDispatcher.handleViewAction({
+            actionType: AppConstants.ADD_BULK,
+            item: bulk
+        })
+
+    },
+    addBulkBlocked: function(bulk) {
+
+        AppDispatcher.handleViewAction({
+            actionType: AppConstants.ADD_BULK_BLOCKED,
+            item: bulk
+        })
+
     }
 }
 

@@ -9,6 +9,7 @@ import AppConstants from '../constants/AppConstants';
 var _items = {};
 
 function create(action) {
+
     // Hand waving here -- not showing how this interacts with XHR or persistent
     // server-side storage.
     // Using the current timestamp + random number in place of a real id.
@@ -17,7 +18,7 @@ function create(action) {
     //var id = action.action.item.props.item.id;
     //console.log(action.action.item.checkin_id);
     var id = action.action.item.checkin_id;
-   // console.log('AppStore', id);
+    //console.log('AppStore', id);
 
     if(_items[id]){
         console.log("item already exists in Store", _items[id]);
@@ -26,12 +27,53 @@ function create(action) {
 
     _items[id] = {
         id: id,
-        payload: action,
+        payload: action.action.item,
         blocked: false,
         date: action.action.item.created_at
     };
     //console.log('AppStore', _items);
     //console.log(_items);
+
+}
+
+function createBulk(action) {
+
+    console.log("createBulk", action);
+
+    let item = action.action.item
+
+    for(var i = 0; i < item.length; i++){
+
+        let id = item[i]['checkin_id'];
+
+        if(item[i][id]){
+            console.log(item[i]['checkin_id']);
+            return;
+        }
+
+        _items[id] = {
+            id: item[i]['checkin_id'],
+            payload: item[i],
+            blocked: false,
+            date: item[i]['created_at']
+        };
+
+    }
+
+}
+
+function addBulkBlocked(action){
+
+    console.log("addBulkBlocked", action);
+
+    let item = action.action.item
+
+    for (var key in item){
+        
+        _items[key]['blocked'] = true;
+        console.log("blocking", _items[key]);
+
+    }
 
 }
 
@@ -148,6 +190,16 @@ AppDispatcher.register(function(action) {
         case AppConstants.SET_BLOCKED:
             //create(action);
             setBlocked(action);
+            AppStore.emitChange();
+            break;
+        case AppConstants.ADD_BULK_BLOCKED:
+            //create(action);
+            addBulkBlocked(action);
+            AppStore.emitChange();
+            break;
+        case AppConstants.ADD_BULK:
+            //create(action);
+            createBulk(action);
             AppStore.emitChange();
             break;
     }
