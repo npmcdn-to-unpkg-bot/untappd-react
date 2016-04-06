@@ -478,7 +478,7 @@ class UntappdApp extends React.Component {
             <div id="main-container">
                     <DropDownMenu value={this.state.dropdown} onChange={this.handleDropdownChange.bind(this)}>
                         <MenuItem value={1} primaryText="All Products"/>
-                        <MenuItem value={2} primaryText="Not Your Fathers Rootbeer"/>
+                        <MenuItem value={2} primaryText="Not Your Fathers Root Beer"/>
                         <MenuItem value={3} primaryText="Not Your Fathers Ginger Ale"/>
                     </DropDownMenu>
                     <div className="allow-title"><h3>Allow?</h3><Divider /></div>
