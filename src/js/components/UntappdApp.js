@@ -485,7 +485,7 @@ class UntappdApp extends React.Component {
                     <List className="list" id="main-list">
                         {items}
                     </List>
-                    <FlatButton label="Secondary" primary={true} 
+                    <FlatButton primary={true} 
                       label="Load More" 
                       style={nextButtonStyle} 
                       onMouseDown={this.handleNextButton.bind(this)}/>
