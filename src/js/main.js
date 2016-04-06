@@ -6,6 +6,16 @@ var config = require('../../config.json');
 
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
+/**
+ * For Material UI to work for some reason.
+ */
+/**
+
+	TODO:
+	- Look into why I need this now
+
+ */
+
 // Needed for onTouchTap
 // Can go away when react 1.0 release
 // Check this repo:

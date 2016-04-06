@@ -411,7 +411,6 @@ class UntappdApp extends React.Component {
               break;
 
             }
-            
 
             let d = Moment(new Date(_itemContent.created_at));
 
@@ -468,7 +467,6 @@ class UntappdApp extends React.Component {
                                       
                                     }
                                     >
-                                    
                                         
                                 </ListItem>
                                 <Divider inset={true} />
