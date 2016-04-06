@@ -383,6 +383,18 @@ class UntappdApp extends React.Component {
 
             let _itemContent = allItems[key]['payload'];
 
+            /**
+             * Simple switch to determine the state of the dropdown
+             * menu. Sorts list accordingle. 
+             */
+            /**
+            
+              TODO:
+              - Put all product names / other constants into the Constants
+              Object.
+            
+             */
+            
             switch (this.state.dropdown){
 
               case 1:
