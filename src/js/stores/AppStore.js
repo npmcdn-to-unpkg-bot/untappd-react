@@ -23,13 +23,8 @@ var _items = {};
  */
 function create(action) {
 
-    // Hand waving here -- not showing how this interacts with XHR or persistent
-    // server-side storage.
-    // Using the current timestamp + random number in place of a real id.
-    //console.log("In create function of - AppStore adding Item");
     var id = action.action.item.checkin_id;
-    //console.log('AppStore', id);
-
+    
     _items[id] = {
         id: id,
         payload: action.action.item,
@@ -139,6 +134,12 @@ function toggle(action) {
 
     var id = action.action.item;
 
+    /**
+     * Not really an importnat conditional as
+     * there really won't ever be a false trigger of 
+     * toggle from an item that doesn't exist. Despite this
+     * I will keep it anyway.
+     */
     if(!_items[id]){
         return;
     }
