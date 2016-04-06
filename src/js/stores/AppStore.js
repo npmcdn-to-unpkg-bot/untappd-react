@@ -59,12 +59,7 @@ function createBulk(action) {
     for(var i = 0; i < item.length; i++){
 
         let id = item[i]['checkin_id'];
-
-        /*if(item[i][id]){
-            console.log(item[i]['checkin_id']);
-            return;
-        }*/
-
+        
         _items[id] = {
             id: item[i]['checkin_id'],
             payload: item[i],

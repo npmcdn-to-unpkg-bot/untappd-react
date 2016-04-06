@@ -35,10 +35,13 @@ import Moment from 'moment';
 
 import API from './../controller/api';
 
-let nyfrbURL = 'https://api.untappd.com/v4/beer/checkins/867402';
-let nyfgaURL = 'https://api.untappd.com/v4/beer/checkins/1297475';
-let secrets = 'client_id=D61A064777B99988FC78379C3DD54B4DC6D06156&client_secret=DD849EE330F363C397616097FF4487CBE7DFFCCA';
-let _arrOfNextPaginationURLs = [nyfrbURL + '?' + secrets, nyfgaURL + '?' + secrets];
+var nyfrbURL = 'https://api.untappd.com/v4/beer/checkins/867402';
+var nyfgaURL = 'https://api.untappd.com/v4/beer/checkins/1297475';
+var secrets = 'client_id=D61A064777B99988FC78379C3DD54B4DC6D06156&client_secret=DD849EE330F363C397616097FF4487CBE7DFFCCA';
+var _arrOfNextPaginationURLs = [nyfrbURL + '?' + secrets, nyfgaURL + '?' + secrets];
+
+var _productOneName = "Not Your Father's Root Beer (5.9%)";
+var _productTwoName = "Not Your Father's Ginger Ale";
 
 //let SelectableList = SelectableContainerEnhance(List);
 
@@ -105,7 +108,7 @@ class UntappdApp extends React.Component {
         this.state = {
             allItems: getAppState().allItems,
             selectedIndex: 1,
-            dropdown: 2,
+            dropdown: 1,
             nextPaginationURL: "",
             previouslyBlockedItems: {}
         };
@@ -178,6 +181,7 @@ class UntappdApp extends React.Component {
          */
         API.getURL(_arrOfNextPaginationURLs[0]).then(function(result) {
 
+            console.log(result);
             parseResultsAndStore(result);
 
         }, function(error) {
@@ -366,7 +370,7 @@ class UntappdApp extends React.Component {
 
         for (var key in allItems) {
             //console.log(allItems[key]);
-
+            //
             /**
              * If the particular item from the store exists but does not have 
              * a payload attribute it must only have a blocked attribute which 
@@ -376,7 +380,26 @@ class UntappdApp extends React.Component {
             if (!allItems[key]['payload']) {
                 continue;
             }
+
             let _itemContent = allItems[key]['payload'];
+
+            switch (this.state.dropdown){
+
+              case 1:
+              break;
+              case 2:
+              if(_itemContent.beer_name != _productOneName){
+                continue;
+              }
+              break;
+              case 3:
+              if(_itemContent.beer_name != _productTwoName){
+                continue;
+              }
+              break;
+
+            }
+            
 
             let d = Moment(new Date(_itemContent.created_at));
 
@@ -445,8 +468,9 @@ class UntappdApp extends React.Component {
 
             <div id="main-container">
                     <DropDownMenu value={this.state.dropdown} onChange={this.handleDropdownChange.bind(this)}>
-                        <MenuItem value={1} primaryText="Not Your Fathers Rootbeer"/>
-                        <MenuItem value={2} primaryText="Not Your Fathers Ginger Ale"/>
+                        <MenuItem value={1} primaryText="All Products"/>
+                        <MenuItem value={2} primaryText="Not Your Fathers Rootbeer"/>
+                        <MenuItem value={3} primaryText="Not Your Fathers Ginger Ale"/>
                     </DropDownMenu>
                     <div className="allow-title"><h3>Allow?</h3><Divider /></div>
                     <List className="list" id="main-list">
