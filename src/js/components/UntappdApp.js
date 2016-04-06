@@ -19,7 +19,7 @@ import DropDownMenu from 'material-ui/lib/DropDownMenu';
 import Toggle from 'material-ui/lib/toggle';
 import ActionInfo from 'material-ui/lib/svg-icons/action/info';
 
-import {SelectableContainerEnhance} from 'material-ui/lib/hoc/selectable-enhance';
+import { SelectableContainerEnhance } from 'material-ui/lib/hoc/selectable-enhance';
 
 import RaisedButton from 'material-ui/lib/raised-button';
 
@@ -35,10 +35,10 @@ import Moment from 'moment';
 
 import API from './../controller/api';
 
-let nyfrbURL ='https://api.untappd.com/v4/beer/checkins/867402';
-let nyfgaURL ='https://api.untappd.com/v4/beer/checkins/1297475';
+let nyfrbURL = 'https://api.untappd.com/v4/beer/checkins/867402';
+let nyfgaURL = 'https://api.untappd.com/v4/beer/checkins/1297475';
 let secrets = 'client_id=D61A064777B99988FC78379C3DD54B4DC6D06156&client_secret=DD849EE330F363C397616097FF4487CBE7DFFCCA';
-let _arrOfNextPaginationURLs = [nyfrbURL+'?'+secrets, nyfgaURL+'?'+secrets];
+let _arrOfNextPaginationURLs = [nyfrbURL + '?' + secrets, nyfgaURL + '?' + secrets];
 
 //let SelectableList = SelectableContainerEnhance(List);
 
@@ -49,14 +49,14 @@ function getAppState() {
 }
 
 const Colors = {
-  grey400:'#bdbdbd',
-  lightBlack: 'rgba(0, 0, 0, 0.54)',
-  darkBlack: 'rgba(0, 0, 0, 0.87)',
-  red400: '#ef5350'
+    grey400: '#bdbdbd',
+    lightBlack: 'rgba(0, 0, 0, 0.54)',
+    darkBlack: 'rgba(0, 0, 0, 0.87)',
+    red400: '#ef5350'
 }
 
 const iconButtonElement = (
-  <IconButton
+    <IconButton
     touch={true}
     tooltip="more"
     tooltipPosition="bottom-left"
@@ -66,7 +66,7 @@ const iconButtonElement = (
 );
 
 const rightIconMenu = (
-  <IconMenu iconButtonElement={iconButtonElement}>
+    <IconMenu iconButtonElement={iconButtonElement}>
     <MenuItem>Reply</MenuItem>
     <MenuItem>Forward</MenuItem>
     <MenuItem>Delete</MenuItem>
@@ -74,16 +74,16 @@ const rightIconMenu = (
 );
 
 const styles = {
-  block: {
-    maxWidth: 250,
-  },
-  toggle: {
-    marginBottom: 16,
-  },
+    block: {
+        maxWidth: 250,
+    },
+    toggle: {
+        marginBottom: 16,
+    },
 };
 
 const buttonStyle = {
-  margin: 12,
+    margin: 12,
 };
 
 const blockedStyles = {
@@ -93,7 +93,7 @@ const blockedStyles = {
 }
 
 const nextButtonStyle = {
-  margin: 12,
+    margin: 12,
 };
 
 class UntappdApp extends React.Component {
@@ -102,17 +102,13 @@ class UntappdApp extends React.Component {
 
         super(props);
 
-        //AppActions.addItem({checkin_comment: "testing"});
-
         this.state = {
             allItems: getAppState().allItems,
-            selectedIndex: 1, 
-            dropdown: 2, 
-            nextPaginationURL:"",
+            selectedIndex: 1,
+            dropdown: 2,
+            nextPaginationURL: "",
             previouslyBlockedItems: {}
         };
-
-        //this._onChange = this._onChange.bind(this);
 
     }
 
@@ -148,30 +144,26 @@ class UntappdApp extends React.Component {
                 url: './db/get_blocked_items.php',
                 type: 'GET',
                 dataType: 'json',
-                success: function(data)
-                {
+                success: function(data) {
                     //console.log(data);
                     _this.setState({
-                        previouslyBlockedItems : data
+                        previouslyBlockedItems: data
                     })
                     return resolve(data);
                 },
-                error: function(err)
-                {
+                error: function(err) {
                     return reject(err);
                 }
             });
 
-        }).then(function(){
+        }).then(function() {
             _this.grabItemsFromAPI();
         });
 
     }
 
-    grabItemsFromAPI(){
+    grabItemsFromAPI() {
 
-        //console.log("componentDidMount");
-        
         var _beerNamesArr = [];
 
         var _apiObj = "checkins";
@@ -186,23 +178,21 @@ class UntappdApp extends React.Component {
          */
         API.getURL(_arrOfNextPaginationURLs[0]).then(function(result) {
 
-            
-            //console.log("Success!", result);
             parseResultsAndStore(result);
-            /*_arrOfNextPaginationURLs.shift();*/
-            
+
         }, function(error) {
+
             console.error("Failed!", error);
 
         }).then(API.getURL(_arrOfNextPaginationURLs[1]).then(function(result) {
 
             parseResultsAndStore(result);
-            /*_arrOfNextPaginationURLs.shift();*/
-            
-            
+
         }, function(error) {
+
             console.error("Failed!", error);
-        }).then(function(){
+
+        }).then(function() {
 
             /**
              * After both links have been loaded and parsed, dispatched previously blocked items
@@ -217,12 +207,11 @@ class UntappdApp extends React.Component {
          * an array of the newly parsed data to be added to the store via
          * AppActions.addBulk().
          */
-        function parseResultsAndStore(res){
+        function parseResultsAndStore(res) {
 
             let result = JSON.parse(res);
             let bulkItemObj = {};
             let _beerObjArr = [];
-            //console.log(result);
 
             for (var i = 0; i < result.response[_apiObj].items.length; i++) {
 
@@ -251,24 +240,16 @@ class UntappdApp extends React.Component {
 
                     _beerObjArr.push(_beerObj);
 
-                    /*removing this because of performance, using "setBulk" instead.*/
-                    //AppActions.addItem(_beerObj);
-
                     _beerNamesArr.push(result.response[_apiObj].items[i].checkin_comment);
 
                 }
 
             }
 
-            //console.log(bulkItemObj2);
-
             AppActions.addBulk(_beerObjArr);
 
-            _arrOfNextPaginationURLs.push(result.response.pagination.next_url+'&'+secrets);
+            _arrOfNextPaginationURLs.push(result.response.pagination.next_url + '&' + secrets);
             _arrOfNextPaginationURLs.shift();
-
-            //console.log("Success!", result);
-            
 
         }
 
@@ -280,7 +261,6 @@ class UntappdApp extends React.Component {
             allItems: getAppState().allItems,
             nextPaginationURL: _arrOfNextPaginationURLs
         });
-        //document.getElementById('main-list').scrollTop=0;
 
     }
 
@@ -289,8 +269,7 @@ class UntappdApp extends React.Component {
      */
     handleClick() {
 
-        //AppActions.selectItem(this);
-         console.log("handleClick");
+        //console.log("handleClick");
 
     }
 
@@ -309,9 +288,9 @@ class UntappdApp extends React.Component {
         the saved .json file. 
     
      */
-    handleToggle(e){
+    handleToggle(e) {
 
-        AppActions.toggleItem(this);//checin_id
+        AppActions.toggleItem(this); //checin_id
 
         /**
          * Forming a brand new object specifically from the json output to the 
@@ -323,13 +302,13 @@ class UntappdApp extends React.Component {
             - Send only checkin_id's
         
          */
-        
+
         let _allItems = getAppState().allItems;
         let _blockedItems = {};
 
-        for (var key in getAppState().allItems){
+        for (var key in getAppState().allItems) {
 
-            if(_allItems[key]['blocked'] == true){
+            if (_allItems[key]['blocked'] == true) {
                 _blockedItems[key] = 'blocked';
             }
 
@@ -339,7 +318,7 @@ class UntappdApp extends React.Component {
             url: './db/blocked_items.php',
             type: 'post',
             dataType: 'json',
-            success: function (data) {
+            success: function(data) {
                 console.log("successfully sent json to be saved to file by php. ")
             },
             data: {
@@ -354,15 +333,15 @@ class UntappdApp extends React.Component {
     /**
      * Triggered when a dropdown menu item has been selected
      */
-    handleDropdownChange(event, index, value){
-        this.setState({dropdown:value});
+    handleDropdownChange(event, index, value) {
+        this.setState({ dropdown: value });
     }
 
     /**
      * Next button handler. Simply triggers the grabItemsFromAPI that was 
      * triggered at the start of the app after the blocked json file was retrieved.
      */
-    handleNextButton(){
+    handleNextButton() {
         console.log("clicked next button");
         console.log(this.state.nextPaginationURL);
 
@@ -379,22 +358,32 @@ class UntappdApp extends React.Component {
         - Move state logic out of the JSX renderer.
     
      */
-    
+
     render() {
 
-        var allItems =  this.state.allItems;
+        var allItems = this.state.allItems;
         var items = [];
 
         for (var key in allItems) {
             //console.log(allItems[key]);
+
+            /**
+             * If the particular item from the store exists but does not have 
+             * a payload attribute it must only have a blocked attribute which 
+             * means it wasn't returned from the API call and should not be 
+             * rendered (& cannot be rendered)
+             */
+            if (!allItems[key]['payload']) {
+                continue;
+            }
             let _itemContent = allItems[key]['payload'];
 
             let d = Moment(new Date(_itemContent.created_at));
 
             var date = d.format("MMM D YYYY h:mm a");
 
-            let _listItem = 
-                            <div key={_itemContent.checkin_id}>    
+            let _listItem =
+                <div key={_itemContent.checkin_id}>    
                                 <ListItem style={{background: (this.state.allItems[key]['blocked'] == true) ? '#f1f1f1' : ''}}
                                     className="list-item"                                
                                     leftAvatar={<Avatar style={{opacity: (this.state.allItems[key]['blocked'] == true) ? blockedStyles.opacity : 1}} src={(_itemContent.media.length > 0) ? _itemContent.user_avatar : "./images/default_avatar.jpg"} />}
@@ -453,8 +442,8 @@ class UntappdApp extends React.Component {
             items.push(_listItem);
         }
         return (
-                
-                <div id="main-container">
+
+            <div id="main-container">
                     <DropDownMenu value={this.state.dropdown} onChange={this.handleDropdownChange.bind(this)}>
                         <MenuItem value={1} primaryText="Not Your Fathers Rootbeer"/>
                         <MenuItem value={2} primaryText="Not Your Fathers Ginger Ale"/>
@@ -468,7 +457,7 @@ class UntappdApp extends React.Component {
                         style={nextButtonStyle} 
                         onMouseDown={this.handleNextButton.bind(this)}/>
                 </div>
-                
+
         );
     }
 }

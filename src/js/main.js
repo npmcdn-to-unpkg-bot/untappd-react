@@ -15,6 +15,6 @@ injectTapEventPlugin();
 //var _apiURL = config['api_url'];
 
 ReactDOM.render(
-    <UntappdApp source={"https://api.untappd.com/v4/beer/checkins/867402?client_id=D61A064777B99988FC78379C3DD54B4DC6D06156&client_secret=DD849EE330F363C397616097FF4487CBE7DFFCCA"}/>,
+    <UntappdApp />,
     document.getElementById('main')
 );

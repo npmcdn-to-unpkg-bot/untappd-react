@@ -13,8 +13,11 @@ import AppConstants from '../constants/AppConstants';
 var _items = {};
 
 /**
- * Adds a single item to the _items store after making sure the passed item
- * does not already exist in the store.         
+ * Adds a single item to the _items store. 
+ * If the item already exists and has an attribute of 
+ * blocked, make a new object and carry that value over
+ * to the new objext. This is extremely important for preserving
+ * the blocked functionality.
  * @param  {AppAction}
  * @return {bool}
  */
@@ -27,18 +30,10 @@ function create(action) {
     var id = action.action.item.checkin_id;
     //console.log('AppStore', id);
 
-    /**
-     * If the item already exists in the store skip it.
-     */
-    if(_items[id]){
-        console.log("item already exists in Store", _items[id]);
-        return;
-    }
-
     _items[id] = {
         id: id,
         payload: action.action.item,
-        blocked: false,
+        blocked: (_items[id]) ? _items[id]['blocked'] : false,
         date: action.action.item.created_at
     };
     
@@ -48,7 +43,10 @@ function create(action) {
 
 /**
  * Adds a bulk amount of items to the _items store 
- * to cut down on event dispatches
+ * to cut down on event dispatches. For the blocked
+ * attribute, check to see if that already exists in
+ * the item, and don't overwrite it - but copy it over to
+ * the new object.
  * @param  {AppAction}
  * @return {bool}
  */
@@ -62,15 +60,15 @@ function createBulk(action) {
 
         let id = item[i]['checkin_id'];
 
-        if(item[i][id]){
+        /*if(item[i][id]){
             console.log(item[i]['checkin_id']);
             return;
-        }
+        }*/
 
         _items[id] = {
             id: item[i]['checkin_id'],
             payload: item[i],
-            blocked: false,
+            blocked: (_items[id]) ? _items[id]['blocked'] : false,
             date: item[i]['created_at']
         };
 
@@ -81,8 +79,10 @@ function createBulk(action) {
 }
 
 /**
- * After retrieving the blocked checkin id's update 
- * the stored existing items as blocked.
+ * After retrieving the blocked checkin id's json 
+ * go through all the items and either create a new item
+ * with its' blocked attribute marked true or update
+ * the existing items attribute. 
  * @param {AppAction}
  * @return {bool}
  */
@@ -90,15 +90,18 @@ function addBulkBlocked(action){
 
     console.log("addBulkBlocked", action);
     
-
     let item = action.action.item
 
     for (var key in item){
 
         if(_items[key]){
             _items[key]['blocked'] = true;
-            console.log("blocking", _items[key]);
+        } else {
+            _items[key] = {
+                blocked : true
+            }
         }
+        console.log("blocking", _items[key]);
         
     }
 
@@ -107,7 +110,10 @@ function addBulkBlocked(action){
 }
 
 /**
- * Block individual items
+ * Block individual items. Same as above. If 
+ * the item doesn't exist in the Stored _items, create it
+ * with the single blocked attribute - otherwise just
+ * update the exists value. 
  * @param {AppAction}
  * @return {bool}
  */
@@ -115,14 +121,14 @@ function setBlocked(action){
 
     var id = action.action.item;
 
-    if(!_items[id]){
-        //console.log("Notice: item doesnt exist in Store to pre toggle");
-        return;
+    if(_items[id]){
+        _items[id]['blocked'] = true;
+    } else {
+        _items[id] = {
+            blocked : true
+        }
     }
-
-    //console.log("TOGGLING ITEM TO BE BLOCKED", _items[id]);
-
-    _items[id]['blocked'] = true;
+    console.log("blocking", _items[id]);
 
     return true;
 
@@ -139,16 +145,13 @@ function toggle(action) {
     var id = action.action.item;
 
     if(!_items[id]){
-        //console.log("Notice: item doesnt exist in Store to pre toggle");
         return;
     }
-    //console.log("TOGGLING ITEM TO BE BLOCKED", _items[id]);
 
     (_items[id]['blocked'] === false) ? _items[id]['blocked'] = true : _items[id]['blocked'] = false;
-    
-    //console.log(_items[id]);
 
 }
+
 /**
  * Delete an item.
  * @param  {string} id
