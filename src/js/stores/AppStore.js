@@ -24,7 +24,7 @@ var _items = {};
 function create(action) {
 
     var id = action.action.item.checkin_id;
-    
+
     _items[id] = {
         id: id,
         payload: action.action.item,
@@ -91,7 +91,7 @@ function addBulkBlocked(action){
                 blocked : true
             }
         }
-        console.log("blocking", _items[key]);
+        console.log("blocking", key);
         
     }
 
