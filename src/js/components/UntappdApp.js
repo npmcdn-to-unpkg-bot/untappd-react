@@ -181,7 +181,7 @@ class UntappdApp extends React.Component {
          */
         API.getURL(_arrOfNextPaginationURLs[0]).then(function(result) {
 
-            console.log(result);
+            //console.log(result);
             parseResultsAndStore(result);
 
         }, function(error) {
@@ -394,7 +394,6 @@ class UntappdApp extends React.Component {
               Object.
             
              */
-            
             switch (this.state.dropdown){
 
               case 1:
