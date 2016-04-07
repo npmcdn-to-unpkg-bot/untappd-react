@@ -130,10 +130,14 @@ class UntappdApp extends React.Component {
             nextPaginationURL: "",
             previouslyBlockedItems: {},
             popoverOpen: false,
+            checkedItemOne: true,
+            checkedItemTwo: false,
+            checkedItemThree: false,
         };
 
         this.handleTouchTap = this.handleTouchTap.bind(this);
         this.handleRequestClose = this.handleRequestClose.bind(this);
+        this.handleCheck = this.handleCheck.bind(this);
 
     }
 
@@ -241,7 +245,7 @@ class UntappdApp extends React.Component {
 
             for (var i = 0; i < result.response[_apiObj].items.length; i++) {
 
-                if (result.response[_apiObj].items[i].checkin_comment != "") {
+                //if (result.response[_apiObj].items[i].checkin_comment != "") {
 
                     var _beerObj = {
                         checkin_id: result.response[_apiObj].items[i].checkin_id,
@@ -268,7 +272,7 @@ class UntappdApp extends React.Component {
 
                     _beerNamesArr.push(result.response[_apiObj].items[i].checkin_comment);
 
-                }
+                //}
 
             }
 
@@ -387,6 +391,14 @@ class UntappdApp extends React.Component {
       });
     }
 
+    handleCheck(event){
+
+      this.setState({
+        [event.currentTarget.id]: (this.state[event.currentTarget.id]) ? false : true
+      })
+
+    }
+
     /**
      * Main view portion of the APP. Using a lot of ternary conditionals
      * to seet the view according to the state of each item from the Store.
@@ -443,6 +455,18 @@ class UntappdApp extends React.Component {
               }
               break;
 
+            }
+
+            if(this.state.checkedItemOne){
+              if(_itemContent.checkin_comment == '') continue;
+            }
+
+            if(this.state.checkedItemTwo){ //filter previously blocked items
+              if(this.state.allItems[key]['blocked']) continue;
+            }
+
+            if(this.state.checkedItemThree){
+              if(_itemContent.rating_score >= 3) continue;
             }
 
             let d = Moment(new Date(_itemContent.created_at));
@@ -541,17 +565,26 @@ class UntappdApp extends React.Component {
                       >
                         <div style={filterPopoverBtnStyles.popover}>
                           <Checkbox
+                            id="checkedItemOne"
                             label="Filter items with no comments."
                             style={styles.checkbox}
                             defaultChecked={true}
+                            checked={this.state.checkedItemOne}
+                            onCheck={this.handleCheck}
                           />
                           <Checkbox
+                            id="checkedItemTwo"
                             label="Filter previously blocked items."
                             style={styles.checkbox}
+                            checked={this.state.checkedItemTwo}
+                            onCheck={this.handleCheck}
                           />
                           <Checkbox
+                            id="checkedItemThree"
                             label="Show items with a rating less than 3."
                             style={styles.checkbox}
+                            checked={this.state.checkedItemThree}
+                            onCheck={this.handleCheck}
                           />
                         </div>
                       </Popover>
