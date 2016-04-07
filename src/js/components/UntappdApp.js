@@ -22,12 +22,15 @@ import ActionInfo from 'material-ui/lib/svg-icons/action/info';
 import { SelectableContainerEnhance } from 'material-ui/lib/hoc/selectable-enhance';
 
 import RaisedButton from 'material-ui/lib/raised-button';
-
-import Card from 'material-ui/lib/card/card';
-import CardActions from 'material-ui/lib/card/card-actions';
-import CardHeader from 'material-ui/lib/card/card-header';
 import FlatButton from 'material-ui/lib/flat-button';
-import CardText from 'material-ui/lib/card/card-text';
+import Popover from 'material-ui/lib/popover/popover';
+
+/**
+ * Checkbox Imports
+ */
+import Checkbox from 'material-ui/lib/checkbox';
+import ActionFavorite from 'material-ui/lib/svg-icons/action/favorite';
+import ActionFavoriteBorder from 'material-ui/lib/svg-icons/action/favorite-border';
 
 import MapsPlace from 'material-ui/lib/svg-icons/maps/place';
 
@@ -99,6 +102,21 @@ const nextButtonStyle = {
     margin: 12,
 };
 
+const filterPopoverBtnStyles = {
+  popover: {
+    padding: 20,
+  },
+};
+
+const checkboxStyles = {
+  block: {
+    maxWidth: 250,
+  },
+  checkbox: {
+    marginBottom: 16,
+  },
+};
+
 class UntappdApp extends React.Component {
 
     constructor(props) {
@@ -110,8 +128,12 @@ class UntappdApp extends React.Component {
             selectedIndex: 1,
             dropdown: 1,
             nextPaginationURL: "",
-            previouslyBlockedItems: {}
+            previouslyBlockedItems: {},
+            popoverOpen: false,
         };
+
+        this.handleTouchTap = this.handleTouchTap.bind(this);
+        this.handleRequestClose = this.handleRequestClose.bind(this);
 
     }
 
@@ -352,6 +374,19 @@ class UntappdApp extends React.Component {
         this.grabItemsFromAPI();
     }
 
+    handleTouchTap(event){
+      this.setState({
+        popoverOpen: true,
+        anchorEl: event.currentTarget,
+      });
+    }
+
+    handleRequestClose(){
+      this.setState({
+        popoverOpen: false,
+      });
+    }
+
     /**
      * Main view portion of the APP. Using a lot of ternary conditionals
      * to seet the view according to the state of each item from the Store.
@@ -362,7 +397,6 @@ class UntappdApp extends React.Component {
         - Move state logic out of the JSX renderer.
     
      */
-
     render() {
 
         var allItems = this.state.allItems;
@@ -417,59 +451,59 @@ class UntappdApp extends React.Component {
 
             let _listItem =
                 <div key={_itemContent.checkin_id}>    
-                                <ListItem style={{background: (this.state.allItems[key]['blocked'] == true) ? '#f1f1f1' : ''}}
-                                    className="list-item"                                
-                                    leftAvatar={<Avatar style={{opacity: (this.state.allItems[key]['blocked'] == true) ? blockedStyles.opacity : 1}} src={(_itemContent.media.length > 0) ? _itemContent.user_avatar : "./images/default_avatar.jpg"} />}
-                                    primaryText={<span style={{fontStyle: "italic", opacity: (this.state.allItems[key]['blocked'] == true) ? blockedStyles.opacity : 1}}>{'"'+_itemContent.checkin_comment+'"'}</span>}
-                                    secondaryText={
-                                        <p style={{opacity: (this.state.allItems[key]['blocked'] == true) ? blockedStyles.opacity : 1}} ><span style={{color:Colors.red400}}>Rating: {_itemContent.rating_score}</span><br/>
-                                        <span>{"Posted: "+date}</span>
-                                          <span style={{float:"right"}}>{"- " + _itemContent.user_first_name + " " + _itemContent.user_last_name}</span>
-                                        </p>
-                                    }
-                                    secondaryTextLines={2}
-                                
-                                    rightToggle={
-                                        <Toggle 
-                                          label=""
-                                          labelPosition="left"
-                                          style={styles.toggle}
-                                          onToggle={this.handleToggle.bind(_itemContent.checkin_id)}
-                                          defaultToggled={(this.state.allItems[key]['blocked'] == true) ? false : true}
-                                        />
-                                    }
+                  <ListItem key={_itemContent.checkin_id} style={{background: (this.state.allItems[key]['blocked'] == true) ? '#f1f1f1' : ''}}
+                      className="list-item"                                
+                      leftAvatar={<Avatar style={{opacity: (this.state.allItems[key]['blocked'] == true) ? blockedStyles.opacity : 1}} src={(_itemContent.media.length > 0) ? _itemContent.user_avatar : "./images/default_avatar.jpg"} />}
+                      primaryText={<span style={{fontStyle: "italic", opacity: (this.state.allItems[key]['blocked'] == true) ? blockedStyles.opacity : 1}}>{'"'+_itemContent.checkin_comment+'"'}</span>}
+                      secondaryText={
+                          <p style={{opacity: (this.state.allItems[key]['blocked'] == true) ? blockedStyles.opacity : 1}} ><span style={{color:Colors.red400}}>Rating: {_itemContent.rating_score}</span><br/>
+                          <span>{"Posted: "+date}</span>
+                            <span style={{float:"right"}}>{"- " + _itemContent.user_first_name + " " + _itemContent.user_last_name}</span>
+                          </p>
+                      }
+                      secondaryTextLines={2}
+                  
+                      rightToggle={
+                          <Toggle 
+                            label=""
+                            labelPosition="left"
+                            style={styles.toggle}
+                            onToggle={this.handleToggle.bind(_itemContent.checkin_id)}
+                            defaultToggled={(this.state.allItems[key]['blocked'] == true) ? false : true}
+                          />
+                      }
 
-                                    rightAvatar={
-                                        <span>
-                                        {(_itemContent.venue.length == 0) ? "" : <IconMenu style={{"marginTop": 20}}
-                                            iconButtonElement={<IconButton><MapsPlace /></IconButton>}
-                                            anchorOrigin={{horizontal: 'left', vertical: 'top'}}
-                                            targetOrigin={{horizontal: 'left', vertical: 'top'}}
-                                            maxHeight={350}
-                                            width={120}
-                                        >
+                      rightAvatar={
+                          <span>
+                          {(_itemContent.venue.length == 0) ? "" : <IconMenu style={{"marginTop": 20}}
+                              iconButtonElement={<IconButton><MapsPlace /></IconButton>}
+                              anchorOrigin={{horizontal: 'left', vertical: 'top'}}
+                              targetOrigin={{horizontal: 'left', vertical: 'top'}}
+                              maxHeight={350}
+                              width={120}
+                          >
 
-                                        <div style={{padding:30}}>
+                          <div style={{padding:30}}>
 
-                                        <p style={{textAlign:"center", float:"left", fontSize:12, width:100}}><span style={{}}>{(_itemContent.venue.length === 0) ? "" : '"'+ _itemContent.venue.venue_name +'"'}</span><br />
-                                            <span style={{fontStyle:"italic"}}>{(_itemContent.venue.length === 0) ?"" : _itemContent.venue.location.venue_state} </span><br/>
-                                            <span style={{fontStyle:"italic"}}>{(_itemContent.venue.length === 0) ?"" : _itemContent.venue.location.venue_country} </span><br/>
-                                        </p>
+                          <p style={{textAlign:"center", float:"left", fontSize:12, width:100}}><span style={{}}>{(_itemContent.venue.length === 0) ? "" : '"'+ _itemContent.venue.venue_name +'"'}</span><br />
+                              <span style={{fontStyle:"italic"}}>{(_itemContent.venue.length === 0) ?"" : _itemContent.venue.location.venue_state} </span><br/>
+                              <span style={{fontStyle:"italic"}}>{(_itemContent.venue.length === 0) ?"" : _itemContent.venue.location.venue_country} </span><br/>
+                          </p>
 
-                                        <a target="_blank" href={(_itemContent.media.length > 0) ? _itemContent.media[0].photo.photo_img_lg : "#"}><img style={{marginLeft:3}} src={(_itemContent.media.length > 0) ? _itemContent.media[0].photo.photo_img_sm : "./images/no-img.jpg"} width="100" height="100"/></a>
-                                        </div>
+                          <a target="_blank" href={(_itemContent.media.length > 0) ? _itemContent.media[0].photo.photo_img_lg : "#"}><img style={{marginLeft:3}} src={(_itemContent.media.length > 0) ? _itemContent.media[0].photo.photo_img_sm : "./images/no-img.jpg"} width="100" height="100"/></a>
+                          </div>
 
-                                      </IconMenu>}
-                                        
-                                      </span>
-                                      
-                                      
-                                    }
-                                    >
-                                        
-                                </ListItem>
-                                <Divider inset={true} />
-                            </div>;
+                        </IconMenu>}
+                          
+                        </span>
+                        
+                        
+                      }
+                      >
+                          
+                  </ListItem>
+                  <Divider inset={true} />
+              </div>;
 
             items.push(_listItem);
         }
@@ -481,14 +515,48 @@ class UntappdApp extends React.Component {
                         <MenuItem value={2} primaryText="Not Your Fathers Root Beer"/>
                         <MenuItem value={3} primaryText="Not Your Fathers Ginger Ale"/>
                     </DropDownMenu>
+
                     <div className="allow-title"><h3>Allow?</h3><Divider /></div>
+
                     <List className="list" id="main-list">
                         {items}
                     </List>
+
                     <FlatButton primary={true} 
                       label="Load More" 
                       style={nextButtonStyle} 
                       onMouseDown={this.handleNextButton.bind(this)}/>
+
+                    <div id="filter-popover-button-container">
+                      <RaisedButton
+                        onTouchTap={this.handleTouchTap}
+                        label="Filter Results"
+                      />
+                      <Popover
+                        open={this.state.popoverOpen}
+                        anchorEl={this.state.anchorEl}
+                        anchorOrigin={{horizontal: 'left', vertical: 'top'}}
+                        targetOrigin={{horizontal: 'middle', vertical: 'bottom'}}
+                        onRequestClose={this.handleRequestClose}
+                      >
+                        <div style={filterPopoverBtnStyles.popover}>
+                          <Checkbox
+                            label="Filter items with no comments."
+                            style={styles.checkbox}
+                            defaultChecked={true}
+                          />
+                          <Checkbox
+                            label="Filter previously blocked items."
+                            style={styles.checkbox}
+                          />
+                          <Checkbox
+                            label="Show items with a rating less than 3."
+                            style={styles.checkbox}
+                          />
+                        </div>
+                      </Popover>
+                    </div>
+
                 </div>
 
         );
