@@ -36,6 +36,8 @@ import MapsPlace from 'material-ui/lib/svg-icons/maps/place';
 
 import Moment from 'moment';
 
+import { Motion, spring, StaggeredMotion } from 'react-motion';
+
 import API from './../controller/api';
 
 var nyfrbURL = 'https://api.untappd.com/v4/beer/checkins/867402';
@@ -51,6 +53,12 @@ var _productTwoName = "Not Your Father's Ginger Ale";
 function getAppState() {
     return {
         allItems: AppStore.getAll()
+    };
+}
+
+function getAllItemsFromTo(minId, maxLength) {
+    return {
+        allItems: AppStore.getAllItemsFromTo(minId, maxLength)
     };
 }
 
@@ -133,6 +141,7 @@ class UntappdApp extends React.Component {
             checkedItemOne: true,
             checkedItemTwo: false,
             checkedItemThree: false,
+            currentListPageLastCheckinID:0
         };
 
         this.handleTouchTap = this.handleTouchTap.bind(this);
@@ -413,8 +422,12 @@ class UntappdApp extends React.Component {
 
         var allItems = this.state.allItems;
         var items = [];
+        var _itemsMaxAmt = 5;
+        var _itemsMaxAmtCounter = 0;
 
         for (var key in allItems) {
+
+
             //console.log(allItems[key]);
             //
             /**
@@ -473,14 +486,20 @@ class UntappdApp extends React.Component {
 
             var date = d.format("MMM D YYYY h:mm a");
 
+            /*
+              Adding multiple classes to a var for the main list item.
+             */
+            var _listItemClasses = "list-item ";
+            _listItemClasses += (allItems[key]['blocked'] == true) ? 'blocked' : 'not-blocked';
+
             let _listItem =
-                <div key={_itemContent.checkin_id}>    
-                  <ListItem key={_itemContent.checkin_id} style={{background: (this.state.allItems[key]['blocked'] == true) ? '#f1f1f1' : ''}}
-                      className="list-item"                                
-                      leftAvatar={<Avatar style={{opacity: (this.state.allItems[key]['blocked'] == true) ? blockedStyles.opacity : 1}} src={(_itemContent.media.length > 0) ? _itemContent.user_avatar : "./images/default_avatar.jpg"} />}
-                      primaryText={<span style={{fontStyle: "italic", opacity: (this.state.allItems[key]['blocked'] == true) ? blockedStyles.opacity : 1}}>{'"'+_itemContent.checkin_comment+'"'}</span>}
+                  <div className="list-item-outer" >    
+                  <ListItem key={_itemContent.checkin_id}
+                      className={_listItemClasses}                             
+                      leftAvatar={<Avatar src={(_itemContent.media.length > 0) ? _itemContent.user_avatar : "./images/default_avatar.jpg"} />}
+                      primaryText={<span>{'"'+_itemContent.checkin_comment+'"'}</span>}
                       secondaryText={
-                          <p style={{opacity: (this.state.allItems[key]['blocked'] == true) ? blockedStyles.opacity : 1}} ><span style={{color:Colors.red400}}>Rating: {_itemContent.rating_score}</span><br/>
+                          <p><span style={{color:Colors.red400}}>Rating: {_itemContent.rating_score}</span><br/>
                           <span>{"Posted: "+date}</span>
                             <span style={{float:"right"}}>{"- " + _itemContent.user_first_name + " " + _itemContent.user_last_name}</span>
                           </p>
@@ -493,7 +512,7 @@ class UntappdApp extends React.Component {
                             labelPosition="left"
                             style={styles.toggle}
                             onToggle={this.handleToggle.bind(_itemContent.checkin_id)}
-                            defaultToggled={(this.state.allItems[key]['blocked'] == true) ? false : true}
+                            defaultToggled={(allItems[key]['blocked'] == true) ? false : true}
                           />
                       }
 
@@ -521,15 +540,20 @@ class UntappdApp extends React.Component {
                           
                         </span>
                         
-                        
                       }
                       >
                           
                   </ListItem>
                   <Divider inset={true} />
-              </div>;
+              </div>
 
             items.push(_listItem);
+
+            /*_itemsMaxAmtCounter++;
+            if(_itemsMaxAmtCounter >= _itemsMaxAmt) {
+              break;
+            }*/
+
         }
         return (
 

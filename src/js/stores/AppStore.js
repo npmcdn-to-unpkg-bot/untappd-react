@@ -146,6 +146,7 @@ function toggle(action) {
 
     (_items[id]['blocked'] === false) ? _items[id]['blocked'] = true : _items[id]['blocked'] = false;
 
+    console.log("toggled item from store");
 }
 
 /**
@@ -167,6 +168,35 @@ var AppStore = assign({}, EventEmitter.prototype, {
     getAll: function() {
 
         return _items;
+
+    },
+
+    /**
+     * Ask the Store to return a set of items in between a 
+     * checkin_id and a max length provided. This will enable 
+     * pagination where the view UI component can keep asking the 
+     * Store for only what it wants to display.
+     * @param  {[String]} minId     [the checkin_id to start from]
+     * @param  {[String]} maxLength [the max length of returned items after check_id]
+     * @return {[Object]}           [Object of items after filter loop]
+     */
+    getAllItemsFromTo: function(minId, maxLength){
+
+        var _returnObj = {};
+        var _keyCounter = 0;
+
+        for (var key in _items){
+
+            if(key <= minId){
+                _keyCounter++;
+                _returnObj[key] = _items[key];
+            }
+            if(_keyCounter == maxLength){
+                break;
+            }
+        }
+
+        return _returnObj;
 
     },
 

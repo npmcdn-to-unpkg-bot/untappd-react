@@ -1,0 +1,21 @@
+{
+  "name": "testing",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Justin Emter <justin.emter@rrpartners.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/justinemter/untappd-react",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react-motion": "https://npmcdn.com/react-motion/bower.zip#^0.4.2",
+    "react": "^15.0.1"
+  }
+}
